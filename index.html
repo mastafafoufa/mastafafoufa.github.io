@@ -8,6 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+  /* Effets interactifs sur les blocs */
+  .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img:hover {
+    filter: brightness(90%);
+  }
+  
+  .cta-primary:hover,
+  .cta-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
 
   .featured {
     padding: var(--section-padding) 40px;
@@ -431,7 +446,9 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">
       <p>Data Scientist at Microsoft</p>
     </div>
-    <button>Get in Touch</button>
+    <a href="https://www.linkedin.com/in/mastafafoufa/" target="_blank">
+      <button class="cta-primary">Get in Touch</button>
+    </a>
     </div>
   </section>
 
@@ -497,6 +514,10 @@
       <li>
         <img src="assets/images/Google_scho_logo.jpg" alt="Google Scholar Logo">
         <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      </li>
+      <li>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+        <a href="https://www.linkedin.com/in/mastafafoufa/" target="_blank">LinkedIn</a>
       </li>
     </ul>
   </div>
