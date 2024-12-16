@@ -8,6 +8,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+
+  .featured {
+    padding: var(--section-padding) 40px;
+    text-align: center;
+    background-color: var(--bg-color);
+  }
+  
+  .featured h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  .featured-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cta-primary {
+    background-color: var(--highlight-color);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-primary:hover {
+    background-color: #d90429;
+  }
+  
+  .cta-secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-secondary:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+  }
+
     :root {
       --primary-color: #2b2d42;
       --secondary-color: #8d99ae;
@@ -323,7 +432,30 @@
       <p>Data Scientist at Microsoft</p>
     </div>
     <button>Get in Touch</button>
+    </div>
   </section>
+
+  <section class="featured">
+    <h2>Featured Content</h2>
+    <div class="featured-cards">
+      <div class="card">
+        <img src="assets/images/featured1.jpg" alt="Featured Image 1">
+        <h3>My Work at Microsoft</h3>
+        <p>Explore how I leverage AI to solve complex problems at scale.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/featured2.jpg" alt="Featured Image 2">
+        <h3>Teaching NLP</h3>
+        <p>Learn about my contributions to teaching NLP at EPITA.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/featured3.jpg" alt="Featured Image 3">
+        <h3>Patents in AI</h3>
+        <p>Discover the patents I’ve worked on in artificial intelligence.</p>
+      </div>
+    </div>
+  </section>
+
 
   <section id="about" class="about">
     <h2>About Me</h2>
