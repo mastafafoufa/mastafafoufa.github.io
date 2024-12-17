@@ -430,8 +430,8 @@
     position: fixed;
     top: 10%;
     left: 10px;
-    width: 200px; /* Format téléphone */
-    height: auto;
+    width: 150px; /* Format téléphone */
+    height: 300px;
     border-radius: 10px;
     z-index: 999;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -456,11 +456,13 @@
   </header>
 
   <section class="hero">
-    <!-- Vidéo flottante -->
-    <video id="floating-video" autoplay muted loop>
-      <source src="assets/images/video_pres.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <iframe 
+      id="floating-video" 
+      src="https://www.youtube.com/embed/m5lmQXwx5fw?autoplay=1&mute=1&loop=1&playlist=m5lmQXwx5fw" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
 
     <h1>Welcome to My World</h1>
     <p>Data Scientist @ Microsoft | AI Innovator | Educator</p>
