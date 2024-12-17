@@ -425,6 +425,22 @@
       padding: 20px;
     }
   }
+  /* Vidéo flottante style */
+  #floating-video {
+    position: fixed;
+    top: 10%;
+    left: 10px;
+    width: 200px; /* Format téléphone */
+    height: auto;
+    border-radius: 10px;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: grab; /* Indique que la vidéo est déplaçable */
+  }
+  
+  #floating-video:active {
+    cursor: grabbing;
+  }
 
   </style>
 </head>
@@ -527,6 +543,32 @@
       </li>
     </ul>
   </div>
+  <script>
+    const video = document.getElementById("floating-video");
+    let isDragging = false;
+    let offsetX, offsetY;
+  
+    video.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      offsetX = e.clientX - video.getBoundingClientRect().left;
+      offsetY = e.clientY - video.getBoundingClientRect().top;
+      video.style.cursor = "grabbing";
+    });
+  
+    window.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      const x = e.clientX - offsetX;
+      const y = e.clientY - offsetY;
+      video.style.left = `${x}px`;
+      video.style.top = `${y}px`;
+    });
+  
+    window.addEventListener("mouseup", () => {
+      isDragging = false;
+      video.style.cursor = "grab";
+    });
+  </script>
+
 </body>
 
 </html>
