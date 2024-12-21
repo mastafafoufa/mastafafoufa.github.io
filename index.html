@@ -469,13 +469,19 @@
   </header>
 
   <section class="hero">
-    <iframe 
-      id="floating-video" 
-      src="https://www.youtube.com/embed/m5lmQXwx5fw?autoplay=1&mute=0&loop=0&playlist=m5lmQXwx5fw" 
-      frameborder="0" 
-      allow="autoplay; encrypted-media; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+      <iframe id="floating-video" src="https://www.youtube.com/embed/m5lmQXwx5fw?autoplay=1&mute=0&loop=0&playlist=m5lmQXwx5fw" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+      </iframe>
+      
+      <button id="close-iframe">Close</button>
+      
+      <script>
+        const iframe = document.getElementById('floating-video');
+        const closeButton = document.getElementById('close-iframe');
+      
+        closeButton.addEventListener('click', () => {
+          iframe.style.display = 'none';
+        });
+      </script>
 
     <h1>Welcome to My World</h1>
     <p>Data Scientist @ Microsoft | AI Innovator | Educator</p>
@@ -498,7 +504,7 @@
         <p>Explore how I leverage AI to solve complex problems at scale.</p>
       </div>
       <div class="card">
-        <img src="assets/images/picture_presenting.jpeg" alt="Featured Image 2">
+        <img src="assets/images/picture_presenting.jpg" alt="Featured Image 2">
         <h3>Teaching NLP</h3>
         <p>Learn about my contributions to teaching NLP at EPITA.</p>
       </div>
