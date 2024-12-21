@@ -25,22 +25,35 @@
   }
 
   .featured {
-    padding: var(--section-padding) 40px;
-    text-align: center;
-    background-color: var(--bg-color);
+  padding: var(--section-padding) 20px; 
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+.featured h2 {
+  font-size: 2rem; 
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.featured-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { 
+  .featured {
+    padding: var(--section-padding) 10px; 
   }
-  
   .featured h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--primary-color);
+    font-size: 1.8rem; 
   }
-  
   .featured-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr; 
   }
+}
   
   .card {
     background-color: #fff;
@@ -485,12 +498,12 @@
         <p>Explore how I leverage AI to solve complex problems at scale.</p>
       </div>
       <div class="card">
-        <img src="assets/images/mastafa_llm_timeline.jpeg" alt="Featured Image 2">
+        <img src="assets/images/picture_presenting.jpeg" alt="Featured Image 2">
         <h3>Teaching NLP</h3>
         <p>Learn about my contributions to teaching NLP at EPITA.</p>
       </div>
       <div class="card">
-        <img src="assets/images/mastafa_ai_cost.jpeg" alt="Featured Image 3">
+        <img src="assets/images/mastafa_llm_timeline.jpeg" alt="Featured Image 3">
         <h3>Patents in AI</h3>
         <p>Discover the patents I’ve worked on in artificial intelligence.</p>
       </div>
