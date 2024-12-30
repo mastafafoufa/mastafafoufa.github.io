@@ -289,55 +289,6 @@
       margin-bottom: 10px;
     }
 
-    /* Sidebar */
-    .sidebar {
-      position: fixed;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: var(--sidebar-bg);
-      width: 60px;
-      height: auto;
-      border-radius: 10px 0 0 10px;
-      transition: width 0.3s ease-in-out;
-      overflow: hidden;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    .sidebar:hover {
-      width: 200px;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .sidebar ul li {
-      padding: 10px 15px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #fff;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .sidebar ul li:hover {
-      background-color: var(--sidebar-hover);
-    }
-
-    .sidebar ul li img {
-      width: 30px;
-      height: 30px;
-    }
-
     .footer {
       background-color: var(--primary-color);
       color: #fff;
@@ -444,23 +395,6 @@
       padding: 20px;
     }
   }
-  /* Vidéo flottante style */
-  #floating-video {
-    position: fixed;
-    top: 10%;
-    left: 10px;
-    width: 150px; /* Format téléphone */
-    height: 300px;
-    border-radius: 10px;
-    z-index: 999;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    cursor: grab; /* Indique que la vidéo est déplaçable */
-  }
-  
-  #floating-video:active {
-    cursor: grabbing;
-  }
-
   </style>
 </head>
 
@@ -537,49 +471,5 @@
     <p>&copy; 2024 Mastafa Foufa | Crafted with passion</p>
   </footer>
 
-<!--   <!-- Sidebar -->
-  <div class="sidebar">
-    <ul>
-      <li>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo">
-        <a href="https://github.com/mastafafoufa" target="_blank">GitHub</a>
-      </li>
-      <li>
-        <img src="assets/images/Google_scho_logo.jpg" alt="Google Scholar Logo">
-        <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=en" target="_blank">Google Scholar</a>
-      </li>
-      <li>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
-        <a href="https://www.linkedin.com/in/mastafafoufa/" target="_blank">LinkedIn</a>
-      </li>
-    </ul>
-  </div> -->
-<!--   <script>
-    const video = document.getElementById("floating-video");
-    let isDragging = false;
-    let offsetX, offsetY;
-  
-    video.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      offsetX = e.clientX - video.getBoundingClientRect().left;
-      offsetY = e.clientY - video.getBoundingClientRect().top;
-      video.style.cursor = "grabbing";
-    });
-  
-    window.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      const x = e.clientX - offsetX;
-      const y = e.clientY - offsetY;
-      video.style.left = `${x}px`;
-      video.style.top = `${y}px`;
-    });
-  
-    window.addEventListener("mouseup", () => {
-      isDragging = false;
-      video.style.cursor = "grab";
-    });
-  </script> -->
-
 </body>
-
 </html>
