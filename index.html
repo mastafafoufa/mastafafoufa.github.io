@@ -695,518 +695,387 @@
     #image01 .frame img {
       transition: none;
     }
-
-    .container {
-      position: relative;
-    }
-
-    .container>.wrapper {
-      vertical-align: top;
-      position: relative;
-      max-width: 100%;
-      border-radius: inherit;
-    }
-
-    .container>.wrapper>.inner {
-      vertical-align: top;
-      position: relative;
-      max-width: 100%;
-      border-radius: inherit;
-      text-align: var(--alignment);
-    }
-
-    #main .container.full:first-child>.wrapper {
-      border-top-left-radius: inherit;
-      border-top-right-radius: inherit;
-    }
-
-    #main .container.full:last-child>.wrapper {
-      border-bottom-left-radius: inherit;
-      border-bottom-right-radius: inherit;
-    }
-
-    #main .container.full:first-child>.wrapper>.inner {
-      border-top-left-radius: inherit;
-      border-top-right-radius: inherit;
-    }
-
-    #main .container.full:last-child>.wrapper>.inner {
-      border-bottom-left-radius: inherit;
-      border-bottom-right-radius: inherit;
-    }
-
-    #container01 {
-      display: flex;
-      width: 100%;
-      min-height: 24rem;
-      align-items: center;
-      justify-content: center;
-      background-image: linear-gradient(45deg, #0F0D0D 13%, rgba(0, 0, 0, 0.761) 45%);
-      background-position: 0% 0%;
-      background-repeat: repeat;
-      background-size: cover;
-      box-shadow: 0rem 1.375rem 5rem 2rem rgba(0, 0, 0, 0.251);
-      border-radius: 1rem;
-    }
-
-    #container01>.wrapper>.inner {
-      --gutters: 8rem;
-      --padding-horizontal: 4rem;
-      --padding-vertical: 4rem;
-      --spacing: 1.75rem;
-      padding: var(--padding-vertical) var(--padding-horizontal);
-    }
-
-    #container01>.wrapper {
-      max-width: var(--width);
-      width: 100%;
-    }
-
-    #container01.default>.wrapper>.inner>* {
-      margin-bottom: var(--spacing);
-      margin-top: var(--spacing);
-    }
-
-    #container01.default>.wrapper>.inner>*:first-child {
-      margin-top: 0 !important;
-    }
-
-    #container01.default>.wrapper>.inner>*:last-child {
-      margin-bottom: 0 !important;
-    }
-
-    #container01.columns>.wrapper>.inner {
-      flex-wrap: wrap;
-      display: flex;
-      align-items: center;
-    }
-
-    #container01.columns>.wrapper>.inner>* {
-      flex-grow: 0;
-      flex-shrink: 0;
-      max-width: 100%;
-      text-align: var(--alignment);
-      padding: 0 0 0 var(--gutters);
-    }
-
-    #container01.columns>.wrapper>.inner>*>* {
-      margin-bottom: var(--spacing);
-      margin-top: var(--spacing);
-    }
-
-    #container01.columns>.wrapper>.inner>*>*:first-child {
-      margin-top: 0 !important;
-    }
-
-    #container01.columns>.wrapper>.inner>*>*:last-child {
-      margin-bottom: 0 !important;
-    }
-
-    #container01.columns>.wrapper>.inner>*:first-child {
-      margin-left: calc(var(--gutters) * -1);
-    }
-
-    #container01.default>.wrapper>.inner>.full {
-      margin-left: calc(var(--padding-horizontal) * -1);
-      max-width: none !important;
-      width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
-    }
-
-    #container01.default>.wrapper>.inner>.full:first-child {
-      margin-top: calc(var(--padding-vertical) * -1) !important;
-      border-top-left-radius: inherit;
-      border-top-right-radius: inherit;
-    }
-
-    #container01.default>.wrapper>.inner>.full:last-child {
-      margin-bottom: calc(var(--padding-vertical) * -1) !important;
-      border-bottom-left-radius: inherit;
-      border-bottom-right-radius: inherit;
-    }
-
-    #container01.columns>.wrapper>.inner>div>.full {
-      margin-left: calc(var(--gutters) * -0.5);
-      max-width: none !important;
-      width: calc(100% + var(--gutters) + 0.4725px);
-    }
-
-    #container01.columns>.wrapper>.inner>div:first-child>.full {
-      margin-left: calc(var(--padding-horizontal) * -1);
-      width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
-    }
-
-    #container01.columns>.wrapper>.inner>div:last-child>.full {
-      width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
-    }
-
-    #container01.columns>.wrapper>.inner>div>.full:first-child {
-      margin-top: calc(var(--padding-vertical) * -1) !important;
-    }
-
-    #container01.columns>.wrapper>.inner>div>.full:last-child {
-      margin-bottom: calc(var(--padding-vertical) * -1) !important;
-    }
-
-    #container01.columns>.wrapper>.inner>.full {
-      align-self: stretch;
-      min-height: 24rem;
-    }
-
-    #container01.columns>.wrapper>.inner>.full:first-child {
-      border-bottom-left-radius: inherit;
-      border-top-left-radius: inherit;
-    }
-
-    #container01.columns>.wrapper>.inner>.full:last-child {
-      border-bottom-right-radius: inherit;
-      border-top-right-radius: inherit;
-    }
-
-    #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
-      border-radius: inherit;
-      height: calc(100% + (var(--padding-vertical) * 2));
-    }
-
-    #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
-      border-radius: inherit;
-      height: 100%;
-      position: absolute;
-      width: 100%;
-    }
-
-    #container01>.wrapper>.inner> :nth-child(1) {
-      width: calc(40% + (var(--gutters) / 2));
-    }
-
-    #container01>.wrapper>.inner> :nth-child(2) {
-      width: calc(60% + (var(--gutters) / 2));
-    }
-
-    @media (max-width: 1920px) {}
-
-    @media (max-width: 1680px) {
-      html {
-        font-size: 13pt;
-      }
-    }
-
-    @media (max-width: 1280px) {
-      html {
-        font-size: 13pt;
-      }
-    }
-
-    @media (max-width: 1024px) {}
-
-    @media (max-width: 980px) {
-      html {
-        font-size: 11pt;
-      }
-
-      #container01.columns>.wrapper>.inner {
-        flex-direction: column !important;
-        flex-wrap: nowrap !important;
-      }
-
-      #container01.columns>.wrapper>.inner>span {
-        height: 0;
-        margin-top: calc(var(--gutters) * -1);
-        pointer-events: none;
-        visibility: hidden;
-      }
-
-      #container01.columns>.wrapper>.inner>*:first-child {
-        margin-left: 0 !important;
-        padding-top: 0 !important;
-      }
-
-      #container01.columns>.wrapper>.inner>* {
-        padding: calc(var(--gutters) * 0.5) 0 !important;
-      }
-
-      #container01.columns>.wrapper>.inner>*:last-child {
-        padding-bottom: 0 !important;
-      }
-
-      #container01.columns>.wrapper>.inner>div>.full {
-        margin-left: calc(var(--padding-horizontal) * -1);
-        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
-      }
-
-      #container01.columns>.wrapper>.inner>div:first-of-type>.full {
-        margin-left: calc(var(--padding-horizontal) * -1);
-        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
-      }
-
-      #container01.columns>.wrapper>.inner>div:last-of-type>.full {
-        margin-left: calc(var(--padding-horizontal) * -1);
-        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
-      }
-
-      #container01.columns>.wrapper>.inner>div>.full:first-child {
-        margin-top: calc(var(--gutters) * -0.5) !important;
-      }
-
-      #container01.columns>.wrapper>.inner>div>.full:last-child {
-        margin-bottom: calc(var(--gutters) * -0.5) !important;
-      }
-
-      #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
-        margin-top: calc(var(--padding-vertical) * -1) !important;
-      }
-
-      #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
-        margin-bottom: calc(var(--padding-vertical) * -1) !important;
-      }
-
-      #container01.columns>.wrapper>.inner>div:first-of-type,
-      #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
-        border-top-left-radius: inherit;
-        border-top-right-radius: inherit;
-      }
-
-      #container01.columns>.wrapper>.inner>div:last-of-type,
-      #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
-        border-bottom-left-radius: inherit;
-        border-bottom-right-radius: inherit;
-      }
-
-      #container01.columns>.wrapper>.inner>div:first-of-type,
-      #container01.columns>.wrapper>.inner>div:first-of-type>.full:last-child {
-        border-bottom-left-radius: 0 !important;
-      }
-
-      #container01.columns>.wrapper>.inner>div:last-of-type,
-      #container01.columns>.wrapper>.inner>div:last-of-type>.full:first-child {
-        border-top-right-radius: 0 !important;
-      }
-
-      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
-        height: auto;
-      }
-
-      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
-        height: auto;
-        position: relative;
-        width: auto;
-      }
-
-      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.image img {
-        max-height: 35rem;
-      }
-
-      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.slideshow .bg {
-        min-height: 35rem;
-      }
-
-      #container01>.wrapper>.inner> :nth-child(1) {
-        min-height: 100% !important;
-        width: 100% !important;
-      }
-
-      #container01>.wrapper>.inner> :nth-child(2) {
-        min-height: 100% !important;
-        width: 100% !important;
-      }
-    }
-
-    @media (max-width: 736px) {
-      html {
-        font-size: 11pt;
-      }
-
-      #main>.inner {
-        --padding-horizontal: 1rem;
-        --padding-vertical: 1rem;
-        --spacing: 3rem;
-      }
-
-      #text02 {
-        letter-spacing: -0.109375rem;
-        width: 100%;
-        font-size: 3em;
-        line-height: 1.125;
-      }
-
-      #text03 {
-        letter-spacing: 0rem;
-        width: 100%;
-        font-size: 1em;
-        line-height: 1.75;
-      }
-
-      #text06 {
-        letter-spacing: 0rem;
-        width: 100%;
-        font-size: 1em;
-        line-height: 1.75;
-      }
-
-      #text04 {
-        letter-spacing: 0rem;
-        width: 100%;
-        font-size: 1em;
-        line-height: 1.75;
-      }
-
-      #text05 {
-        letter-spacing: 0rem;
-        width: 100%;
-        font-size: 1em;
-        line-height: 1.75;
-      }
-
-      #text01 {
-        letter-spacing: 0rem;
-        width: 100%;
-        font-size: 1em;
-        line-height: 1.75;
-      }
-
-      #icons01 {
-        font-size: 1.5em;
-        gap: 1rem;
-      }
-
-      #icons01:not(:first-child) {
-        margin-top: 1.6875rem !important;
-      }
-
-      #icons01:not(:last-child) {
-        margin-bottom: 1.6875rem !important;
-      }
-
-      #image01 .frame {
-        height: 25rem !important;
-      }
-
-      #image01 img {
-        height: 100% !important;
-        object-fit: cover;
-        object-position: top;
-        width: 100% !important;
-      }
-
-      #container01>.wrapper>.inner {
-        --gutters: 8rem;
-        --padding-horizontal: 2.5rem;
-        --padding-vertical: 4rem;
-        --spacing: 1.75rem;
-      }
-
-      #container01 {
-        min-height: 18rem;
-      }
-
-      #container01.columns>.wrapper>.inner>* {
-        padding: calc(var(--gutters) * 0.5) 0 !important;
-      }
-
-      #container01.columns>.wrapper>.inner>.full {
-        min-height: 18rem;
-      }
-
-      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.image img {
-        max-height: none;
-      }
-
-      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.slideshow .bg {
-        min-height: auto;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #main>.inner {
-        --spacing: 2.625rem;
-      }
-
-      #image01 .frame {
-        height: 20rem !important;
-      }
-
-      #container01>.wrapper>.inner {
-        --spacing: 1.53125rem;
-      }
-    }
-
-    @media (max-width: 360px) {
-      #main>.inner {
-        --padding-horizontal: 0.75rem;
-        --padding-vertical: 0.75rem;
-        --spacing: 2.25rem;
-      }
-
-      #text02 {
-        font-size: 3em;
-      }
-
-      #text03 {
-        font-size: 1em;
-      }
-
-      #text06 {
-        font-size: 1em;
-      }
-
-      #text04 {
-        font-size: 1em;
-      }
-
-      #text05 {
-        font-size: 1em;
-      }
-
-      #text01 {
-        font-size: 1em;
-      }
-
-      #icons01 {
-        gap: 0.75rem;
-      }
-
-      #image01 .frame {
-        height: 17.5rem !important;
-      }
-
-      #container01>.wrapper>.inner {
-        --gutters: 8rem;
-        --padding-horizontal: 1.875rem;
-        --padding-vertical: 3rem;
-        --spacing: 1.3125rem;
-      }
-
-      #container01 {
-        min-height: 12rem;
-      }
-
-      #container01.columns>.wrapper>.inner>.full {
-        min-height: 12rem;
-      }
-    }
-  </style><noscript>
-    <style>
-      body {
-        overflow: auto !important;
-      }
-
-      body:after {
-        display: none !important;
-      }
-
-      #main>.inner {
-        opacity: 1.0 !important;
-      }
-
-      #main {
-        opacity: 1.0 !important;
-        transform: none !important;
-        transition: none !important;
-        filter: none !important;
-      }
-    </style>
-  </noscript>
-</head>
-
+.container {
+  position: relative;
+}
+
+.container>.wrapper {
+  vertical-align: top; /* Has effect only on inline-block or table-cell elements */
+  position: relative;
+  max-width: 100%;
+  border-radius: inherit;
+}
+
+.container>.wrapper>.inner {
+  vertical-align: top; /* Has effect only on inline-block or table-cell elements */
+  position: relative;
+  max-width: 100%;
+  border-radius: inherit;
+  text-align: var(--alignment);
+}
+
+#main .container.full:first-child>.wrapper {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#main .container.full:last-child>.wrapper {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+#main .container.full:first-child>.wrapper>.inner {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#main .container.full:last-child>.wrapper>.inner {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+#container01 {
+  display: flex; /* This makes #container01 a flex container. Its children are .wrapper */
+  width: 100%;
+  min-height: 24rem;
+  align-items: center; /* Aligns .wrapper vertically if #container01 has extra height */
+  justify-content: center; /* Centers .wrapper horizontally if #container01 has extra width */
+  background-image: linear-gradient(45deg, #0F0D0D 13%, rgba(0, 0, 0, 0.761) 45%);
+  background-position: 0% 0%;
+  background-repeat: repeat; /* Consider 'no-repeat' if it's a specific background image */
+  background-size: cover;
+  box-shadow: 0rem 1.375rem 5rem 2rem rgba(0, 0, 0, 0.251);
+  border-radius: 1rem;
+}
+
+#container01>.wrapper {
+  /* max-width: var(--width); */ /* This variable needs to be defined, or use a fixed value e.g., 1200px */
+  max-width: 70rem; /* Example: a common max-width for content, adjust as needed */
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#container01>.wrapper>.inner {
+  /* --gutters: 8rem; */ /* This seems very large for gutters. Reducing for better spacing. */
+  --gutters: 2rem; /* Adjusted default gutter size */
+  --padding-horizontal: clamp(1rem, 4vw, 3rem); /* Adjusted responsive padding */
+  --padding-vertical: clamp(1.5rem, 5vh, 3rem);   /* Adjusted responsive padding */
+  --spacing: 1.75rem; /* Used for margins between elements inside columns */
+  padding: var(--padding-vertical) var(--padding-horizontal);
+  box-sizing: border-box;
+}
+
+/* Default layout for items directly within .inner (not columns) */
+#container01.default>.wrapper>.inner>* {
+  margin-bottom: var(--spacing);
+  margin-top: var(--spacing);
+}
+
+#container01.default>.wrapper>.inner>*:first-child {
+  margin-top: 0 !important;
+}
+
+#container01.default>.wrapper>.inner>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+/* === DESKTOP COLUMN STYLES (Image on Left) === */
+/* Applied when .columns class is present and screen is wider than mobile breakpoints */
+
+#container01.columns>.wrapper>.inner {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  /* gap: var(--gutters, 2rem); */ /* Modern way for spacing, if used, remove specific padding on children for gap */
+}
+
+/* Child div containers for image and text (the columns themselves) */
+#container01.columns>.wrapper>.inner > div { /* Targeting the direct div children as columns */
+  box-sizing: border-box;
+}
+
+/* Image Column (Left) */
+#container01.columns>.wrapper>.inner > div:nth-child(1) {
+  flex-basis: 35%; /* Adjust percentage for image width */
+  flex-shrink: 0;
+  padding-right: calc(var(--gutters, 2rem) / 2); /* Space on the right of the image column */
+}
+
+/* Text Column (Right) */
+#container01.columns>.wrapper>.inner > div:nth-child(2) {
+  flex-basis: 65%; /* Adjust percentage for text width */
+  flex-grow: 1;
+  padding-left: calc(var(--gutters, 2rem) / 2); /* Space on the left of the text column */
+}
+
+/* Styling for elements *within* each column if needed */
+#container01.columns>.wrapper>.inner > div > * { /* Elements inside each column */
+  margin-bottom: var(--spacing);
+  margin-top: var(--spacing);
+}
+#container01.columns>.wrapper>.inner > div > *:first-child {
+  margin-top: 0 !important;
+}
+#container01.columns>.wrapper>.inner > div > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+/* Removing old complex padding/margin logic for columns based on the new flex approach */
+/*
+#container01.columns>.wrapper>.inner>* {
+  padding: 0 0 0 var(--gutters);
+}
+#container01.columns>.wrapper>.inner>*:first-child {
+  margin-left: calc(var(--gutters) * -1);
+}
+#container01>.wrapper>.inner> :nth-child(1) {
+  width: calc(40% + (var(--gutters) / 2));
+}
+#container01>.wrapper>.inner> :nth-child(2) {
+  width: calc(60% + (var(--gutters) / 2));
+}
+*/
+
+/* Styles for .full class within columns (if still needed, review usage) */
+/* These rules for .full elements seem overly complex and might conflict with simpler flex column sizing.
+   It's often better to let the flex items (columns) control their content's width.
+   Review if these specific .full stylings are essential for your design. */
+
+#container01.default>.wrapper>.inner>.full,
+#container01.columns>.wrapper>.inner>div>.full { /* Simplified selector for .full inside columns */
+  margin-left: calc(var(--padding-horizontal) * -1);
+  /* max-width: none !important; */ /* Consider removing !important unless absolutely necessary */
+  width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px); /* This creates full-bleed effect */
+}
+
+#container01.default>.wrapper>.inner>.full:first-child,
+#container01.columns>.wrapper>.inner>div>.full:first-child {
+  margin-top: calc(var(--padding-vertical) * -1) !important;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#container01.default>.wrapper>.inner>.full:last-child,
+#container01.columns>.wrapper>.inner>div>.full:last-child {
+  margin-bottom: calc(var(--padding-vertical) * -1) !important;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+/* Image specific styles for #image01 (assuming it's inside the first column) */
+#image01 .frame { /* This rule was missing from your provided snippet, adding it from previous context */
+  width: 100%;
+  height: auto;
+  display: block; /* Ensure frame behaves as a block */
+  overflow: hidden;
+  /* border-radius: 0.5rem; */ /* Optional */
+}
+
+#image01 img { /* This rule was missing, adding it */
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Or 'contain' based on preference */
+  object-position: center; /* Or 'top' */
+  /* border-radius: inherit; */ /* Optional */
+}
+
+
+/* === MOBILE STYLES (Image Stacks) === */
+@media (max-width: 980px) {
+  html {
+    font-size: 11pt;
+  }
+
+  #container01.columns>.wrapper>.inner {
+    flex-direction: column !important;
+    align-items: center !important; /* Center items when stacked */
+  }
+
+  /* Reset padding used for desktop side-by-side layout */
+  #container01.columns>.wrapper>.inner > div:nth-child(1),
+  #container01.columns>.wrapper>.inner > div:nth-child(2) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important; /* Columns take full width of their parent */
+    flex-basis: auto !important; /* Reset flex-basis */
+  }
+
+  /* Image column when stacked */
+  #container01.columns>.wrapper>.inner > div:nth-child(1) {
+    margin-bottom: var(--spacing, 1.5rem); /* Space below image */
+    max-width: 300px; /* Constrain image width on mobile */
+    width: 80%; /* Or a percentage that looks good centered */
+  }
+
+  /* Text column when stacked */
+  #container01.columns>.wrapper>.inner > div:nth-child(2) {
+    text-align: center; /* Or left, as per your preference */
+  }
+
+  /* Remove or adjust overly complex rules for .full on mobile if they cause issues */
+  /* The following rules for .full might need to be simplified or removed for mobile if columns stack to full width. */
+  #container01.columns>.wrapper>.inner>div>.full,
+  #container01.columns>.wrapper>.inner>div:first-of-type>.full,
+  #container01.columns>.wrapper>.inner>div:last-of-type>.full {
+    margin-left: 0; /* Reset negative margins if content is centered */
+    width: 100%;   /* Let it be 100% of its parent column */
+  }
+
+  #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.image img {
+    max-height: 25rem; /* Adjusted from 35rem for better proportion */
+  }
+
+  /* Retaining your original rules for element widths inside columns FOR THIS BREAKPOINT, as mobile was working for you */
+  /* These might need review if the image/text alignment looks off after other centering changes. */
+  /*
+  #container01>.wrapper>.inner> :nth-child(1) {
+    min-height: 100% !important; // This is problematic for image aspect ratio.
+    width: 100% !important;
+  }
+
+  #container01>.wrapper>.inner> :nth-child(2) {
+    min-height: 100% !important;
+    width: 100% !important;
+  }
+  */
+}
+
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt; /* Already set at 980px, but fine */
+  }
+
+  #main>.inner {
+    --padding-horizontal: 1rem;
+    --padding-vertical: 1rem;
+    --spacing: 1.5rem; /* Adjusted from 3rem */
+  }
+
+  /* Text sizing remains as per your original */
+  #text02 { letter-spacing: -0.109375rem; width: 100%; font-size: 2.5em; line-height: 1.125; } /* Reduced font-size slightly */
+  #text03, #text06, #text04, #text05, #text01 { letter-spacing: 0rem; width: 100%; font-size: 1em; line-height: 1.65; } /* Adjusted line-height */
+
+
+  #container01>.wrapper>.inner {
+    /* --gutters: 8rem; */ /* This is still very large, ensure it's effectively overridden or reduced */
+    --padding-horizontal: 1.5rem; /* Adjusted from 2.5rem */
+    --padding-vertical: 2rem;   /* Adjusted from 4rem */
+    --spacing: 1.5rem; /* Adjusted from 1.75rem */
+  }
+   #container01.columns>.wrapper>.inner > div:nth-child(1) { /* Image container */
+    max-width: 240px; /* Further constrain image width */
+   }
+
+  #container01 {
+    min-height: 15rem; /* Adjusted */
+  }
+
+  /* Image frame and image: Prioritize auto height for responsiveness */
+  #image01 .frame,
+  #image01 img {
+    height: auto !important; /* Let aspect ratio determine height */
+  }
+  /* Removing your fixed height for #image01 .frame at this breakpoint
+  #image01 .frame {
+    height: 25rem !important;
+  }
+  #image01 img {
+    height: 100% !important;
+  }
+  */
+}
+
+@media (max-width: 480px) {
+  #main>.inner {
+    --spacing: 1.25rem; /* Adjusted */
+  }
+   #container01.columns>.wrapper>.inner > div:nth-child(1) { /* Image container */
+    max-width: 200px;
+   }
+
+  /* Image frame and image: Prioritize auto height for responsiveness */
+  #image01 .frame,
+  #image01 img {
+    height: auto !important; /* Let aspect ratio determine height */
+  }
+  /* Removing your fixed height:
+  #image01 .frame {
+    height: 20rem !important;
+  }
+  */
+
+  #container01>.wrapper>.inner {
+    --spacing: 1.25rem; /* Adjusted */
+  }
+}
+
+@media (max-width: 360px) {
+  #main>.inner {
+    --padding-horizontal: 0.75rem;
+    --padding-vertical: 0.75rem;
+    --spacing: 1rem; /* Adjusted */
+  }
+
+  #text02 { font-size: 2em; } /* Further reduced */
+
+   #container01.columns>.wrapper>.inner > div:nth-child(1) { /* Image container */
+    max-width: 180px;
+   }
+
+  /* Image frame and image: Prioritize auto height for responsiveness */
+  #image01 .frame,
+  #image01 img {
+    height: auto !important; /* Let aspect ratio determine height */
+  }
+  /* Removing your fixed height:
+  #image01 .frame {
+    height: 17.5rem !important;
+  }
+  */
+
+  #container01>.wrapper>.inner {
+    /* --gutters: 8rem; */ /* Still very large, ensure overridden or reduced */
+    --padding-horizontal: 1rem; /* Adjusted */
+    --padding-vertical: 1.5rem; /* Adjusted */
+    --spacing: 1rem; /* Adjusted */
+  }
+
+  #container01 {
+    min-height: 10rem; /* Adjusted */
+  }
+}
+
+/* Ensure that the image01 rules specific to your image element are present */
+/* If #image01 is not already styled for width/height, these are crucial */
+/* These might already be in your main CSS, but ensure they exist: */
+.image { /* General class for image containers if used */
+  display: block;
+  line-height: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.image .frame {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  display: inline-block; /* Or block if it's meant to take full width of parent */
+  max-width: 100%;
+  overflow: hidden;
+  vertical-align: top;
+  width: 100%; /* Make frame take 100% of its parent (e.g. the image column) */
+}
+
+.image .frame img {
+  border-radius: 0 !important; /* Or inherit if frame has radius */
+  max-width: 100%;
+  vertical-align: top;
+  width: inherit; /* Inherits width from .frame, which is 100% */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Default, adjust as needed */
+}
   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
 <path d="M 11 4 C 7.1456661 4 4 7.1456661 4 11 L 4 39 C 4 42.854334 7.1456661 46 11 46 L 39 46 C 42.854334 46 46 42.854334 46 39 L 46 11 C 46 7.1456661 42.854334 4 39 4 L 11 4 z M 11 6 L 39 6 C 41.773666 6 44 8.2263339 44 11 L 44 39 C 44 41.773666 41.773666 44 39 44 L 11 44 C 8.2263339 44 6 41.773666 6 39 L 6 11 C 6 8.2263339 8.2263339 6 11 6 z M 13.085938 13 L 22.308594 26.103516 L 13 37 L 15.5 37 L 23.4375 27.707031 L 29.976562 37 L 37.914062 37 L 27.789062 22.613281 L 36 13 L 33.5 13 L 26.660156 21.009766 L 21.023438 13 L 13.085938 13 z M 16.914062 15 L 19.978516 15 L 34.085938 35 L 31.021484 35 L 16.914062 15 z"></path>
 </svg>
@@ -1245,39 +1114,39 @@
                 <div class="wrapper">
                     <div class="inner">
                         <div class="column">
-                            <div id="image01" class="image full" data-position="top">
+                            <div id="image01" class="image" data-position="top">
                                 <span class="frame"><img src="assets/images/mastafa_ethics_llm.jpeg" alt="Photo of Mastafa Foufa" /></span>
                             </div>
                         </div>
                         <div class="column">
                             <h1 id="text02">Mastafa Foufa</h1>
-                        <p id="text03">Hi, I'm <strong>Mastafa Foufa</strong>, an <strong>Applied Scientist and Innovator</strong> at <a href="https://microsoft.com/"><strong>Microsoft</strong></a>. I drive AI innovation to solve complex challenges and empower businesses.</p>
-                        <p id="text03">My <strong>8 AI patents</strong> underscore my commitment to advancing the field. I develop and deploy cutting-edge AI solutions.</p>
-                        <p id="text03">As <strong>founder of MHF</strong> (established 2020), I equip startups and small to medium businesses with AI strategies, guiding them to harness AI for growth and innovation.</p>
-                        <p id="text03">My real-world expertise also shapes my <strong>teaching of Master's degree students at EPITA Paris</strong> in advanced Natural Language Processing (NLP), blending practical application with cutting-edge theory.</p>
+                            <p id="text03">Hi, I'm <strong>Mastafa Foufa</strong>, an <strong>Applied Scientist and Innovator</strong> at <a href="https://microsoft.com/"><strong>Microsoft</strong></a>. I drive AI innovation to solve complex challenges and empower businesses.</p>
+                            <p id="text03">My <strong>8 AI patents</strong> underscore my commitment to advancing the field. I develop and deploy cutting-edge AI solutions.</p>
+                            <p id="text03">As <strong>founder of MHF</strong> (established 2020), I equip startups and small to medium businesses with AI strategies, guiding them to harness AI for growth and innovation.</p>
+                            <p id="text03">My real-world expertise also shapes my <strong>teaching of Master's degree students at EPITA Paris</strong> in advanced Natural Language Processing (NLP), blending practical application with cutting-edge theory.</p>
                             <p id="text06"><span class="p"><strong>Currently</strong>:<br />
-                                🔥 <strong>Applied Scientist @ <a href="https://microsoft.com/">Microsoft</a></strong> (<em>4+ YOE in high-impact AI/ML projects</em>) <br />
-                                🌟 <strong>Founder @ MHF</strong> (<em>AI agency, established 2020</em>)<br />
-                                ✍️ <strong>Data Science Author @ <a href="https://medium.com/@mastafa.foufa">Medium</a></strong> (<em>900+ followers</em> | on pause)
-                                </span></p>
+                                    🔥 <strong>Applied Scientist @ <a href="https://microsoft.com/">Microsoft</a></strong> (<em>4+ YOE in high-impact AI/ML projects</em>) <br />
+                                    🌟 <strong>Founder @ MHF</strong> (<em>AI agency, established 2020</em>)<br />
+                                    ✍️ <strong>Data Science Author @ <a href="https://medium.com/@mastafa.foufa">Medium</a></strong> (<em>900+ followers</em> | on pause)
+                                    </span></p>
 
                             <p id="text04"><span class="p"><strong>Previously</strong>:<br />
-                                👩‍🏫 <strong>Lead Instructor of Advanced NLP @ EPITA Paris</strong><br />
-                                🛠️ <strong>Tech Lead @ Improov</strong>
-                                </span></p>
+                                    👩‍🏫 <strong>Lead Instructor of Advanced NLP @ EPITA Paris</strong><br />
+                                    🛠️ <strong>Tech Lead @ Improov</strong>
+                                    </span></p>
 
                             <p id="text05"><span class="p"><strong>My latest AI Patents</strong> 🔬<br />
-                                You can explore my full patent portfolio on <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=">Google Scholar</a>.<br />
-                                ➡️ <a href="https://patents.google.com/patent/US20230247072A1/en"><strong>Optimizing Richness in Remote Meetings:</strong></a> AI-driven solutions for more engaging virtual collaboration.<br />
-                                ➡️ <a href="https://patents.google.com/patent/US20230206143A1/en"><strong>Computing Experience Personalization to Enhance User Productivity:</strong></a> Crafting intelligent systems that adapt to individual user needs.<br />
-                                ➡️ <a href="https://patents.google.com/patent/US20230042015A1/en"><strong>Shared Visual Content Filtering During Virtual Meetings:</strong></a> Streamlining information flow in collaborative environments.
-                                </span></p>
+                                    You can explore my full patent portfolio on <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=">Google Scholar</a>.<br />
+                                    ➡️ <a href="https://patents.google.com/patent/US20230247072A1/en"><strong>Optimizing Richness in Remote Meetings:</strong></a> AI-driven solutions for more engaging virtual collaboration.<br />
+                                    ➡️ <a href="https://patents.google.com/patent/US20230206143A1/en"><strong>Computing Experience Personalization to Enhance User Productivity:</strong></a> Crafting intelligent systems that adapt to individual user needs.<br />
+                                    ➡️ <a href="https://patents.google.com/patent/US20230042015A1/en"><strong>Shared Visual Content Filtering During Virtual Meetings:</strong></a> Streamlining information flow in collaborative environments.
+                                    </span></p>
 
                             <p id="text05"><span class="p"><strong>My top online contributions</strong> 🧠<br />
-                                📈 <a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317"><strong>Machine Learning in Non-Euclidean Spaces:</strong></a> Advancing the theoretical and practical application of ML in complex data domains.<br />
-                                🗣️ <a href="https://patents.google.com/patent/US20220417047A1/en"><strong>AI-Powered Name Pronunciation:</strong></a> Developing sophisticated linguistic AI for global communication.<br />
-                                🔎 <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600"><strong>Multilingual Anomaly Detection:</strong></a> Building robust AI systems for identifying unusual patterns across diverse datasets.
-                                </span></p>
+                                    📈 <a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317"><strong>Machine Learning in Non-Euclidean Spaces:</strong></a> Advancing the theoretical and practical application of ML in complex data domains.<br />
+                                    🗣️ <a href="https://patents.google.com/patent/US20220417047A1/en"><strong>AI-Powered Name Pronunciation:</strong></a> Developing sophisticated linguistic AI for global communication.<br />
+                                    🔎 <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600"><strong>Multilingual Anomaly Detection:</strong></a> Building robust AI systems for identifying unusual patterns across diverse datasets.
+                                    </span></p>
 
                             <p id="text03"><span class="p"><strong>Looking to partner on impactful AI initiatives?</strong> 🤝 Fill out my <a href="https://forms.gle/pC5g9nCvmFqzM2mU8">contact form</a>! 📝</span></p>
 
