@@ -695,394 +695,524 @@
     #image01 .frame img {
       transition: none;
     }
-.container {
-  position: relative;
-}
 
-.container>.wrapper {
-  vertical-align: top; /* Has effect only on inline-block or table-cell elements */
-  position: relative;
-  max-width: 100%;
-  border-radius: inherit;
-}
+    .container {
+      position: relative;
+    }
 
-.container>.wrapper>.inner {
-  vertical-align: top; /* Has effect only on inline-block or table-cell elements */
-  position: relative;
-  max-width: 100%;
-  border-radius: inherit;
-  text-align: var(--alignment);
-}
+    .container>.wrapper {
+      vertical-align: top;
+      position: relative;
+      max-width: 100%;
+      border-radius: inherit;
+    }
 
-#main .container.full:first-child>.wrapper {
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-}
+    .container>.wrapper>.inner {
+      vertical-align: top;
+      position: relative;
+      max-width: 100%;
+      border-radius: inherit;
+      text-align: var(--alignment);
+    }
 
-#main .container.full:last-child>.wrapper {
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
-}
+    #main .container.full:first-child>.wrapper {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
 
-#main .container.full:first-child>.wrapper>.inner {
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-}
+    #main .container.full:last-child>.wrapper {
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
 
-#main .container.full:last-child>.wrapper>.inner {
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
-}
+    #main .container.full:first-child>.wrapper>.inner {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
 
-#container01 {
-  display: flex; /* This makes #container01 a flex container. Its children are .wrapper */
-  width: 100%;
-  min-height: 24rem;
-  align-items: center; /* Aligns .wrapper vertically if #container01 has extra height */
-  justify-content: center; /* Centers .wrapper horizontally if #container01 has extra width */
-  background-image: linear-gradient(45deg, #0F0D0D 13%, rgba(0, 0, 0, 0.761) 45%);
-  background-position: 0% 0%;
-  background-repeat: repeat; /* Consider 'no-repeat' if it's a specific background image */
-  background-size: cover;
-  box-shadow: 0rem 1.375rem 5rem 2rem rgba(0, 0, 0, 0.251);
-  border-radius: 1rem;
-}
+    #main .container.full:last-child>.wrapper>.inner {
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
 
-#container01>.wrapper {
-  /* max-width: var(--width); */ /* This variable needs to be defined, or use a fixed value e.g., 1200px */
-  max-width: 70rem; /* Example: a common max-width for content, adjust as needed */
-  width: 100%;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
+    #container01 {
+      display: flex;
+      width: 100%;
+      min-height: 24rem;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(45deg, #0F0D0D 13%, rgba(0, 0, 0, 0.761) 45%);
+      background-position: 0% 0%;
+      background-repeat: repeat;
+      background-size: cover;
+      box-shadow: 0rem 1.375rem 5rem 2rem rgba(0, 0, 0, 0.251);
+      border-radius: 1rem;
+    }
 
-#container01>.wrapper>.inner {
-  /* --gutters: 8rem; */ /* This seems very large for gutters. Reducing for better spacing. */
-  --gutters: 2rem; /* Adjusted default gutter size */
-  --padding-horizontal: clamp(1rem, 4vw, 3rem); /* Adjusted responsive padding */
-  --padding-vertical: clamp(1.5rem, 5vh, 3rem);   /* Adjusted responsive padding */
-  --spacing: 1.75rem; /* Used for margins between elements inside columns */
-  padding: var(--padding-vertical) var(--padding-horizontal);
-  box-sizing: border-box;
-}
+    #container01>.wrapper>.inner {
+      --gutters: 8rem;
+      --padding-horizontal: 4rem;
+      --padding-vertical: 4rem;
+      --spacing: 1.75rem;
+      padding: var(--padding-vertical) var(--padding-horizontal);
+    }
 
-/* Default layout for items directly within .inner (not columns) */
-#container01.default>.wrapper>.inner>* {
-  margin-bottom: var(--spacing);
-  margin-top: var(--spacing);
-}
+    #container01>.wrapper {
+      max-width: var(--width);
+      width: 100%;
+    }
 
-#container01.default>.wrapper>.inner>*:first-child {
-  margin-top: 0 !important;
-}
+    #container01.default>.wrapper>.inner>* {
+      margin-bottom: var(--spacing);
+      margin-top: var(--spacing);
+    }
 
-#container01.default>.wrapper>.inner>*:last-child {
-  margin-bottom: 0 !important;
-}
+    #container01.default>.wrapper>.inner>*:first-child {
+      margin-top: 0 !important;
+    }
 
+    #container01.default>.wrapper>.inner>*:last-child {
+      margin-bottom: 0 !important;
+    }
 
-/* === DESKTOP COLUMN STYLES (Image on Left) === */
-/* Applied when .columns class is present and screen is wider than mobile breakpoints */
+    #container01.columns>.wrapper>.inner {
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+    }
 
-#container01.columns>.wrapper>.inner {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  /* gap: var(--gutters, 2rem); */ /* Modern way for spacing, if used, remove specific padding on children for gap */
-}
+    #container01.columns>.wrapper>.inner>* {
+      flex-grow: 0;
+      flex-shrink: 0;
+      max-width: 100%;
+      text-align: var(--alignment);
+      padding: 0 0 0 var(--gutters);
+    }
 
-/* Child div containers for image and text (the columns themselves) */
-#container01.columns>.wrapper>.inner > div { /* Targeting the direct div children as columns */
-  box-sizing: border-box;
-}
+    #container01.columns>.wrapper>.inner>*>* {
+      margin-bottom: var(--spacing);
+      margin-top: var(--spacing);
+    }
 
-/* Image Column (Left) */
-#container01.columns>.wrapper>.inner > div:nth-child(1) {
-  flex-basis: 35%; /* Adjust percentage for image width */
-  flex-shrink: 0;
-  padding-right: calc(var(--gutters, 2rem) / 2); /* Space on the right of the image column */
-}
+    #container01.columns>.wrapper>.inner>*>*:first-child {
+      margin-top: 0 !important;
+    }
 
-/* Text Column (Right) */
-#container01.columns>.wrapper>.inner > div:nth-child(2) {
-  flex-basis: 65%; /* Adjust percentage for text width */
-  flex-grow: 1;
-  padding-left: calc(var(--gutters, 2rem) / 2); /* Space on the left of the text column */
-}
+    #container01.columns>.wrapper>.inner>*>*:last-child {
+      margin-bottom: 0 !important;
+    }
 
-/* Styling for elements *within* each column if needed */
-#container01.columns>.wrapper>.inner > div > * { /* Elements inside each column */
-  margin-bottom: var(--spacing);
-  margin-top: var(--spacing);
-}
-#container01.columns>.wrapper>.inner > div > *:first-child {
-  margin-top: 0 !important;
-}
-#container01.columns>.wrapper>.inner > div > *:last-child {
-  margin-bottom: 0 !important;
-}
+    #container01.columns>.wrapper>.inner>*:first-child {
+      margin-left: calc(var(--gutters) * -1);
+    }
 
+    #container01.default>.wrapper>.inner>.full {
+      margin-left: calc(var(--padding-horizontal) * -1);
+      max-width: none !important;
+      width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+    }
 
-/* Removing old complex padding/margin logic for columns based on the new flex approach */
-/*
-#container01.columns>.wrapper>.inner>* {
-  padding: 0 0 0 var(--gutters);
-}
-#container01.columns>.wrapper>.inner>*:first-child {
-  margin-left: calc(var(--gutters) * -1);
-}
-#container01>.wrapper>.inner> :nth-child(1) {
-  width: calc(40% + (var(--gutters) / 2));
-}
-#container01>.wrapper>.inner> :nth-child(2) {
-  width: calc(60% + (var(--gutters) / 2));
-}
-*/
+    #container01.default>.wrapper>.inner>.full:first-child {
+      margin-top: calc(var(--padding-vertical) * -1) !important;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
 
-/* Styles for .full class within columns (if still needed, review usage) */
-/* These rules for .full elements seem overly complex and might conflict with simpler flex column sizing.
-   It's often better to let the flex items (columns) control their content's width.
-   Review if these specific .full stylings are essential for your design. */
+    #container01.default>.wrapper>.inner>.full:last-child {
+      margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
 
-#container01.default>.wrapper>.inner>.full,
-#container01.columns>.wrapper>.inner>div>.full { /* Simplified selector for .full inside columns */
-  margin-left: calc(var(--padding-horizontal) * -1);
-  /* max-width: none !important; */ /* Consider removing !important unless absolutely necessary */
-  width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px); /* This creates full-bleed effect */
-}
+    #container01.columns>.wrapper>.inner>div>.full {
+      margin-left: calc(var(--gutters) * -0.5);
+      max-width: none !important;
+      width: calc(100% + var(--gutters) + 0.4725px);
+    }
 
-#container01.default>.wrapper>.inner>.full:first-child,
-#container01.columns>.wrapper>.inner>div>.full:first-child {
-  margin-top: calc(var(--padding-vertical) * -1) !important;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-}
+    #container01.columns>.wrapper>.inner>div:first-child>.full {
+      margin-left: calc(var(--padding-horizontal) * -1);
+      width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+    }
 
-#container01.default>.wrapper>.inner>.full:last-child,
-#container01.columns>.wrapper>.inner>div>.full:last-child {
-  margin-bottom: calc(var(--padding-vertical) * -1) !important;
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
-}
+    #container01.columns>.wrapper>.inner>div:last-child>.full {
+      width: calc(100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) + 0.4725px);
+    }
 
-/* Image specific styles for #image01 (assuming it's inside the first column) */
-#image01 .frame { /* This rule was missing from your provided snippet, adding it from previous context */
-  width: 100%;
-  height: auto;
-  display: block; /* Ensure frame behaves as a block */
-  overflow: hidden;
-  /* border-radius: 0.5rem; */ /* Optional */
-}
+    #container01.columns>.wrapper>.inner>div>.full:first-child {
+      margin-top: calc(var(--padding-vertical) * -1) !important;
+    }
 
-#image01 img { /* This rule was missing, adding it */
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Or 'contain' based on preference */
-  object-position: center; /* Or 'top' */
-  /* border-radius: inherit; */ /* Optional */
-}
+    #container01.columns>.wrapper>.inner>div>.full:last-child {
+      margin-bottom: calc(var(--padding-vertical) * -1) !important;
+    }
 
+    #container01.columns>.wrapper>.inner>.full {
+      align-self: stretch;
+      min-height: 24rem;
+    }
 
-/* === MOBILE STYLES (Image Stacks) === */
-@media (max-width: 980px) {
-  html {
-    font-size: 11pt;
-  }
+    #container01.columns>.wrapper>.inner>.full:first-child {
+      border-bottom-left-radius: inherit;
+      border-top-left-radius: inherit;
+    }
 
-  #container01.columns>.wrapper>.inner {
-    flex-direction: column !important;
-    align-items: center !important; /* Center items when stacked */
-  }
+    #container01.columns>.wrapper>.inner>.full:last-child {
+      border-bottom-right-radius: inherit;
+      border-top-right-radius: inherit;
+    }
 
-  /* Reset padding used for desktop side-by-side layout */
-  #container01.columns>.wrapper>.inner > div:nth-child(1),
-  #container01.columns>.wrapper>.inner > div:nth-child(2) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    width: 100% !important; /* Columns take full width of their parent */
-    flex-basis: auto !important; /* Reset flex-basis */
-  }
+    #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
+      border-radius: inherit;
+      height: calc(100% + (var(--padding-vertical) * 2));
+    }
 
-  /* Image column when stacked */
-  #container01.columns>.wrapper>.inner > div:nth-child(1) {
-    margin-bottom: var(--spacing, 1.5rem); /* Space below image */
-    max-width: 300px; /* Constrain image width on mobile */
-    width: 80%; /* Or a percentage that looks good centered */
-  }
+    #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
+      border-radius: inherit;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
 
-  /* Text column when stacked */
-  #container01.columns>.wrapper>.inner > div:nth-child(2) {
-    text-align: center; /* Or left, as per your preference */
-  }
+    #container01>.wrapper>.inner> :nth-child(1) {
+      width: calc(40% + (var(--gutters) / 2));
+    }
 
-  /* Remove or adjust overly complex rules for .full on mobile if they cause issues */
-  /* The following rules for .full might need to be simplified or removed for mobile if columns stack to full width. */
-  #container01.columns>.wrapper>.inner>div>.full,
-  #container01.columns>.wrapper>.inner>div:first-of-type>.full,
-  #container01.columns>.wrapper>.inner>div:last-of-type>.full {
-    margin-left: 0; /* Reset negative margins if content is centered */
-    width: 100%;   /* Let it be 100% of its parent column */
-  }
+    #container01>.wrapper>.inner> :nth-child(2) {
+      width: calc(60% + (var(--gutters) / 2));
+    }
 
-  #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.image img {
-    max-height: 25rem; /* Adjusted from 35rem for better proportion */
-  }
+    @media (max-width: 1920px) {}
 
-  /* Retaining your original rules for element widths inside columns FOR THIS BREAKPOINT, as mobile was working for you */
-  /* These might need review if the image/text alignment looks off after other centering changes. */
-  /*
-  #container01>.wrapper>.inner> :nth-child(1) {
-    min-height: 100% !important; // This is problematic for image aspect ratio.
-    width: 100% !important;
-  }
+    @media (max-width: 1680px) {
+      html {
+        font-size: 13pt;
+      }
+    }
 
-  #container01>.wrapper>.inner> :nth-child(2) {
-    min-height: 100% !important;
-    width: 100% !important;
-  }
-  */
-}
+    @media (max-width: 1280px) {
+      html {
+        font-size: 13pt;
+      }
+    }
 
-@media (max-width: 736px) {
-  html {
-    font-size: 11pt; /* Already set at 980px, but fine */
-  }
+    @media (max-width: 1024px) {}
 
-  #main>.inner {
-    --padding-horizontal: 1rem;
-    --padding-vertical: 1rem;
-    --spacing: 1.5rem; /* Adjusted from 3rem */
-  }
+    @media (max-width: 980px) {
+      html {
+        font-size: 11pt;
+      }
 
-  /* Text sizing remains as per your original */
-  #text02 { letter-spacing: -0.109375rem; width: 100%; font-size: 2.5em; line-height: 1.125; } /* Reduced font-size slightly */
-  #text03, #text06, #text04, #text05, #text01 { letter-spacing: 0rem; width: 100%; font-size: 1em; line-height: 1.65; } /* Adjusted line-height */
+      #container01.columns>.wrapper>.inner {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+      }
 
+      #container01.columns>.wrapper>.inner>span {
+        height: 0;
+        margin-top: calc(var(--gutters) * -1);
+        pointer-events: none;
+        visibility: hidden;
+      }
 
-  #container01>.wrapper>.inner {
-    /* --gutters: 8rem; */ /* This is still very large, ensure it's effectively overridden or reduced */
-    --padding-horizontal: 1.5rem; /* Adjusted from 2.5rem */
-    --padding-vertical: 2rem;   /* Adjusted from 4rem */
-    --spacing: 1.5rem; /* Adjusted from 1.75rem */
-  }
-   #container01.columns>.wrapper>.inner > div:nth-child(1) { /* Image container */
-    max-width: 240px; /* Further constrain image width */
-   }
+      #container01.columns>.wrapper>.inner>*:first-child {
+        margin-left: 0 !important;
+        padding-top: 0 !important;
+      }
 
-  #container01 {
-    min-height: 15rem; /* Adjusted */
-  }
+      #container01.columns>.wrapper>.inner>* {
+        padding: calc(var(--gutters) * 0.5) 0 !important;
+      }
 
-  /* Image frame and image: Prioritize auto height for responsiveness */
-  #image01 .frame,
-  #image01 img {
-    height: auto !important; /* Let aspect ratio determine height */
-  }
-  /* Removing your fixed height for #image01 .frame at this breakpoint
-  #image01 .frame {
-    height: 25rem !important;
-  }
-  #image01 img {
-    height: 100% !important;
-  }
-  */
-}
+      #container01.columns>.wrapper>.inner>*:last-child {
+        padding-bottom: 0 !important;
+      }
 
-@media (max-width: 480px) {
-  #main>.inner {
-    --spacing: 1.25rem; /* Adjusted */
-  }
-   #container01.columns>.wrapper>.inner > div:nth-child(1) { /* Image container */
-    max-width: 200px;
-   }
+      #container01.columns>.wrapper>.inner>div>.full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
 
-  /* Image frame and image: Prioritize auto height for responsiveness */
-  #image01 .frame,
-  #image01 img {
-    height: auto !important; /* Let aspect ratio determine height */
-  }
-  /* Removing your fixed height:
-  #image01 .frame {
-    height: 20rem !important;
-  }
-  */
+      #container01.columns>.wrapper>.inner>div:first-of-type>.full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
 
-  #container01>.wrapper>.inner {
-    --spacing: 1.25rem; /* Adjusted */
-  }
-}
+      #container01.columns>.wrapper>.inner>div:last-of-type>.full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
 
-@media (max-width: 360px) {
-  #main>.inner {
-    --padding-horizontal: 0.75rem;
-    --padding-vertical: 0.75rem;
-    --spacing: 1rem; /* Adjusted */
-  }
+      #container01.columns>.wrapper>.inner>div>.full:first-child {
+        margin-top: calc(var(--gutters) * -0.5) !important;
+      }
 
-  #text02 { font-size: 2em; } /* Further reduced */
+      #container01.columns>.wrapper>.inner>div>.full:last-child {
+        margin-bottom: calc(var(--gutters) * -0.5) !important;
+      }
 
-   #container01.columns>.wrapper>.inner > div:nth-child(1) { /* Image container */
-    max-width: 180px;
-   }
+      #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
 
-  /* Image frame and image: Prioritize auto height for responsiveness */
-  #image01 .frame,
-  #image01 img {
-    height: auto !important; /* Let aspect ratio determine height */
-  }
-  /* Removing your fixed height:
-  #image01 .frame {
-    height: 17.5rem !important;
-  }
-  */
+      #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
 
-  #container01>.wrapper>.inner {
-    /* --gutters: 8rem; */ /* Still very large, ensure overridden or reduced */
-    --padding-horizontal: 1rem; /* Adjusted */
-    --padding-vertical: 1.5rem; /* Adjusted */
-    --spacing: 1rem; /* Adjusted */
-  }
+      #container01.columns>.wrapper>.inner>div:first-of-type,
+      #container01.columns>.wrapper>.inner>div:first-of-type>.full:first-child {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
 
-  #container01 {
-    min-height: 10rem; /* Adjusted */
-  }
-}
+      #container01.columns>.wrapper>.inner>div:last-of-type,
+      #container01.columns>.wrapper>.inner>div:last-of-type>.full:last-child {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
 
-/* Ensure that the image01 rules specific to your image element are present */
-/* If #image01 is not already styled for width/height, these are crucial */
-/* These might already be in your main CSS, but ensure they exist: */
-.image { /* General class for image containers if used */
-  display: block;
-  line-height: 0;
-  max-width: 100%;
-  position: relative;
-}
+      #container01.columns>.wrapper>.inner>div:first-of-type,
+      #container01.columns>.wrapper>.inner>div:first-of-type>.full:last-child {
+        border-bottom-left-radius: 0 !important;
+      }
 
-.image .frame {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  display: inline-block; /* Or block if it's meant to take full width of parent */
-  max-width: 100%;
-  overflow: hidden;
-  vertical-align: top;
-  width: 100%; /* Make frame take 100% of its parent (e.g. the image column) */
-}
+      #container01.columns>.wrapper>.inner>div:last-of-type,
+      #container01.columns>.wrapper>.inner>div:last-of-type>.full:first-child {
+        border-top-right-radius: 0 !important;
+      }
 
-.image .frame img {
-  border-radius: 0 !important; /* Or inherit if frame has radius */
-  max-width: 100%;
-  vertical-align: top;
-  width: inherit; /* Inherits width from .frame, which is 100% */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Default, adjust as needed */
-}
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child {
+        height: auto;
+      }
+
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child>* {
+        height: auto;
+        position: relative;
+        width: auto;
+      }
+
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.image img {
+        max-height: 35rem;
+      }
+
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.slideshow .bg {
+        min-height: 35rem;
+      }
+
+      #container01>.wrapper>.inner> :nth-child(1) {
+        min-height: 100% !important;
+        width: 100% !important;
+      }
+
+      #container01>.wrapper>.inner> :nth-child(2) {
+        min-height: 100% !important;
+        width: 100% !important;
+      }
+    }
+
+    @media (max-width: 736px) {
+      html {
+        font-size: 11pt;
+      }
+
+      #main>.inner {
+        --padding-horizontal: 1rem;
+        --padding-vertical: 1rem;
+        --spacing: 3rem;
+      }
+
+      #text02 {
+        letter-spacing: -0.109375rem;
+        width: 100%;
+        font-size: 3em;
+        line-height: 1.125;
+      }
+
+      #text03 {
+        letter-spacing: 0rem;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.75;
+      }
+
+      #text06 {
+        letter-spacing: 0rem;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.75;
+      }
+
+      #text04 {
+        letter-spacing: 0rem;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.75;
+      }
+
+      #text05 {
+        letter-spacing: 0rem;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.75;
+      }
+
+      #text01 {
+        letter-spacing: 0rem;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.75;
+      }
+
+      #icons01 {
+        font-size: 1.5em;
+        gap: 1rem;
+      }
+
+      #icons01:not(:first-child) {
+        margin-top: 1.6875rem !important;
+      }
+
+      #icons01:not(:last-child) {
+        margin-bottom: 1.6875rem !important;
+      }
+
+      #image01 .frame {
+        height: 25rem !important;
+      }
+
+      #image01 img {
+        height: 100% !important;
+        object-fit: cover;
+        object-position: top;
+        width: 100% !important;
+      }
+
+      #container01>.wrapper>.inner {
+        --gutters: 8rem;
+        --padding-horizontal: 2.5rem;
+        --padding-vertical: 4rem;
+        --spacing: 1.75rem;
+      }
+
+      #container01 {
+        min-height: 18rem;
+      }
+
+      #container01.columns>.wrapper>.inner>* {
+        padding: calc(var(--gutters) * 0.5) 0 !important;
+      }
+
+      #container01.columns>.wrapper>.inner>.full {
+        min-height: 18rem;
+      }
+
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.image img {
+        max-height: none;
+      }
+
+      #container01.columns>.wrapper>.inner>.full>.full:first-child:last-child.slideshow .bg {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #main>.inner {
+        --spacing: 2.625rem;
+      }
+
+      #image01 .frame {
+        height: 20rem !important;
+      }
+
+      #container01>.wrapper>.inner {
+        --spacing: 1.53125rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      #main>.inner {
+        --padding-horizontal: 0.75rem;
+        --padding-vertical: 0.75rem;
+        --spacing: 2.25rem;
+      }
+
+      #text02 {
+        font-size: 3em;
+      }
+
+      #text03 {
+        font-size: 1em;
+      }
+
+      #text06 {
+        font-size: 1em;
+      }
+
+      #text04 {
+        font-size: 1em;
+      }
+
+      #text05 {
+        font-size: 1em;
+      }
+
+      #text01 {
+        font-size: 1em;
+      }
+
+      #icons01 {
+        gap: 0.75rem;
+      }
+
+      #image01 .frame {
+        height: 17.5rem !important;
+      }
+
+      #container01>.wrapper>.inner {
+        --gutters: 8rem;
+        --padding-horizontal: 1.875rem;
+        --padding-vertical: 3rem;
+        --spacing: 1.3125rem;
+      }
+
+      #container01 {
+        min-height: 12rem;
+      }
+
+      #container01.columns>.wrapper>.inner>.full {
+        min-height: 12rem;
+      }
+    }
+  </style><noscript>
+    <style>
+      body {
+        overflow: auto !important;
+      }
+
+      body:after {
+        display: none !important;
+      }
+
+      #main>.inner {
+        opacity: 1.0 !important;
+      }
+
+      #main {
+        opacity: 1.0 !important;
+        transform: none !important;
+        transition: none !important;
+        filter: none !important;
+      }
+    </style>
+  </noscript>
+</head>
+
   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
 <path d="M 11 4 C 7.1456661 4 4 7.1456661 4 11 L 4 39 C 4 42.854334 7.1456661 46 11 46 L 39 46 C 42.854334 46 46 42.854334 46 39 L 46 11 C 46 7.1456661 42.854334 4 39 4 L 11 4 z M 11 6 L 39 6 C 41.773666 6 44 8.2263339 44 11 L 44 39 C 44 41.773666 41.773666 44 39 44 L 11 44 C 8.2263339 44 6 41.773666 6 39 L 6 11 C 6 8.2263339 8.2263339 6 11 6 z M 13.085938 13 L 22.308594 26.103516 L 13 37 L 15.5 37 L 23.4375 27.707031 L 29.976562 37 L 37.914062 37 L 27.789062 22.613281 L 36 13 L 33.5 13 L 26.660156 21.009766 L 21.023438 13 L 13.085938 13 z M 16.914062 15 L 19.978516 15 L 34.085938 35 L 31.021484 35 L 16.914062 15 z"></path>
 </svg>
 
   
-<body class="">
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+<body class="is-loading"><svg xmlns="http://www.w3.org/2000/svg" version="1.1"
     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
     <symbol id="icon-instagram" viewBox="0 0 16 16">
       <path
@@ -1108,65 +1238,57 @@
         d="M12.1,13.8v19.1H5.7V13.8C5.7,13.8,12.1,13.8,12.1,13.8z M12.5,7.9c0,0.9-0.3,1.7-1,2.4c-0.7,0.6-1.5,0.9-2.6,0.9h0 c-1.1,0-1.9-0.3-2.5-0.9c-0.6-0.6-1-1.4-1-2.4c0-1,0.3-1.7,1-2.4S7.9,4.6,9,4.6s1.9,0.3,2.6,0.9S12.5,6.9,12.5,7.9z M35,22v11h-6.4 V22.7c0-1.4-0.3-2.4-0.8-3.2c-0.5-0.8-1.3-1.1-2.4-1.1c-0.8,0-1.5,0.2-2,0.7c-0.5,0.4-1,1-1.2,1.7c-0.1,0.4-0.2,0.9-0.2,1.6v10.7 h-6.4c0-5.1,0-9.3,0-12.5s0-5.1,0-5.7l0-0.9H22v2.8h0c0.3-0.4,0.5-0.8,0.8-1.1c0.3-0.3,0.6-0.6,1.1-1c0.5-0.4,1-0.6,1.7-0.8 c0.7-0.2,1.4-0.3,2.2-0.3c2.2,0,4,0.7,5.3,2.2C34.4,17,35,19.1,35,22L35,22z" />
     </symbol>
   </svg>
-<div id="wrapper">
+  <div id="wrapper">
     <div id="main">
-        <div class="inner">
-            <div id="container01" class="container columns">
-                <div class="wrapper">
-                    <div class="inner">
-                        <div class="column">
-                            <div id="image01" class="image" data-position="top">
-                                <span class="frame"><img src="assets/images/mastafa_ethics_llm.jpeg" alt="Photo of Mastafa Foufa" /></span>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <h1 id="text02">Mastafa Foufa</h1>
-                            <p id="text03">Hi, I'm <strong>Mastafa Foufa</strong>, an <strong>Applied Scientist and Innovator</strong> at <a href="https://microsoft.com/"><strong>Microsoft</strong></a>. I drive AI innovation to solve complex challenges and empower businesses.</p>
-                            <p id="text03">My <strong>8 AI patents</strong> underscore my commitment to advancing the field. I develop and deploy cutting-edge AI solutions.</p>
-                            <p id="text03">As <strong>founder of MHF</strong> (established 2020), I equip startups and small to medium businesses with AI strategies, guiding them to harness AI for growth and innovation.</p>
-                            <p id="text03">My real-world expertise also shapes my <strong>teaching of Master's degree students at EPITA Paris</strong> in advanced Natural Language Processing (NLP), blending practical application with cutting-edge theory.</p>
-                            <p id="text06"><span class="p"><strong>Currently</strong>:<br />
-                                    🔥 <strong>Applied Scientist @ <a href="https://microsoft.com/">Microsoft</a></strong> (<em>4+ YOE in high-impact AI/ML projects</em>) <br />
-                                    🌟 <strong>Founder @ MHF</strong> (<em>AI agency, established 2020</em>)<br />
-                                    ✍️ <strong>Data Science Author @ <a href="https://medium.com/@mastafa.foufa">Medium</a></strong> (<em>900+ followers</em> | on pause)
-                                    </span></p>
+      <div class="inner">
+        <div id="container01" class="container columns">
+          <div class="wrapper">
+            <div class="inner">
+              <div class="full">
+                <div id="image01" class="image full" data-position="top"><span class="frame"><img
+                      src="assets/images/mastafa_ethics_llm.jpeg" alt="Photo of Mastafa Foufa" /></span></div>
+              </div><div>
+  <h1 id="text02">Mastafa Foufa</h1>
+  <p id="text03">Hi, I'm <strong>Mastafa Foufa</strong>, a French <strong>Applied Scientist and Innovator</strong> at <a href="https://microsoft.com/"><strong>Microsoft</strong></a>. I am now based in Seattle and I drive AI innovation to solve complex challenges and empower businesses.</p>
+  <p id="text03">My <strong>8 AI patents</strong> underscore my commitment to advancing the field. I develop and deploy cutting-edge AI solutions.</p>
+  <p id="text03">As <strong>founder of MHF</strong> (established 2020), I equip startups and small to medium businesses with AI strategies, guiding them to harness AI for growth and innovation.</p>
+  <p id="text03">My real-world expertise also shapes my <strong>teaching of Master's degree students at EPITA Paris</strong> in advanced Natural Language Processing (NLP), blending practical application with cutting-edge theory.</p>
+      <p id="text06"><span class="p"><strong>Currently</strong>:<br />
+          🔥 <strong>Applied Scientist @ <a href="https://microsoft.com/">Microsoft</a></strong> (<em>4+ YOE in high-impact AI/ML projects</em>) <br />
+          🌟 <strong>Founder @ MHF</strong> (<em>AI agency, established 2020</em>)<br />
+          ✍️ <strong>Data Science Author @ <a href="https://medium.com/@mastafa.foufa">Medium</a></strong> (<em>900+ followers</em> | on pause)
+          </span></p>
 
-                            <p id="text04"><span class="p"><strong>Previously</strong>:<br />
-                                    👩‍🏫 <strong>Lead Instructor of Advanced NLP @ EPITA Paris</strong><br />
-                                    🛠️ <strong>Tech Lead @ Improov</strong>
-                                    </span></p>
+      <p id="text04"><span class="p"><strong>Previously</strong>:<br />
+          👩‍🏫 <strong>Lead Instructor of Advanced NLP @ EPITA Paris</strong><br />
+          🛠️ <strong>Tech Lead @ Improov</strong>
+          </span></p>
 
-                            <p id="text05"><span class="p"><strong>My latest AI Patents</strong> 🔬<br />
-                                    You can explore my full patent portfolio on <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=">Google Scholar</a>.<br />
-                                    ➡️ <a href="https://patents.google.com/patent/US20230247072A1/en"><strong>Optimizing Richness in Remote Meetings:</strong></a> AI-driven solutions for more engaging virtual collaboration.<br />
-                                    ➡️ <a href="https://patents.google.com/patent/US20230206143A1/en"><strong>Computing Experience Personalization to Enhance User Productivity:</strong></a> Crafting intelligent systems that adapt to individual user needs.<br />
-                                    ➡️ <a href="https://patents.google.com/patent/US20230042015A1/en"><strong>Shared Visual Content Filtering During Virtual Meetings:</strong></a> Streamlining information flow in collaborative environments.
-                                    </span></p>
+      <p id="text05"><span class="p"><strong>My latest AI Patents</strong> 🔬<br />
+          You can explore my full patent portfolio on <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=">Google Scholar</a>.<br />
+          ➡️ <a href="https://patents.google.com/patent/US20230247072A1/en"><strong>Optimizing Richness in Remote Meetings:</strong></a> AI-driven solutions for more engaging virtual collaboration.<br />
+          ➡️ <a href="https://patents.google.com/patent/US20230206143A1/en"><strong>Computing Experience Personalization to Enhance User Productivity:</strong></a> Crafting intelligent systems that adapt to individual user needs.<br />
+          ➡️ <a href="https://patents.google.com/patent/US20230042015A1/en"><strong>Shared Visual Content Filtering During Virtual Meetings:</strong></a> Streamlining information flow in collaborative environments.
+          </span></p>
 
-                            <p id="text05"><span class="p"><strong>My top online contributions</strong> 🧠<br />
-                                    📈 <a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317"><strong>Machine Learning in Non-Euclidean Spaces:</strong></a> Advancing the theoretical and practical application of ML in complex data domains.<br />
-                                    🗣️ <a href="https://patents.google.com/patent/US20220417047A1/en"><strong>AI-Powered Name Pronunciation:</strong></a> Developing sophisticated linguistic AI for global communication.<br />
-                                    🔎 <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600"><strong>Multilingual Anomaly Detection:</strong></a> Building robust AI systems for identifying unusual patterns across diverse datasets.
-                                    </span></p>
+      <p id="text05"><span class="p"><strong>My top online contributions</strong> 🧠<br />
+          📈 <a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317"><strong>Machine Learning in Non-Euclidean Spaces:</strong></a> Advancing the theoretical and practical application of ML in complex data domains.<br />
+          🗣️ <a href="https://patents.google.com/patent/US20220417047A1/en"><strong>AI-Powered Name Pronunciation:</strong></a> Developing sophisticated linguistic AI for global communication.<br />
+          🔎 <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600"><strong>Multilingual Anomaly Detection:</strong></a> Building robust AI systems for identifying unusual patterns across diverse datasets.
+          </span></p>
 
-                            <p id="text03"><span class="p"><strong>Looking to partner on impactful AI initiatives?</strong> 🤝 Fill out my <a href="https://forms.gle/pC5g9nCvmFqzM2mU8">contact form</a>! 📝</span></p>
+      <p id="text03"><span class="p"><strong>Looking to partner on impactful AI initiatives?</strong> 🤝 Fill out my <a href="https://forms.gle/pC5g9nCvmFqzM2mU8">contact form</a>! 📝</span></p>
 
-                            <p id="text01"><strong>Get in touch with me:</strong></p>
-                            <ul id="icons01" class="container icons">
-                                <li><a class="n01" href="https://www.instagram.com/mastafahf/?hl=en" aria-label="Instagram"><svg><use xlink:href="#icon-instagram"></use></svg><span class="label">Instagram</span></a></li>
-                                <li><a class="n02" href="mailto:mastafa.foufa@hotmail.com" aria-label="Email"><svg><use xlink:href="#icon-c3c8e1063e3b7f84f6b54712741de139"></use></svg><span class="label">Email</span></a></li>
-                                <li><a class="n03" href="https://medium.com/@mastafa.foufa" aria-label="Medium"><svg><use xlink:href="#icon-7ba57a956e94fa64bf7f65dd78b6b627"></use></svg><span class="label">Medium</span></a></li>
-                                <li><a class="n04" href="https://www.linkedin.com/in/mastafa-foufa/" aria-label="LinkedIn"><svg><use xlink:href="#icon-bf393d6ea48a4e69e1ed58a3563b94a5"></use></svg><span class="label">LinkedIn</span></a></li>
-                                <li><a class="n05" href="https://x.com/mastafahf" aria-label="X"><svg><use xlink:href="#icon-x"></use></svg><span class="label">X</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <p id="text01"><strong>Get in touch with me:</strong></p>
+      <ul id="icons01" class="container icons">
+          <li><a class="n01" href="https://www.instagram.com/mastafahf/?hl=en" aria-label="Instagram"><svg><use xlink:href="#icon-instagram"></use></svg><span class="label">Instagram</span></a></li>
+          <li><a class="n02" href="mailto:mastafa.foufa@hotmail.com" aria-label="Email"><svg><use xlink:href="#icon-c3c8e1063e3b7f84f6b54712741de139"></use></svg><span class="label">Email</span></a></li>
+          <li><a class="n03" href="https://medium.com/@mastafa.foufa" aria-label="Medium"><svg><use xlink:href="#icon-7ba57a956e94fa64bf7f65dd78b6b627"></use></svg><span class="label">Medium</span></a></li>
+          <li><a class="n04" href="https://www.linkedin.com/in/mastafa-foufa/" aria-label="LinkedIn"><svg><use xlink:href="#icon-bf393d6ea48a4e69e1ed58a3563b94a5"></use></svg><span class="label">LinkedIn</span></a></li>
+          <li><a class="n05" href="https://x.com/mastafahf" aria-label="X"><svg><use xlink:href="#icon-x"></use></svg><span class="label">X</span></a></li>
+      </ul>
 </div>
-<script>(function () { var on = addEventListener, $ = function (q) { return document.querySelector(q) }, $$ = function (q) { return document.querySelectorAll(q) }, $body = document.body, $inner = $('.inner'), client = (function () { var o = { browser: 'other', browserVersion: 0, os: 'other', osVersion: 0, mobile: false, canUse: null, flags: { lsdUnits: false, }, }, ua = navigator.userAgent, a, i; a = [['firefox', /Firefox\/([0-9\.]+)/], ['edge', /Edge\/([0-9\.]+)/], ['safari', /Version\/([0-9\.]+).+Safari/], ['chrome', /Chrome\/([0-9\.]+)/], ['chrome', /CriOS\/([0-9\.]+)/], ['ie', /Trident\/.+rv:([0-9]+)/]]; for (i = 0; i < a.length; i++) { if (ua.match(a[i][1])) { o.browser = a[i][0]; o.browserVersion = parseFloat(RegExp.$1); break; } } a = [['ios', /([0-9_]+) like Mac OS X/, function (v) { return v.replace('_', '.').replace('_', ''); }], ['ios', /CPU like Mac OS X/, function (v) { return 0 }], ['ios', /iPad; CPU/, function (v) { return 0 }], ['android', /Android ([0-9\.]+)/, null], ['mac', /Macintosh.+Mac OS X ([0-9_]+)/, function (v) { return v.replace('_', '.').replace('_', ''); }], ['windows', /Windows NT ([0-9\.]+)/, null], ['undefined', /Undefined/, null],]; for (i = 0; i < a.length; i++) { if (ua.match(a[i][1])) { o.os = a[i][0]; o.osVersion = parseFloat(a[i][2] ? (a[i][2])(RegExp.$1) : RegExp.$1); break; } } if (o.os == 'mac' && ('ontouchstart' in window) && ((screen.width == 1024 && screen.height == 1366) || (screen.width == 834 && screen.height == 1112) || (screen.width == 810 && screen.height == 1080) || (screen.width == 768 && screen.height == 1024))) o.os = 'ios'; o.mobile = (o.os == 'android' || o.os == 'ios'); var _canUse = document.createElement('div'); o.canUse = function (property, value) { var style; style = _canUse.style; if (!(property in style)) return false; if (typeof value !== 'undefined') { style[property] = value; if (style[property] == '') return false; } return true; }; o.flags.lsdUnits = o.canUse('width', '100dvw'); return o; }()), trigger = function (t) { dispatchEvent(new Event(t)); }, cssRules = function (selectorText) { var ss = document.styleSheets, a = [], f = function (s) { var r = s.cssRules, i; for (i = 0; i < r.length; i++) { if (r[i] instanceof CSSMediaRule && matchMedia(r[i].conditionText).matches) (f)(r[i]); else if (r[i] instanceof CSSStyleRule && r[i].selectorText == selectorText) a.push(r[i]); } }, x, i; for (i = 0; i < ss.length; i++)f(ss[i]); return a; }, thisHash = function () { var h = location.hash ? location.hash.substring(1) : null, a; if (!h) return null; if (h.match(/\?/)) { a = h.split('?'); h = a[0]; history.replaceState(undefined, undefined, '#' + h); window.location.search = a[1]; } if (h.length > 0 && !h.match(/^[a-zA-Z]/)) h = 'x' + h; if (typeof h == 'string') h = h.toLowerCase(); return h; }, scrollToElement = function (e, style, duration) { var y, cy, dy, start, easing, offset, f; if (!e) y = 0; else { offset = (e.dataset.scrollOffset ? parseInt(e.dataset.scrollOffset) : 0) * parseFloat(getComputedStyle(document.documentElement).fontSize); switch (e.dataset.scrollBehavior ? e.dataset.scrollBehavior : 'default') { case 'default': default: y = e.offsetTop + offset; break; case 'center': if (e.offsetHeight < window.innerHeight) y = e.offsetTop - ((window.innerHeight - e.offsetHeight) / 2) + offset; else y = e.offsetTop - offset; break; case 'previous': if (e.previousElementSibling) y = e.previousElementSibling.offsetTop + e.previousElementSibling.offsetHeight + offset; else y = e.offsetTop + offset; break; } } if (!style) style = 'smooth'; if (!duration) duration = 750; if (style == 'instant') { window.scrollTo(0, y); return; } start = Date.now(); cy = window.scrollY; dy = y - cy; switch (style) { case 'linear': easing = function (t) { return t }; break; case 'smooth': easing = function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 }; break; }f = function () { var t = Date.now() - start; if (t >= duration) window.scroll(0, y); else { window.scroll(0, cy + (dy * easing(t / duration))); requestAnimationFrame(f); } }; f(); }, scrollToTop = function () { scrollToElement(null); }, loadElements = function (parent) { var a, e, x, i; a = parent.querySelectorAll('iframe[data-src]:not([data-src=""])'); for (i = 0; i < a.length; i++) { a[i].contentWindow.location.replace(a[i].dataset.src); a[i].dataset.initialSrc = a[i].dataset.src; a[i].dataset.src = ''; } a = parent.querySelectorAll('video[autoplay]'); for (i = 0; i < a.length; i++) { if (a[i].paused) a[i].play(); } e = parent.querySelector('[data-autofocus="1"]'); x = e ? e.tagName : null; switch (x) { case 'FORM': e = e.querySelector('.field input, .field select, .field textarea'); if (e) e.focus(); break; default: break; } }, unloadElements = function (parent) { var a, e, x, i; a = parent.querySelectorAll('iframe[data-src=""]'); for (i = 0; i < a.length; i++) { if (a[i].dataset.srcUnload === '0') continue; if ('initialSrc' in a[i].dataset) a[i].dataset.src = a[i].dataset.initialSrc; else a[i].dataset.src = a[i].src; a[i].contentWindow.location.replace('about:blank'); } a = parent.querySelectorAll('video'); for (i = 0; i < a.length; i++) { if (!a[i].paused) a[i].pause(); } e = $(':focus'); if (e) e.blur(); }; window._scrollToTop = scrollToTop; var thisURL = function () { return window.location.href.replace(window.location.search, '').replace(/#$/, ''); }; var getVar = function (name) { var a = window.location.search.substring(1).split('&'), b, k; for (k in a) { b = a[k].split('='); if (b[0] == name) return b[1]; } return null; }; var errors = { handle: function (handler) { window.onerror = function (message, url, line, column, error) { (handler)(error.message); return true; }; }, unhandle: function () { window.onerror = null; } }; on('load', function () { setTimeout(function () { $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing'); setTimeout(function () { $body.className = $body.className.replace(/\bis-playing\b/, 'is-ready'); }, 1250); }, 100); }); loadElements(document.body); var style, sheet, rule; style = document.createElement('style'); style.appendChild(document.createTextNode('')); document.head.appendChild(style); sheet = style.sheet; if (client.mobile) { (function () { if (client.flags.lsdUnits) { document.documentElement.style.setProperty('--viewport-height', '100svh'); document.documentElement.style.setProperty('--background-height', '100dvh'); } else { var f = function () { document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px'); document.documentElement.style.setProperty('--background-height', (window.innerHeight + 250) + 'px'); }; on('load', f); on('orientationchange', function () { setTimeout(function () { (f)(); }, 100); }); } })(); } if (client.os == 'android') { (function () { sheet.insertRule('body::after { }', 0); rule = sheet.cssRules[0]; var f = function () { rule.style.cssText = 'height: ' + (Math.max(screen.width, screen.height)) + 'px'; }; on('load', f); on('orientationchange', f); on('touchmove', f); })(); $body.classList.add('is-touch'); } else if (client.os == 'ios') { if (client.osVersion <= 11) (function () { sheet.insertRule('body::after { }', 0); rule = sheet.cssRules[0]; rule.style.cssText = '-webkit-transform: scale(1.0)'; })(); if (client.osVersion <= 11) (function () { sheet.insertRule('body.ios-focus-fix::before { }', 0); rule = sheet.cssRules[0]; rule.style.cssText = 'height: calc(100% + 60px)'; on('focus', function (event) { $body.classList.add('ios-focus-fix'); }, true); on('blur', function (event) { $body.classList.remove('ios-focus-fix'); }, true); })(); $body.classList.add('is-touch'); } })();</script>
+  <script>(function () { var on = addEventListener, $ = function (q) { return document.querySelector(q) }, $$ = function (q) { return document.querySelectorAll(q) }, $body = document.body, $inner = $('.inner'), client = (function () { var o = { browser: 'other', browserVersion: 0, os: 'other', osVersion: 0, mobile: false, canUse: null, flags: { lsdUnits: false, }, }, ua = navigator.userAgent, a, i; a = [['firefox', /Firefox\/([0-9\.]+)/], ['edge', /Edge\/([0-9\.]+)/], ['safari', /Version\/([0-9\.]+).+Safari/], ['chrome', /Chrome\/([0-9\.]+)/], ['chrome', /CriOS\/([0-9\.]+)/], ['ie', /Trident\/.+rv:([0-9]+)/]]; for (i = 0; i < a.length; i++) { if (ua.match(a[i][1])) { o.browser = a[i][0]; o.browserVersion = parseFloat(RegExp.$1); break; } } a = [['ios', /([0-9_]+) like Mac OS X/, function (v) { return v.replace('_', '.').replace('_', ''); }], ['ios', /CPU like Mac OS X/, function (v) { return 0 }], ['ios', /iPad; CPU/, function (v) { return 0 }], ['android', /Android ([0-9\.]+)/, null], ['mac', /Macintosh.+Mac OS X ([0-9_]+)/, function (v) { return v.replace('_', '.').replace('_', ''); }], ['windows', /Windows NT ([0-9\.]+)/, null], ['undefined', /Undefined/, null],]; for (i = 0; i < a.length; i++) { if (ua.match(a[i][1])) { o.os = a[i][0]; o.osVersion = parseFloat(a[i][2] ? (a[i][2])(RegExp.$1) : RegExp.$1); break; } } if (o.os == 'mac' && ('ontouchstart' in window) && ((screen.width == 1024 && screen.height == 1366) || (screen.width == 834 && screen.height == 1112) || (screen.width == 810 && screen.height == 1080) || (screen.width == 768 && screen.height == 1024))) o.os = 'ios'; o.mobile = (o.os == 'android' || o.os == 'ios'); var _canUse = document.createElement('div'); o.canUse = function (property, value) { var style; style = _canUse.style; if (!(property in style)) return false; if (typeof value !== 'undefined') { style[property] = value; if (style[property] == '') return false; } return true; }; o.flags.lsdUnits = o.canUse('width', '100dvw'); return o; }()), trigger = function (t) { dispatchEvent(new Event(t)); }, cssRules = function (selectorText) { var ss = document.styleSheets, a = [], f = function (s) { var r = s.cssRules, i; for (i = 0; i < r.length; i++) { if (r[i] instanceof CSSMediaRule && matchMedia(r[i].conditionText).matches) (f)(r[i]); else if (r[i] instanceof CSSStyleRule && r[i].selectorText == selectorText) a.push(r[i]); } }, x, i; for (i = 0; i < ss.length; i++)f(ss[i]); return a; }, thisHash = function () { var h = location.hash ? location.hash.substring(1) : null, a; if (!h) return null; if (h.match(/\?/)) { a = h.split('?'); h = a[0]; history.replaceState(undefined, undefined, '#' + h); window.location.search = a[1]; } if (h.length > 0 && !h.match(/^[a-zA-Z]/)) h = 'x' + h; if (typeof h == 'string') h = h.toLowerCase(); return h; }, scrollToElement = function (e, style, duration) { var y, cy, dy, start, easing, offset, f; if (!e) y = 0; else { offset = (e.dataset.scrollOffset ? parseInt(e.dataset.scrollOffset) : 0) * parseFloat(getComputedStyle(document.documentElement).fontSize); switch (e.dataset.scrollBehavior ? e.dataset.scrollBehavior : 'default') { case 'default': default: y = e.offsetTop + offset; break; case 'center': if (e.offsetHeight < window.innerHeight) y = e.offsetTop - ((window.innerHeight - e.offsetHeight) / 2) + offset; else y = e.offsetTop - offset; break; case 'previous': if (e.previousElementSibling) y = e.previousElementSibling.offsetTop + e.previousElementSibling.offsetHeight + offset; else y = e.offsetTop + offset; break; } } if (!style) style = 'smooth'; if (!duration) duration = 750; if (style == 'instant') { window.scrollTo(0, y); return; } start = Date.now(); cy = window.scrollY; dy = y - cy; switch (style) { case 'linear': easing = function (t) { return t }; break; case 'smooth': easing = function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 }; break; }f = function () { var t = Date.now() - start; if (t >= duration) window.scroll(0, y); else { window.scroll(0, cy + (dy * easing(t / duration))); requestAnimationFrame(f); } }; f(); }, scrollToTop = function () { scrollToElement(null); }, loadElements = function (parent) { var a, e, x, i; a = parent.querySelectorAll('iframe[data-src]:not([data-src=""])'); for (i = 0; i < a.length; i++) { a[i].contentWindow.location.replace(a[i].dataset.src); a[i].dataset.initialSrc = a[i].dataset.src; a[i].dataset.src = ''; } a = parent.querySelectorAll('video[autoplay]'); for (i = 0; i < a.length; i++) { if (a[i].paused) a[i].play(); } e = parent.querySelector('[data-autofocus="1"]'); x = e ? e.tagName : null; switch (x) { case 'FORM': e = e.querySelector('.field input, .field select, .field textarea'); if (e) e.focus(); break; default: break; } }, unloadElements = function (parent) { var a, e, x, i; a = parent.querySelectorAll('iframe[data-src=""]'); for (i = 0; i < a.length; i++) { if (a[i].dataset.srcUnload === '0') continue; if ('initialSrc' in a[i].dataset) a[i].dataset.src = a[i].dataset.initialSrc; else a[i].dataset.src = a[i].src; a[i].contentWindow.location.replace('about:blank'); } a = parent.querySelectorAll('video'); for (i = 0; i < a.length; i++) { if (!a[i].paused) a[i].pause(); } e = $(':focus'); if (e) e.blur(); }; window._scrollToTop = scrollToTop; var thisURL = function () { return window.location.href.replace(window.location.search, '').replace(/#$/, ''); }; var getVar = function (name) { var a = window.location.search.substring(1).split('&'), b, k; for (k in a) { b = a[k].split('='); if (b[0] == name) return b[1]; } return null; }; var errors = { handle: function (handler) { window.onerror = function (message, url, line, column, error) { (handler)(error.message); return true; }; }, unhandle: function () { window.onerror = null; } }; on('load', function () { setTimeout(function () { $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing'); setTimeout(function () { $body.className = $body.className.replace(/\bis-playing\b/, 'is-ready'); }, 1250); }, 100); }); loadElements(document.body); var style, sheet, rule; style = document.createElement('style'); style.appendChild(document.createTextNode('')); document.head.appendChild(style); sheet = style.sheet; if (client.mobile) { (function () { if (client.flags.lsdUnits) { document.documentElement.style.setProperty('--viewport-height', '100svh'); document.documentElement.style.setProperty('--background-height', '100dvh'); } else { var f = function () { document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px'); document.documentElement.style.setProperty('--background-height', (window.innerHeight + 250) + 'px'); }; on('load', f); on('orientationchange', function () { setTimeout(function () { (f)(); }, 100); }); } })(); } if (client.os == 'android') { (function () { sheet.insertRule('body::after { }', 0); rule = sheet.cssRules[0]; var f = function () { rule.style.cssText = 'height: ' + (Math.max(screen.width, screen.height)) + 'px'; }; on('load', f); on('orientationchange', f); on('touchmove', f); })(); $body.classList.add('is-touch'); } else if (client.os == 'ios') { if (client.osVersion <= 11) (function () { sheet.insertRule('body::after { }', 0); rule = sheet.cssRules[0]; rule.style.cssText = '-webkit-transform: scale(1.0)'; })(); if (client.osVersion <= 11) (function () { sheet.insertRule('body.ios-focus-fix::before { }', 0); rule = sheet.cssRules[0]; rule.style.cssText = 'height: calc(100% + 60px)'; on('focus', function (event) { $body.classList.add('ios-focus-fix'); }, true); on('blur', function (event) { $body.classList.remove('ios-focus-fix'); }, true); })(); $body.classList.add('is-touch'); } })();</script>
 </body>
-  
+
 </html>
