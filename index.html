@@ -38,7 +38,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.8;
-            font-size: 18px; /* Slightly larger base font for readability */
+            font-size: 18px;
         }
         
         /* --- Main Content Layout --- */
@@ -61,11 +61,10 @@
         
         h2 {
             font-size: 1.25rem;
-            font-weight: 400; /* Lighter weight for the subtitle */
+            font-weight: 400;
             margin-bottom: 2rem;
         }
         
-        /* Section heading style from the inspiration site */
         h3 {
             font-size: 1rem;
             font-weight: 700;
@@ -101,13 +100,13 @@
         
         /* --- Profile Picture Style --- */
         .profile-pic {
-            display: block; /* Ensures it takes its own line and can be centered */
-            width: 120px;   /* Size of the circle */
+            display: block;
+            width: 120px;
             height: 120px;
-            border-radius: 50%; /* Makes it a circle */
-            object-fit: cover; /* Ensures the image covers the circle without distortion */
-            margin: 0 auto 2rem auto; /* Center it horizontally and add space below */
-            border: 2px solid var(--accent-color); /* Subtle border matching accent */
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 2rem auto;
+            border: 2px solid var(--accent-color);
         }
 
         /* --- Work & Project Listing --- */
@@ -127,9 +126,33 @@
             margin: 0;
         }
         
+        /* --- Contact CTA Button --- */
+        .contact-cta {
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2471a3; /* A darker blue */
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
         /* --- Footer & Social Links --- */
         footer {
-            margin-top: 4rem;
             padding-top: 2rem;
             border-top: 2px solid var(--border-color);
             text-align: center;
@@ -194,6 +217,11 @@
             <h4><a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600" target="_blank">Multilingual Anomaly Detection &rarr;</a></h4>
             <p>Building robust AI systems for identifying unusual patterns.</p>
         </div>
+        
+        <section class="contact-cta">
+            <p>Looking to partner on impactful AI initiatives? 🤝</p>
+            <a href="https://forms.gle/pC5g9nCvmFqzM2mU8" class="cta-button" target="_blank">Get in Touch</a>
+        </section>
 
         <footer>
             <div class="social-links">
