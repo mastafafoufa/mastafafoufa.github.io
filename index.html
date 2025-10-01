@@ -99,6 +99,17 @@
             color: var(--heading-color);
         }
         
+        /* --- Profile Picture Style --- */
+        .profile-pic {
+            display: block; /* Ensures it takes its own line and can be centered */
+            width: 120px;   /* Size of the circle */
+            height: 120px;
+            border-radius: 50%; /* Makes it a circle */
+            object-fit: cover; /* Ensures the image covers the circle without distortion */
+            margin: 0 auto 2rem auto; /* Center it horizontally and add space below */
+            border: 2px solid var(--accent-color); /* Subtle border matching accent */
+        }
+
         /* --- Work & Project Listing --- */
         .item {
             margin-bottom: 1.5rem;
@@ -142,6 +153,7 @@
     <main class="content">
 
         <header>
+            <img src="assets/images/mastafa_ethics_llm.jpeg" alt="Mastafa Foufa" class="profile-pic">
             <h1>Mastafa Foufa</h1>
             <h2>Applied Scientist & Innovator @ Microsoft</h2>
         </header>
