@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastafa Foufa | Applied Scientist & Innovator</title>
     
-    <meta name="description" content="Mastafa Foufa is an Applied Scientist and Innovator at Microsoft, driving AI innovation to solve complex challenges. He is also the founder of MHF and a former NLP instructor at EPITA Paris.">
+    <title>MHF | Mastafa Foufa - AI, Philosophy & Innovation</title>
+    <meta name="description" content="Join the community for Mastafa Foufa (MHF), an AI innovator (8+ patents), for his upcoming book on AI and philosophy.">
+    
     <link rel="canonical" href="https://mastafafoufa.github.io" />
 
-    <meta property="og:title" content="Mastafa Foufa | Applied Scientist & Innovator" />
+    <meta property="og:title" content="MHF | Mastafa Foufa - AI, Philosophy & Innovation" />
     <meta property="og:site_name" content="Mastafa Foufa" />
     <meta property="og:url" content="https://mastafafoufa.github.io" />
-    <meta property="og:description" content="Mastafa Foufa is an Applied Scientist and Innovator at Microsoft, driving AI innovation to solve complex challenges.">
+    <meta property="og:description" content="Join the community for early access to my new book on AI and philosophy.">
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://mastafafoufa.github.io/assets/images/mypicture_bis.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="800" />
-
     <meta property="twitter:card" content="summary_large_image" />
 
     <link href="https://fonts.googleapis.com/css?display=swap&family=Lato:400,400italic,700,700italic" rel="stylesheet" type="text/css" />
@@ -25,11 +24,12 @@
     <style>
         /* --- Minimalist Style Settings --- */
         :root {
-            --bg-color: #FFFFFF; /* White background */
-            --text-color: #2c3e50; /* Dark, soft text color */
-            --heading-color: #000000; /* Pure black for headings */
-            --accent-color: #2980b9; /* Professional blue for links */
-            --border-color: #ecf0f1; /* Light gray for separators */
+            --bg-color: #FFFFFF; 
+            --text-color: #2c3e50;
+            --heading-color: #000000;
+            --accent-color: #2980b9; 
+            --border-color: #ecf0f1;
+            --form-bg-color: #f9f9f9;
         }
 
         /* --- Basic Setup & Typography --- */
@@ -39,30 +39,31 @@
             color: var(--text-color);
             line-height: 1.8;
             font-size: 18px;
+            margin: 0;
+            padding: 0;
         }
         
         /* --- Main Content Layout --- */
         .content {
             max-width: 720px;
-            margin: 4rem auto;
+            margin: 0 auto;
             padding: 2rem;
         }
 
-        h1, h2 {
+        h1, h2, h3, h4 {
             color: var(--heading-color);
-            font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         h1 {
             font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
         
         h2 {
-            font-size: 1.25rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
         }
         
         h3 {
@@ -97,98 +98,178 @@
             font-weight: 700;
             color: var(--heading-color);
         }
+
+        /* --- 'MHF' Header --- */
+        .header {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        .logo:hover {
+            text-decoration: none;
+        }
+        .tagline {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-top: 0.25rem;
+        }
+
+        /* --- Book Hero Section --- */
+        .book-hero {
+            text-align: center;
+            background-color: var(--form-bg-color);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        .book-hero h2 {
+            margin-bottom: 0.5rem;
+        }
+        .book-hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         
-        /* --- Profile Picture Style --- */
+        /* --- Email Form Styling --- */
+        .email-form-container {
+            margin-top: 2rem;
+        }
+        .email-input {
+            width: 70%;
+            max-width: 350px;
+            padding: 14px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            box-sizing: border-box; 
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cta-button:hover {
+            background-color: #2471a3;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* --- About Section --- */
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap; 
+        }
         .profile-pic {
-            display: block;
             width: 120px;
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 2rem auto;
             border: 2px solid var(--accent-color);
+            flex-shrink: 0;
+        }
+        .about-text {
+            flex: 1;
         }
 
         /* --- Work & Project Listing --- */
         .item {
             margin-bottom: 1.5rem;
         }
-        
         .item h4 {
             font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 0.25rem;
             color: var(--heading-color);
         }
-        
         .item p {
             font-size: 1rem;
             margin: 0;
         }
         
-        /* --- Contact CTA Button --- */
-        .contact-cta {
-            text-align: center;
-            margin-top: 4rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #ffffff;
-            padding: 12px 28px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #2471a3; /* A darker blue */
-            text-decoration: none;
-            transform: translateY(-2px);
-        }
-
         /* --- Footer & Social Links --- */
         footer {
-            padding-top: 2rem;
+            padding: 3rem 0 2rem 0;
             border-top: 2px solid var(--border-color);
             text-align: center;
+            margin-top: 4rem;
         }
-        
         .social-links a {
             font-weight: 700;
             color: var(--text-color);
             margin: 0 10px;
             font-size: 1rem;
         }
-        
         .social-links a:hover {
             color: var(--accent-color);
             text-decoration: none;
+        }
+        .copyright {
+            font-size: 0.9rem;
+            color: #95a5a6;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
         }
     </style>
 </head>
 <body>
 
+    <header class="header">
+        <a href="/" class="logo">MHF</a>
+        <div class="tagline">AI · PHILOSOPHY · INNOVATION</div>
+    </header>
+
     <main class="content">
 
-        <header>
+        <section class="book-hero">
+            <h2>My Next Book</h2>
+            <p>
+                I'm finalizing a book on AI and philosophy. <br>
+                Join the <strong>"Founding Readers' Circle"</strong> to receive a free early copy and share your feedback.
+            </p>
+            <div class="email-form-container">
+            <a href="https://mastafafoufa.substack.com" target="_blank" class="cta-button">
+                Rejoins le club
+            </a>
+            </div>
+        </section>
+
+
+        <h3>About Me</h3>
+        <section class="about-section">
             <img src="assets/images/mastafa_ethics_llm.jpeg" alt="Mastafa Foufa" class="profile-pic">
-            <h1>Mastafa Foufa</h1>
-            <h2>Applied Scientist & Innovator @ Microsoft</h2>
-        </header>
+            <div class="about-text">
+                <p>
+                    Based in Seattle, I am an <strong>Applied Scientist</strong> at Microsoft. My passion is creating AI solutions to solve complex challenges.
+                </P>
+                <p>
+                    With <strong>8+ AI patents</strong>, I am also the founder of <strong>MHF</strong> (AI strategy for startups) and taught NLP at <strong>EPITA Paris</strong> (2021-2023).
+                </p>
+            </div>
+        </section>
 
-        <p>
-            Hi, I'm <strong>Mastafa Foufa</strong>. Based in Seattle, I drive AI innovation to solve complex challenges and empower businesses. My <strong>8 AI patents</strong> underscore a deep commitment to advancing the field.
-        </p>
-        <p>
-            As the founder of <strong>MHF</strong>, I equip startups with AI strategies for growth. My real-world expertise also shapes my teaching of Master's students in advanced Natural Language Processing (NLP) at <strong>EPITA Paris</strong>.
-        </p>
-
-        <h3>AI Patents</h3>
+        <h3>Work & Contributions</h3>
         
         <div class="item">
             <h4><a href="https://patents.google.com/patent/US20230247072A1/en" target="_blank">Optimizing Richness in Remote Meetings &rarr;</a></h4>
@@ -202,10 +283,7 @@
             <h4><a href="https://patents.google.com/patent/US20230042015A1/en" target="_blank">Shared Visual Content Filtering &rarr;</a></h4>
             <p>Streamlining information flow in collaborative environments.</p>
         </div>
-
-        <h3>Online Contributions</h3>
-
-        <div class="item">
+         <div class="item">
             <h4><a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317" target="_blank">Machine Learning in Non-Euclidean Spaces &rarr;</a></h4>
             <p>Advancing ML's application in complex data domains.</p>
         </div>
@@ -218,11 +296,6 @@
             <p>Building robust AI systems for identifying unusual patterns.</p>
         </div>
         
-        <section class="contact-cta">
-            <p>Looking to partner on impactful AI initiatives? 🤝</p>
-            <a href="https://forms.gle/pC5g9nCvmFqzM2mU8" class="cta-button" target="_blank">Get in Touch</a>
-        </section>
-
         <footer>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/mastafa-foufa/" target="_blank">LinkedIn</a>
@@ -230,6 +303,7 @@
                 <a href="https://x.com/mastafahf" target="_blank">X (Twitter)</a>
                 <a href="mailto:mastafa.foufa@hotmail.com">Email</a>
             </div>
+            <p class="copyright">&copy; 2025 Mastafa Foufa</p>
         </footer>
 
     </main>
