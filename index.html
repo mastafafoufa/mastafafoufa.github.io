@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -99,10 +100,10 @@
             color: var(--heading-color);
         }
 
-        /* --- 'MHF' Header --- */
+        /* --- NEW: Minimalist Header --- */
         .header {
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             border-bottom: 2px solid var(--border-color);
             margin-bottom: 3rem;
         }
@@ -112,6 +113,7 @@
             color: var(--heading-color);
             letter-spacing: 2px;
             text-decoration: none;
+            margin: 0;
         }
         .logo:hover {
             text-decoration: none;
@@ -119,7 +121,25 @@
         .tagline {
             font-size: 1rem;
             color: var(--text-color);
-            margin-top: 0.25rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+        .separator {
+            color: var(--border-color);
+            margin: 0 0.5rem;
+        }
+        .site-nav {
+            margin-top: 1.5rem;
+        }
+        .site-nav a {
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0 12px;
+            font-size: 1rem;
+        }
+        .site-nav a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
         }
 
         /* --- Book Hero Section --- */
@@ -143,16 +163,6 @@
         /* --- Email Form Styling --- */
         .email-form-container {
             margin-top: 2rem;
-        }
-        .email-input {
-            width: 70%;
-            max-width: 350px;
-            padding: 14px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 10px;
-            box-sizing: border-box; 
         }
         .cta-button {
             display: inline-block;
@@ -235,41 +245,50 @@
 </head>
 <body>
 
-    <header class="header">
-        <a href="/" class="logo">MHF</a>
-        <div class="tagline">AI · PHILOSOPHY · INNOVATION</div>
+    <header class="header" id="mhf">
+        <h1 class="logo"><a href="/" style="color: inherit; text-decoration: none;">MHF</a></h1>
+        <div class="tagline">
+            AI <span class="separator">|</span> PHILOSOPHY <span class="separator">|</span> INNOVATION
+        </div>
+        <nav class="site-nav">
+            <a href="#book">Book</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+        </nav>
     </header>
 
     <main class="content">
 
-        <section class="book-hero">
+        <section class="book-hero" id="book">
             <h2>My Next Book</h2>
             <p>
                 I'm finalizing a book on AI and philosophy. <br>
                 Join the <strong>"Founding Readers' Circle"</strong> to receive a free early copy and share your feedback.
             </p>
+            
             <div class="email-form-container">
-            <a href="https://mastafafoufa.substack.com" target="_blank" class="cta-button">
-                Rejoins le club
-            </a>
+                <a href="https://mastafafoufa.substack.com" target="_blank" class="cta-button">
+                    Rejoins le club
+                </a>
             </div>
         </section>
 
 
-        <h3>About Me</h3>
+        <h3 id="about">About Me</h3>
         <section class="about-section">
             <img src="assets/images/mastafa_ethics_llm.jpeg" alt="Mastafa Foufa" class="profile-pic">
             <div class="about-text">
                 <p>
-                    Based in Seattle, I am an <strong>Applied Scientist</strong> at Microsoft. My passion is creating AI solutions to solve complex challenges.
+                    Based in Seattle, I am an <strong>Applied Scientist & Innovator</strong> at Microsoft. My passion is creating AI solutions to solve complex challenges.
                 </P>
                 <p>
-                    With <strong>8+ AI patents</strong>, I am also the founder of <strong>MHF</strong> (AI strategy for startups) and taught NLP at <strong>EPITA Paris</strong> (2021-2023).
+                    With <strong>8+ AI patents</strong>, I am also the founder of <strong>MHF</strong> (AI strategy for startups) and teach advanced NLP at <strong>EPITA Paris</strong>.
                 </p>
             </div>
         </section>
 
-        <h3>Work & Contributions</h3>
+        <h3 id="projects">Work & Contributions</h3>
         
         <div class="item">
             <h4><a href="https://patents.google.com/patent/US20230247072A1/en" target="_blank">Optimizing Richness in Remote Meetings &rarr;</a></h4>
@@ -288,17 +307,17 @@
             <p>Advancing ML's application in complex data domains.</p>
         </div>
         <div class="item">
-            <h4><a href="https://patents.google.com/patent/US20220417047A1/en" target="_blank">AI-Powered Name Pronunciation &rarr;</a></h4>
+            <h4><a href="httpss://patents.google.com/patent/US20220417047A1/en" target="_blank">AI-Powered Name Pronunciation &rarr;</a></h4>
             <p>Developing sophisticated linguistic AI for global communication.</p>
         </div>
         <div class="item">
             <h4><a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600" target="_blank">Multilingual Anomaly Detection &rarr;</a></h4>
-            <p>Building robust AI systems for identifying unusual patterns.</p>
+            <p>Building robust systems for identifying unusual patterns.</p>
         </div>
         
         <footer>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/mastafa-foufa/" target="_blank">LinkedIn</a>
+                <a href="https."www.linkedin.com/in/mastafa-foufa/" target="_blank">LinkedIn</a>
                 <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=" target="_blank">Google Scholar</a>
                 <a href="https://x.com/mastafahf" target="_blank">X (Twitter)</a>
                 <a href="mailto:mastafa.foufa@hotmail.com">Email</a>
