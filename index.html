@@ -217,6 +217,107 @@
             font-size: 1rem;
             margin: 0;
         }
+
+        /* --- NEW: Research Tabs & Cards --- */
+        .research-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #95a5a6; /* Inactive color */
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-color);
+        }
+
+        .tab-btn.active {
+            color: var(--heading-color);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            /* For the filtering animation */
+            display: block; 
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-color: var(--accent-color);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .project-title a {
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+        
+        .project-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .tech-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-tag.patent { background-color: #e8f6f3; color: #1abc9c; } /* Greenish for patents */
+        .tech-tag.paper { background-color: #ebf5fb; color: #3498db; } /* Blue for papers */
+
+        /* Animation class for filtering */
+        .fade-in {
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         
         /* --- Footer & Social Links --- */
         footer {
@@ -288,32 +389,81 @@
             </div>
         </section>
 
-        <h3 id="projects">Work & Contributions</h3>
-        
-        <div class="item">
-            <h4><a href="https://patents.google.com/patent/US20230247072A1/en" target="_blank">Optimizing Richness in Remote Meetings &rarr;</a></h4>
-            <p>AI-driven solutions for more engaging virtual collaboration.</p>
-        </div>
-        <div class="item">
-            <h4><a href="https://patents.google.com/patent/US20230206143A1/en" target="_blank">Computing Experience Personalization &rarr;</a></h4>
-            <p>Crafting intelligent systems that adapt to individual user needs.</p>
-        </div>
-        <div class="item">
-            <h4><a href="https://patents.google.com/patent/US20230042015A1/en" target="_blank">Shared Visual Content Filtering &rarr;</a></h4>
-            <p>Streamlining information flow in collaborative environments.</p>
-        </div>
-         <div class="item">
-            <h4><a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317" target="_blank">Machine Learning in Non-Euclidean Spaces &rarr;</a></h4>
-            <p>Advancing ML's application in complex data domains.</p>
-        </div>
-        <div class="item">
-            <h4><a href="httpss://patents.google.com/patent/US20220417047A1/en" target="_blank">AI-Powered Name Pronunciation &rarr;</a></h4>
-            <p>Developing sophisticated linguistic AI for global communication.</p>
-        </div>
-        <div class="item">
-            <h4><a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600" target="_blank">Multilingual Anomaly Detection &rarr;</a></h4>
-            <p>Building robust systems for identifying unusual patterns.</p>
-        </div>
+      <section id="projects">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                 <h3>Work & Contributions</h3>
+            </div>
+           
+            <div class="research-tabs">
+                <button class="tab-btn active" onclick="filterProjects('all')">All Work</button>
+                <button class="tab-btn" onclick="filterProjects('patents')">Patents</button>
+                <button class="tab-btn" onclick="filterProjects('publications')">Publications</button>
+            </div>
+
+            <div id="projects-container" class="projects-container">
+                
+                <div class="project-card" data-type="patents">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <a href="https://patents.google.com/patent/US20230247072A1/en" target="_blank">Optimizing Richness in Remote Meetings</a>
+                        </div>
+                        <span class="tech-tag patent">US Patent</span>
+                    </div>
+                    <p>AI-driven solutions for more engaging virtual collaboration, analyzing audio-visual cues to enhance meeting quality.</p>
+                </div>
+
+                <div class="project-card" data-type="patents">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <a href="https://patents.google.com/patent/US20230206143A1/en" target="_blank">Computing Experience Personalization</a>
+                        </div>
+                        <span class="tech-tag patent">US Patent</span>
+                    </div>
+                    <p>Crafting intelligent systems that adapt to individual user needs by learning from interaction patterns.</p>
+                </div>
+
+                <div class="project-card" data-type="publications">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317" target="_blank">Machine Learning in Non-Euclidean Spaces</a>
+                        </div>
+                        <span class="tech-tag paper">Medium Article</span>
+                    </div>
+                    <p>Advancing ML's application in complex data domains like hyperbolic geometry for better hierarchical data representation.</p>
+                </div>
+
+                <div class="project-card" data-type="patents">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <a href="https://patents.google.com/patent/US20230042015A1/en" target="_blank">Shared Visual Content Filtering</a>
+                        </div>
+                        <span class="tech-tag patent">US Patent</span>
+                    </div>
+                    <p>Streamlining information flow in collaborative environments to prevent information overload.</p>
+                </div>
+
+                <div class="project-card" data-type="patents">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <a href="https://patents.google.com/patent/US20220417047A1/en" target="_blank">AI-Powered Name Pronunciation</a>
+                        </div>
+                        <span class="tech-tag paper">Innovation</span>
+                    </div>
+                    <p>Developing sophisticated linguistic AI models to accurately pronounce global names, fostering inclusivity.</p>
+                </div>
+
+                <div class="project-card" data-type="publications">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1644217&dswid=4600" target="_blank">Multilingual Anomaly Detection</a>
+                        </div>
+                        <span class="tech-tag paper">Academic Paper</span>
+                    </div>
+                    <p>Building robust AI systems for identifying unusual patterns across different languages and cultural contexts.</p>
+                </div>
+
+            </div>
+        </section>
         
         <footer>
             <div class="social-links">
@@ -327,5 +477,38 @@
 
     </main>
 
+    <script>
+        function filterProjects(category) {
+            // 1. Update Active Button State
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                // Check if this button was the one clicked
+                if (btn.getAttribute('onclick').includes(category)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // 2. Filter Cards
+            const projects = document.querySelectorAll('.project-card');
+            
+            projects.forEach(project => {
+                // Remove animation class to reset it
+                project.classList.remove('fade-in');
+                
+                // Logic to show or hide
+                if (category === 'all' || project.getAttribute('data-type') === category) {
+                    project.style.display = 'block';
+                    // Add a tiny timeout so the animation triggers
+                    setTimeout(() => {
+                        project.classList.add('fade-in');
+                    }, 10);
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
 </body>
 </html>
