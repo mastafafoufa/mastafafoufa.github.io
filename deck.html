@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHF | Innovation Deck</title>
+    <style>
+        /* --- RESET & BASICS --- */
+        :root {
+            --bg-color: #0a0a0a;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --accent: #3b82f6; /* Azure Blue */
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden; /* Hide standard scrollbar */
+        }
+
+        /* --- THE DECK CONTAINER --- */
+        /* This creates the "Slide" behavior */
+        .deck-container {
+            height: 100vh;
+            width: 100vw;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* --- SLIDE STYLING --- */
+        .slide {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 40px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        /* Content Wrapper for max-width */
+        .content {
+            max-width: 1000px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        .highlight { color: #fff; font-weight: 600; }
+
+        /* --- UI ELEMENTS --- */
+        /* The Progress Bar / Slide Counter */
+        .ui-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            font-variant-numeric: tabular-nums;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+        }
+
+        /* --- CARD GRIDS (For Patents/Skills) --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card h4 { font-size: 1.2rem; margin-bottom: 10px; color: #fff; }
+        .card p { font-size: 1rem; max-width: 100%; }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+            40% {transform: translateX(-50%) translateY(-10px);}
+            60% {transform: translateX(-50%) translateY(-5px);}
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            p { font-size: 1.1rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .slide { padding: 20px; align-items: flex-start; }
+            .logo { top: 20px; left: 20px; }
+            .slide-counter { bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">MHF | DECK</div>
+    <div class="scroll-indicator">Scroll to Navigate</div>
+    <div class="slide-counter" id="counter">01 / 06</div>
+
+    <main class="deck-container" id="deck" onscroll="updateCounter()">
+
+        <section class="slide" id="s1">
+            <div class="content">
+                <h3>The Profile</h3>
+                <h1>Mastafa Foufa</h1>
+                <p>
+                    Senior Applied Scientist at Microsoft.<br>
+                    Educator.<br>
+                    [cite_start]Inventor of <span class="highlight">11 AI Patents</span>[cite: 3, 9].
+                </p>
+            </div>
+        </section>
+
+        <section class="slide" id="s2">
+            <div class="content">
+                <h3>The Mission</h3>
+                <h2>From Research to Production Scale</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Impact at Scale</h4>
+                        [cite_start]<p>Currently securing critical feedback loops for Microsoft 365, safeguarding <strong>50,000+ monthly user submissions</strong>[cite: 10].</p>
+                    </div>
+                    <div class="card">
+                        <h4>Engineering Rigor</h4>
+                        [cite_start]<p>Architecting production-ready NLP models on Azure to drive anomaly detection and actionable insights[cite: 6].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide" id="s3">
+            <div class="content">
+                <h3>Intellectual Property</h3>
+                <h2>11 Patents & Counting</h2>
+                [cite_start]<p style="margin-bottom: 40px;">Pioneering the intersection of user productivity and machine learning[cite: 9].</p>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>US Patent 12,039,470</h4>
+                        <p style="color: #fff; margin-bottom: 5px;">Computing experience personalization</p>
+                        <p style="font-size: 0.9rem;">Granted 2024</p>
+                    </div>
+                    <div class="card">
+                        <h4>US Patent 11,881,958</h4>
+                        <p style="color: #fff; margin-bottom: 5px;">Shared visual content filtering</p>
+                        <p style="font-size: 0.9rem;">Granted 2024</p>
+                    </div>
+                    <div class="card">
+                        <h4>US Patent 12,028,176</h4>
+                        <p style="color: #fff; margin-bottom: 5px;">ML-based name pronunciation</p>
+                        <p style="font-size: 0.9rem;">Granted 2024</p>
+                    </div>
+                    <div class="card">
+                        <h4>US Patent App 18/650,589</h4>
+                        <p style="color: #fff; margin-bottom: 5px;">Verbatim feedback processing</p>
+                        [cite_start]<p style="font-size: 0.9rem;">Pending 2025 [cite: 10]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide" id="s4">
+            <div class="content">
+                <h3>Thought Leadership</h3>
+                <h2>The Educator</h2>
+                <p>
+                    <strong>Lecturer at EPITA Paris (2021-Present)</strong><br>
+                    I don't just build; [cite_start]I teach the next generation of engineers to master <span class="highlight">Advanced NLP</span> and <span class="highlight">Large Language Models (LLMs)</span>[cite: 12, 13].
+                </p>
+                <br>
+                <p>
+                    <strong>Global Data Science Team</strong><br>
+                    [cite_start]Educated 100+ Microsoft employees at the Dublin Data Club on advanced machine learning concepts[cite: 8].
+                </p>
+            </div>
+        </section>
+
+        <section class="slide" id="s5">
+            <div class="content">
+                <h3>Background</h3>
+                <h2>Discipline & Philosophy</h2>
+                <div class="grid-2">
+                    <div class="card" style="border-left: 4px solid var(--accent);">
+                        <h4>The Tatami</h4>
+                        <p>Black Belt in Judo. Two-time national champion in Karate Jutsu. [cite_start]The rigor required for martial arts is the foundation of my engineering philosophy[cite: 47].</p>
+                    </div>
+                    <div class="card" style="border-left: 4px solid #fff;">
+                        <h4>The Author</h4>
+                        <p>Currently writing a book on the intersection of AI and Philosophy, exploring the societal impacts of the systems we build.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide" id="s6">
+            <div class="content" style="text-align: center;">
+                <h3>Next Steps</h3>
+                <h2>Let's Innovate.</h2>
+                <p style="margin: 0 auto 40px auto;">
+                    Available for high-level consulting and collaboration.
+                </p>
+                
+                <a href="mailto:mastafa.foufa@hotmail.com" style="
+                    display: inline-block;
+                    background: #fff;
+                    color: #000;
+                    padding: 20px 40px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    border-radius: 50px;
+                    transition: transform 0.2s;
+                ">Contact Me</a>
+
+                <div style="margin-top: 40px;">
+                    <a href="/" style="color: var(--text-secondary); text-decoration: none; margin: 0 15px;">Main Site</a>
+                    <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=en" style="color: var(--text-secondary); text-decoration: none; margin: 0 15px;">Google Scholar</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple script to update the slide counter (01/06)
+        function updateCounter() {
+            const deck = document.getElementById('deck');
+            const slides = document.querySelectorAll('.slide');
+            const counter = document.getElementById('counter');
+            
+            // Calculate which slide is currently in view based on scroll position
+            let currentSlide = Math.round(deck.scrollTop / window.innerHeight) + 1;
+            
+            // Ensure we don't go out of bounds (mobile bounce effect)
+            if (currentSlide < 1) currentSlide = 1;
+            if (currentSlide > slides.length) currentSlide = slides.length;
+
+            counter.innerText = '0' + currentSlide + ' / 0' + slides.length;
+        }
+    </script>
+</body>
+</html>
