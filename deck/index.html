@@ -21,7 +21,7 @@
             background-color: var(--bg-color);
             background-image: radial-gradient(circle at 50% 50%, #111 0%, #050505 100%);
             color: var(--text-primary);
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
         }
 
@@ -74,10 +74,10 @@
         }
 
         h3 {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             margin-bottom: 20px;
             font-weight: 700;
         }
@@ -97,18 +97,23 @@
             top: 40px;
             left: 40px;
             font-weight: 900;
-            font-size: 1rem;
-            letter-spacing: 3px;
+            font-size: 1.2rem;
+            letter-spacing: 6px;
+            color: #fff;
+            text-decoration: none;
             z-index: 100;
+            transition: opacity 0.3s ease;
         }
+        .logo:hover { opacity: 0.7; }
 
         .slide-counter {
             position: fixed;
             bottom: 40px;
             right: 40px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
             font-family: monospace;
+            letter-spacing: 2px;
         }
 
         /* Side Navigation Dots */
@@ -123,24 +128,24 @@
             z-index: 100;
         }
         .dot {
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background: rgba(255,255,255,0.2);
-            transition: 0.3s;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .dot.active { background: var(--accent); transform: scale(1.5); }
+        .dot.active { background: var(--accent); transform: scale(2); }
 
         .scroll-indicator {
             position: fixed;
             bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: var(--text-secondary);
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         /* --- GRID & CARDS --- */
@@ -155,19 +160,19 @@
             background: var(--glass);
             border: 1px solid var(--border);
             padding: 40px;
-            border-radius: 16px;
+            border-radius: 12px;
             backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.4s ease;
         }
 
         .card:hover {
-            border-color: rgba(52, 152, 219, 0.5);
+            border-color: var(--accent);
             background: rgba(255, 255, 255, 0.06);
             transform: translateY(-5px);
         }
 
-        .card h4 { font-size: 1.1rem; margin-bottom: 12px; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
-        .card p { font-size: 0.95rem; color: var(--text-secondary); }
+        .card h4 { font-size: 1rem; margin-bottom: 12px; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+        .card p { font-size: 0.9rem; color: var(--text-secondary); }
 
         .btn-primary {
             display: inline-block;
@@ -176,25 +181,29 @@
             padding: 18px 45px;
             text-decoration: none;
             font-weight: 700;
-            border-radius: 4px;
+            border-radius: 2px;
             margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
             transition: 0.3s;
         }
-        .btn-primary:hover { background: var(--accent); color: #fff; transform: scale(1.05); }
+        .btn-primary:hover { background: var(--accent); color: #fff; }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .slide { padding: 30px; }
-            h1 { font-size: 3rem; }
-            h2 { font-size: 1.8rem; }
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 1.6rem; }
             .grid-2 { grid-template-columns: 1fr; }
             .side-nav { display: none; }
+            .logo { top: 20px; left: 20px; font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="logo">MHF // INNOVATION DECK</div>
+    <a href="../index.html" class="logo">MHF</a>
     
     <nav class="side-nav">
         <div class="dot active"></div>
@@ -205,7 +214,7 @@
         <div class="dot"></div>
     </nav>
 
-    <div class="scroll-indicator">Scroll</div>
+    <div class="scroll-indicator">Scroll to Explore</div>
     <div class="slide-counter" id="counter">01 / 06</div>
 
     <main class="deck-container" id="deck">
@@ -216,8 +225,8 @@
                 <h3>Senior Applied Scientist</h3>
                 <h1>Mastafa Foufa</h1>
                 <p>
-                    Inventor of <span class="highlight">9 AI Patents</span>. <br>
-                    Bridging the gap between <span class="highlight">Deep Tech</span> and <span class="highlight">Philosophical Inquiry</span>.
+                    Senior Inventor with <span class="highlight">9+ AI Patents</span>. <br>
+                    Bridging the gap between <span class="highlight">Production Scale AI</span> and <span class="highlight">Philosophical Inquiry</span>.
                 </p>
             </div>
         </section>
@@ -226,45 +235,45 @@
         <section class="slide">
             <div class="content">
                 <h3>The Mission</h3>
-                <h2>Scalable Intelligence with Ethical Guardrails.</h2>
+                <h2>High-Scale Intelligence. Ethical Guardrails.</h2>
                 <div class="grid-2">
                     <div class="card">
-                        <h4>Production Impact</h4>
-                        <p>Architecting production-ready NLP models on Azure that safeguard thousands of monthly user interactions within the Microsoft 365 ecosystem.</p>
+                        <h4>Impact at Scale</h4>
+                        <p>Architecting production-ready NLP models on Azure that safeguard 50,000+ monthly user interactions within the Microsoft 365 ecosystem.</p>
                     </div>
                     <div class="card">
-                        <h4>Human-Centric AI</h4>
-                        <p>Focusing on anomaly detection and well-being assessment to ensure technology serves user health and productivity.</p>
+                        <h4>Well-being Assessment</h4>
+                        <p>Pioneering AI systems that detect and mitigate digital fatigue, ensuring technology enhances rather than depletes human productivity.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 3: IP -->
+        <!-- SLIDE 3: IP (Focusing on your list) -->
         <section class="slide">
             <div class="content">
                 <h3>Intellectual Property</h3>
-                <h2>Pioneering Innovation</h2>
+                <h2>Pioneering the Future</h2>
                 <div class="grid-2">
                     <div class="card">
                         <h4>US 12,039,470</h4>
-                        <p class="highlight">Experience Personalization</p>
-                        <p>Learning user patterns to optimize productivity workflows.</p>
+                        <p class="highlight">Personalized Computing</p>
+                        <p>Systems that learn from interaction recall to optimize human productivity.</p>
                     </div>
                     <div class="card">
                         <h4>US 11,881,958</h4>
-                        <p class="highlight">Visual Content Filtering</p>
-                        <p>Intelligent information streamlining for remote collaboration.</p>
+                        <p class="highlight">Visual Filtering</p>
+                        <p>Intelligent information streamlining for complex remote collaboration.</p>
                     </div>
                     <div class="card">
                         <h4>US 12,028,176</h4>
-                        <p class="highlight">ML Name Pronunciation</p>
-                        <p>Fostering global inclusivity through linguistic AI models.</p>
+                        <p class="highlight">Inclusive AI</p>
+                        <p>ML models focused on accurate global name pronunciation and linguistic inclusivity.</p>
                     </div>
                     <div class="card">
                         <h4>App 18/650,589</h4>
-                        <p class="highlight">Verbatim Processing</p>
-                        <p>Compliant feedback retention systems (Pending 2025).</p>
+                        <p class="highlight">Privacy-First NLP</p>
+                        <p>Compliant verbatim processing for large-scale feedback systems.</p>
                     </div>
                 </div>
             </div>
@@ -274,14 +283,14 @@
         <section class="slide">
             <div class="content">
                 <h3>Leadership & Education</h3>
-                <h2>Scaling Knowledge</h2>
+                <h2>Advancing the Field</h2>
                 <p style="margin-bottom: 30px;">
                     <strong>Lecturer at EPITA Paris</strong><br>
-                    Teaching Advanced NLP and Large Language Model (LLM) architectures to the next generation of engineers.
+                    Architecting curriculum and teaching Advanced NLP/LLM architectures to 5th-year engineering students.
                 </p>
                 <p>
-                    <strong>Internal Education</strong><br>
-                    Mentoring 100+ Data Scientists at Microsoft on machine learning rigor and production excellence.
+                    <strong>Global Data Science Mentorship</strong><br>
+                    Educating 100+ Microsoft Applied Scientists on the intersection of machine learning rigor and user privacy.
                 </p>
             </div>
         </section>
@@ -289,16 +298,16 @@
         <!-- SLIDE 5: PHILOSOPHY -->
         <section class="slide">
             <div class="content">
-                <h3>The Intersection</h3>
-                <h2>Discipline & Philosophy</h2>
+                <h3>Background</h3>
+                <h2>Discipline & Inquiry</h2>
                 <div class="grid-2">
                     <div class="card">
                         <h4>The Tatami</h4>
-                        <p>Black Belt in Judo and 2x National Champion in Karate Jutsu. The discipline of the martial arts is the core of my research rigor.</p>
+                        <p>Black Belt in Judo and 2x National Champion in Karate Jutsu. The rigor of the tatami is the foundation of my scientific methodology.</p>
                     </div>
                     <div class="card">
                         <h4>The Author</h4>
-                        <p>Currently authoring a deep-dive into the philosophical implications of AI, exploring how building intelligence changes the human condition.</p>
+                        <p>Currently authoring a book on the societal implications of AI, exploring how building intelligence forces us to redefine the human experience.</p>
                     </div>
                 </div>
             </div>
@@ -307,11 +316,11 @@
         <!-- SLIDE 6: CONTACT -->
         <section class="slide">
             <div class="content" style="text-align: center;">
-                <h3>Status: Available for Innovation</h3>
-                <h2>Let's build the future.</h2>
+                <h3>Next Phase</h3>
+                <h2>Let's build with purpose.</h2>
                 <a href="mailto:mastafa.foufa@hotmail.com" class="btn-primary">Get in Touch</a>
                 <div style="margin-top: 50px;">
-                    <a href="../index.html" style="color: var(--text-secondary); text-decoration: none; margin: 0 20px; font-size: 0.9rem;">Back to Portfolio</a>
+                    <a href="../index.html" style="color: var(--text-secondary); text-decoration: none; margin: 0 20px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">Back to Portfolio</a>
                 </div>
             </div>
         </section>
@@ -326,11 +335,11 @@
         deck.addEventListener('scroll', () => {
             const index = Math.round(deck.scrollTop / window.innerHeight);
             
-            // Update Dots
+            // Update Navigation Dots
             dots.forEach(dot => dot.classList.remove('active'));
-            dots[index].classList.add('active');
+            if(dots[index]) dots[index].classList.add('active');
 
-            // Update Counter
+            // Update Current Slide Counter
             counter.innerText = `0${index + 1} / 06`;
         });
     </script>
