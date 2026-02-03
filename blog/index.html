@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHF | Blog - Pensées & Science</title>
+    <link href="https://fonts.googleapis.com/css?display=swap&family=Playfair+Display:700|Inter:400,700" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #2980b9;
+            --muted: #7f8c8d;
+            --border: #ececec;
+        }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        header { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 4rem; text-align: center; }
+        .logo { font-weight: 900; letter-spacing: 5px; text-decoration: none; color: var(--text); font-size: 1.2rem; }
+        
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-top: 1rem; }
+
+        .blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        
+        .category-title { 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            color: var(--accent); 
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .post-preview { margin-bottom: 3rem; }
+        .post-preview h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 0 0 10px 0; }
+        .post-preview h2 a { text-decoration: none; color: var(--text); transition: 0.2s; }
+        .post-preview h2 a:hover { color: var(--accent); }
+        .post-date { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; }
+        .post-excerpt { color: #555; margin-top: 10px; }
+
+        @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="logo">MHF</a>
+            <h1>Écrits & Réflexions</h1>
+        </header>
+
+        <main class="blog-grid">
+            <!-- PERSONAL TRACK -->
+            <section>
+                <div class="category-title">Pensées pour moi-même</div>
+                <article class="post-preview">
+                    <div class="post-date">Février 2025</div>
+                    <h2><a href="poids-du-silence.html">Le Poids du Silence</a></h2>
+                    <p class="post-excerpt">Une réflexion sur l'efficacité technique face à la fragilité humaine, née d'une rencontre manquée dans une gare.</p>
+                </article>
+            </section>
+
+            <!-- SCIENCE TRACK -->
+            <section>
+                <div class="category-title">La Science</div>
+                <article class="post-preview">
+                    <div class="post-date">À venir</div>
+                    <h2><a href="#">L'Incertitude dans les LLMs</a></h2>
+                    <p class="post-excerpt">Comment quantifier ce que l'IA ne sait pas.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
