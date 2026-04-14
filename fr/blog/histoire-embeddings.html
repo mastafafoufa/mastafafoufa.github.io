@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Word2Vec aux espaces latents des transformers : une histoire des embeddings | MHF</title>
+  <meta name="description" content="Du roi − homme + femme = reine aux représentations contextuelles denses d'un transformer moderne : une histoire technique des embeddings et ce qu'ils nous apprennent sur la représentation du sens. Par Mastafa Foufa.">
+
+  <link rel="canonical" href="https://mastafafoufa.com/fr/blog/histoire-embeddings.html" />
+  <link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/histoire-embeddings.html" />
+  <link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/history-of-embeddings.html" />
+
+  <link rel="stylesheet" href="../../assets/css/shared.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"De Word2Vec aux espaces latents des transformers : une histoire des embeddings","datePublished":"2026-04-14","author":{"@type":"Person","name":"Mastafa Foufa"},"inLanguage":"fr","url":"https://mastafafoufa.com/fr/blog/histoire-embeddings.html"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/fr/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="/fr/blog/">← Blog</a>
+      <a href="/fr/">Accueil</a>
+      <a href="/en/blog/history-of-embeddings.html" class="lang-toggle" hreflang="en">EN</a>
+    </nav>
+  </header>
+
+  <div class="article-container">
+    <a href="/fr/blog/" class="back-link">← Retour au Blog</a>
+    <div class="article-meta">Plongée Technique &nbsp;·&nbsp; Avril 2026</div>
+    <h1 class="article-title">De Word2Vec aux espaces latents des transformers&nbsp;: une histoire des embeddings</h1>
+
+    <div class="article-body">
+      <p><span class="dropcap">E</span>n 2013, un résultat a circulé dans les laboratoires de NLP avec la qualité d'une blague mathématique parfaite : <em>roi</em> − <em>homme</em> + <em>femme</em> ≈ <em>reine</em>. Ce n'était pas une curiosité anecdotique. C'était la démonstration qu'un réseau de neurones, entraîné sur des milliards de mots sans jamais qu'on lui enseigne quoi que ce soit sur la royauté, le genre, ou la sémantique, avait appris à organiser les mots dans un espace géométrique où leurs relations analogiques prenaient la forme d'opérations vectorielles. Word2Vec venait de naître, et avec lui, l'idée que le sens pouvait être représenté comme une position dans l'espace.</p>
+
+      <p>La décennie qui a suivi est l'une des plus productives de l'histoire du traitement du langage naturel. Retracer son arc — de Word2Vec aux espaces latents des transformers modernes — c'est comprendre ce que les machines ont appris à faire avec le sens, et ce que cela implique.</p>
+
+      <p><strong>Word2Vec (2013, Mikolov et al.)</strong> repose sur une idée simple et profonde : le sens d'un mot peut être inféré de ses voisins habituels. « Vous connaîtrez un mot à la compagnie qu'il fréquente » (Firth, 1957). Word2Vec entraîne un réseau superficiel à prédire les mots entourant un mot cible (ou l'inverse), et les représentations intermédiaires — des vecteurs de 100 à 300 dimensions — encodent des régularités sémantiques étonnantes. Les vecteurs de pays sont proches de leurs capitales. Les vecteurs d'animaux forment des clusters. Les relations grammaticales (singulier/pluriel, masculin/féminin) correspondent à des directions cohérentes dans l'espace.</p>
+
+      <p>La limite de Word2Vec est fondamentale : chaque mot a <em>un</em> vecteur fixe. La banque où l'on dépose son argent et la banque de sable sur une rivière partagent le même point dans l'espace d'embedding. Le contexte n'existe pas.</p>
+
+      <p><strong>GloVe (2014, Pennington et al.)</strong> approche le problème différemment, en utilisant les statistiques globales de cooccurrence de mots sur un grand corpus. Au lieu d'entraîner sur des fenêtres locales, GloVe factorise la matrice de cooccurrence globale. Les représentations obtenues sont légèrement différentes de Word2Vec dans leurs propriétés géométriques, mais partagent la même limitation : pas de contexte, un vecteur par mot.</p>
+
+      <p><strong>FastText (2016, Bojanowski et al., Facebook AI)</strong> introduit les n-grammes de caractères dans la représentation. Chaque mot est décomposé en sous-mots (par exemple « jogging » → « jog », « ogg », « ggi », « gin », « ing »). Cela résout deux problèmes importants : les mots hors vocabulaire (un mot inconnu peut être représenté par ses sous-mots) et les langues morphologiquement riches où un même radical génère de nombreuses formes.</p>
+
+      <p><strong>ELMo (2018, Peters et al., AllenNLP)</strong> est le premier grand tournant vers les embeddings contextuels. ELMo utilise un LSTM bidirectionnel : pour chaque mot d'une phrase, il génère un vecteur qui dépend de l'ensemble du contexte gauche et droit. « Banque » dans « déposer de l'argent à la banque » et « banque de sable » ont maintenant des représentations différentes. Le sens contextuel est enfin capturé. Le coût : ELMo nécessite de faire tourner le modèle complet pour chaque phrase, et ses LSTMs peinent à capturer des dépendances à très longue distance.</p>
+
+      <p><strong>BERT (2018, Devlin et al., Google)</strong> est le second tournant majeur. BERT utilise l'architecture transformer — mécanisme d'attention — dans une configuration bidirectionnelle. Il est pré-entraîné sur deux tâches : prédire des mots masqués dans une phrase (<em>Masked Language Modeling</em>) et prédire si une phrase suit naturellement une autre (<em>Next Sentence Prediction</em>). BERT produit des embeddings contextuels profonds où chaque couche encode des informations différentes : les couches basses captent la syntaxe, les couches hautes capturent la sémantique et le contexte pragmatique.</p>
+
+      <p>Pour le NLP appliqué, BERT a été révolutionnaire. Le fine-tuning d'un modèle BERT pré-entraîné sur une tâche spécifique (classification de sentiments, reconnaissance d'entités nommées, réponse à des questions) permettait d'atteindre des performances état de l'art avec très peu de données labellisées.</p>
+
+      <p><strong>Sentence-BERT (2019) et les encodeurs de phrases</strong> ont adapté l'architecture pour produire des embeddings sémantiques de phrases entières — utiles pour la recherche sémantique, le clustering de documents, et la détection de similarité.</p>
+
+      <p>Dans les <strong>transformers modernes</strong> (GPT-4, Claude, Gemini), les espaces d'embedding sont d'une complexité qualitativement différente. Avec des dimensions allant de 12 000 à 25 000+ et des centaines de couches d'attention, ces espaces encodent non seulement le sens des mots mais des structures syntaxiques complexes, des connaissances du monde, des relations factuelles, et ce qui ressemble à du raisonnement implicite. L'espace latent n'est plus un espace de mots — c'est un espace de concepts, de relations, et peut-être d'inférences.</p>
+
+      <p>Ce qui est fascinant, et qui me préoccupe à la fois, c'est que nous ne comprenons pas entièrement ce que ces espaces encodent. Les techniques d'interprétabilité mécanistique commencent à identifier des « features » dans les poids des transformers — des directions dans l'espace latent qui correspondent à des concepts identifiables. Mais pour l'essentiel, l'espace latent d'un grand modèle de langage reste opaque à ses créateurs. Ces machines savent représenter le sens avec une précision stupéfiante. Nous ne savons pas exactement comment.</p>
+    </div>
+
+    <div class="article-footer">
+      MHF &nbsp;·&nbsp; <a href="/fr/">Mastafa Foufa</a> &nbsp;·&nbsp;
+      <a href="/en/blog/history-of-embeddings.html">Read in English →</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/">Accueil</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa.</p>
+  </footer>
+</body>
+</html>

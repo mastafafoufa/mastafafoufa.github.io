@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Word2Vec to Transformer Latent Spaces: A History of Embeddings | MHF</title>
+  <meta name="description" content="The journey from 'king − man + woman = queen' to the dense contextual representations inside a modern transformer — a technical history of how machines learned to represent meaning. By Mastafa Foufa.">
+
+  <link rel="canonical" href="https://mastafafoufa.com/en/blog/history-of-embeddings.html" />
+  <link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/history-of-embeddings.html" />
+  <link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/histoire-embeddings.html" />
+
+  <link rel="stylesheet" href="../../assets/css/shared.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"From Word2Vec to Transformer Latent Spaces: A History of Embeddings","datePublished":"2026-04-14","author":{"@type":"Person","name":"Mastafa Foufa"},"inLanguage":"en","url":"https://mastafafoufa.com/en/blog/history-of-embeddings.html"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/en/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="/en/blog/">← Blog</a>
+      <a href="/en/">Home</a>
+      <a href="/fr/blog/histoire-embeddings.html" class="lang-toggle" hreflang="fr">FR</a>
+    </nav>
+  </header>
+
+  <div class="article-container">
+    <a href="/en/blog/" class="back-link">← Back to Blog</a>
+    <div class="article-meta">Technical Deep-Dive &nbsp;·&nbsp; April 2026</div>
+    <h1 class="article-title">From Word2Vec to Transformer Latent Spaces: A History of Embeddings</h1>
+
+    <div class="article-body">
+      <p>In 2013, a result circulated through NLP research communities with the quality of a perfect mathematical joke: <em>king</em> − <em>man</em> + <em>woman</em> ≈ <em>queen</em>. This was not a curiosity. It was a demonstration that a neural network, trained on billions of words with no explicit instruction about royalty, gender, or semantics, had learned to organise words in a geometric space where analogical relationships took the form of vector arithmetic. Word2Vec had arrived, and with it an idea that would reshape the entire field: meaning can be represented as position in space.</p>
+
+      <p>The decade that followed is one of the most productive in the history of natural language processing. Tracing its arc — from Word2Vec through ELMo and BERT to the latent spaces of modern transformers — is a way of understanding what machines have learned to do with meaning, and what that implies.</p>
+
+      <p><strong>Word2Vec (Mikolov et al., 2013)</strong> rests on a simple and deep idea: the meaning of a word can be inferred from the company it keeps. Firth's distributional hypothesis (1957) — "you shall know a word by the company it keeps" — provided the linguistic justification. Word2Vec trains a shallow neural network to predict the words surrounding a target word (or vice versa), and the intermediate representations — vectors of 100 to 300 dimensions — encode striking semantic regularities. Country vectors cluster near their capitals. Animal vectors form coherent groups. Grammatical relationships (singular/plural, verb/noun) correspond to consistent directions in the space. The word2vec arithmetic works because these relationships are encoded as translation vectors that generalise across instances.</p>
+
+      <p>The fundamental limitation of Word2Vec is that each word has one fixed vector. The bank where you deposit money and the bank of a river share the same point in embedding space. Context does not exist.</p>
+
+      <p><strong>GloVe (Pennington et al., Stanford, 2014)</strong> approaches the problem differently, using global co-occurrence statistics across the entire corpus rather than local context windows. GloVe factorises the global co-occurrence matrix and produces representations with somewhat different geometric properties than Word2Vec, but shares the same core limitation: no context, one vector per word.</p>
+
+      <p><strong>FastText (Bojanowski et al., Facebook AI, 2016)</strong> introduces character n-grams into the representation. Each word is decomposed into subword units ("jogging" → "jog", "ogg", "ggi", "gin", "ing"). This solves two important problems: out-of-vocabulary words (an unseen word can be represented from its subwords) and morphologically rich languages where a single stem generates many surface forms.</p>
+
+      <p><strong>ELMo (Peters et al., AllenNLP, 2018)</strong> is the first major turn toward contextual embeddings. ELMo uses a bidirectional LSTM: for each word in a sentence, it generates a vector that depends on the entire left and right context. "Bank" in "deposit money at the bank" and "bank of sand" now have different representations. The cost: ELMo requires running the full model for each sentence, and LSTMs struggle to capture very long-range dependencies.</p>
+
+      <p><strong>BERT (Devlin et al., Google, 2018)</strong> is the second major turning point. BERT uses the transformer architecture — the attention mechanism introduced by Vaswani et al. in "Attention Is All You Need" (2017) — in a bidirectional configuration. It is pre-trained on two tasks: predicting masked words in a sentence (Masked Language Modeling) and predicting whether one sentence follows another (Next Sentence Prediction). BERT produces deep contextual embeddings where different layers encode different information: lower layers capture syntax, upper layers capture semantics and pragmatic context.</p>
+
+      <p>For applied NLP, BERT was transformative. Fine-tuning a pre-trained BERT model on a specific downstream task (sentiment classification, named entity recognition, question answering) achieved state-of-the-art performance with very little labelled data — a major practical advance for the many organisations that cannot afford large labelled corpora.</p>
+
+      <p><strong>Sentence-BERT and sentence encoders (2019 onwards)</strong> adapted the architecture to produce semantic embeddings of entire sentences, enabling efficient semantic search, document clustering, and similarity detection at scale.</p>
+
+      <p>In <strong>modern large language models</strong> — GPT-4, Claude, Gemini — the embedding spaces are qualitatively different in complexity. With hidden dimensions of 12,000 to 25,000+ and hundreds of attention layers, these spaces encode not only word meaning but complex syntactic structures, world knowledge, factual relationships, and something that functions like implicit reasoning. The latent space is no longer a space of words — it is a space of concepts, relations, and possibly inferences.</p>
+
+      <p>What is remarkable, and what I find both fascinating and worth examining carefully, is that we do not fully understand what these spaces encode. Mechanistic interpretability research is beginning to identify "features" in transformer weights — directions in latent space that correspond to identifiable concepts. But for the most part, the latent space of a large language model remains opaque to its creators. These machines represent meaning with extraordinary precision. We do not know exactly how. And we are building systems that mediate human cognition on top of representations we cannot fully explain.</p>
+    </div>
+
+    <div class="article-footer">
+      MHF &nbsp;·&nbsp; <a href="/en/">Mastafa Foufa</a> &nbsp;·&nbsp;
+      <a href="/fr/blog/histoire-embeddings.html">Lire en français →</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="/en/blog/">Blog</a>
+      <a href="/en/">Home</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa.</p>
+  </footer>
+</body>
+</html>

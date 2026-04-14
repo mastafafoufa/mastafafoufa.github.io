@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mastafa Foufa — Scientifique IA, Inventeur & Auteur | MHF</title>
+  <meta name="description" content="Mastafa Foufa, Scientifique Appliqué Senior chez Microsoft, auteur de La paresse de penser (FYP Éditions, mai 2026). IA, cognition et philosophie de la technique.">
+
+  <link rel="canonical"    href="https://mastafafoufa.com/fr/" />
+  <link rel="alternate" hreflang="fr"        href="https://mastafafoufa.com/fr/" />
+  <link rel="alternate" hreflang="en"        href="https://mastafafoufa.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://mastafafoufa.com/en/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://mastafafoufa.com/fr/" />
+  <meta property="og:title"       content="Mastafa Foufa — La paresse de penser, à paraître mai 2026" />
+  <meta property="og:description" content="Scientifique Appliqué chez Microsoft, auteur de La paresse de penser (FYP Éditions, 2026)." />
+  <meta property="og:image"       content="https://mastafafoufa.com/assets/images/mastafa_black_white_web.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="stylesheet" href="../assets/css/shared.css">
+
+  <!-- JSON-LD : Personne + Livre -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Mastafa Foufa",
+        "url": "https://mastafafoufa.com/fr/",
+        "jobTitle": "Scientifique Appliqué Senior",
+        "worksFor": { "@type": "Organization", "name": "Microsoft" },
+        "alumniOf": { "@type": "EducationalOrganization", "name": "Télécom Paris" },
+        "sameAs": [
+          "https://www.linkedin.com/in/mastafa-foufa/",
+          "https://scholar.google.com/citations?user=jA54ZlUAAAAJ",
+          "https://x.com/mastafahf"
+        ],
+        "knowsAbout": ["Intelligence Artificielle", "Traitement du Langage Naturel", "Philosophie de la technique"],
+        "image": "https://mastafafoufa.com/assets/images/mastafa_black_white_web.jpg"
+      },
+      {
+        "@type": "Book",
+        "name": "La paresse de penser",
+        "author": { "@type": "Person", "name": "Mastafa Foufa" },
+        "publisher": { "@type": "Organization", "name": "FYP Éditions" },
+        "inLanguage": "fr",
+        "datePublished": "2026-05",
+        "description": "Un essai sur la façon dont les machines intelligentes transforment notre capacité à penser par nous-mêmes."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* --- Hero livre (FR-specific : livre en avant-plan) --- */
+    .book-hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 5rem 2rem;
+    }
+    .book-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 4rem;
+      align-items: center;
+    }
+    .book-hero .badge-forthcoming {
+      margin-bottom: 1.5rem;
+    }
+    .book-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      margin: 0.75rem 0 0.5rem;
+    }
+    .book-hero-publisher {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 2rem;
+    }
+    .book-hero-desc {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.8);
+      max-width: 520px;
+    }
+    .book-hero-portrait {
+      width: 100%;
+      border-radius: 4px;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+      filter: grayscale(100%) brightness(0.85);
+    }
+
+    /* --- Retailers (placeholder) --- */
+    .retailers {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+    .retailer-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      cursor: not-allowed;
+    }
+    .retailer-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* --- About --- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+    .about-portrait {
+      width: 100%;
+      border-radius: 4px;
+      filter: grayscale(100%);
+    }
+    .about-text p { font-size: 1.05rem; margin-bottom: 1.25rem; }
+
+    /* --- Blog previews --- */
+    .blog-previews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .book-hero-inner { grid-template-columns: 1fr; }
+      .book-hero-portrait { max-width: 240px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .blog-previews { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <a href="/fr/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="#livre">Le Livre</a>
+      <a href="#auteur">À Propos</a>
+      <a href="#brevets">Brevets</a>
+      <a href="/fr/blog/">Blog</a>
+      <a href="/press/">Presse</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+      <a href="/en/" class="lang-toggle" hreflang="en">EN</a>
+    </nav>
+  </header>
+
+  <!-- HERO — LIVRE EN AVANT-PLAN -->
+  <section class="book-hero" id="livre">
+    <div class="book-hero-inner">
+      <div>
+        <span class="badge badge-forthcoming">À paraître &nbsp;·&nbsp; Mai 2026</span>
+        <h1 class="book-hero-title">La paresse<br>de penser</h1>
+        <p class="book-hero-publisher">FYP Éditions</p>
+        <p class="book-hero-desc">
+          Nous vivons dans une époque d'accélération cognitive. Les grands modèles de langage anticipent nos prochains mots. Les algorithmes de recommandation devancent nos désirs. Les agents autonomes prennent des décisions à notre place.
+          <br><br>
+          Cet essai pose une question inconfortable : sommes-nous en train de déléguer non seulement nos tâches, mais notre capacité même à penser ?
+        </p>
+        <div class="retailers">
+          <span class="retailer-pill">FNAC</span>
+          <span class="retailer-pill">Amazon&nbsp;FR</span>
+          <span class="retailer-pill">Librairies indépendantes</span>
+        </div>
+        <p class="retailer-note">Disponible en librairies à partir de mai 2026.</p>
+      </div>
+      <img src="../assets/images/mastafa_black_white_web.jpg"
+           alt="Mastafa Foufa — auteur de La paresse de penser"
+           class="book-hero-portrait">
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- À PROPOS DU LIVRE -->
+    <h2 class="section-label">Le Propos</h2>
+    <div style="max-width:680px; font-family:'Lora',serif; font-size:1.08rem; line-height:1.9;">
+      <p>
+        Ce livre n'est pas un livre contre l'intelligence artificielle. C'est un livre pour une relation plus consciente avec elle.
+      </p>
+      <p>
+        Nourri de neuf ans au cœur de l'industrie — de la construction de systèmes NLP à grande échelle chez Microsoft à l'enseignement des architectures de grands modèles de langage à l'EPITA Paris — <em>La paresse de penser</em> explore le mécanisme par lequel nous consentons, souvent sans le savoir, à laisser les machines penser à notre place.
+      </p>
+      <p>
+        Ni alarmiste, ni naïvement optimiste : cet essai est une invitation à ralentir, à observer, et à choisir délibérément ce que nous confions aux algorithmes.
+      </p>
+    </div>
+
+    <!-- AUTEUR -->
+    <h2 class="section-label" id="auteur">L'Auteur</h2>
+    <div class="about-grid">
+      <img src="../assets/images/mastafa_black_white_web.jpg"
+           alt="Mastafa Foufa"
+           class="about-portrait">
+      <div class="about-text">
+        <p>
+          Je suis ingénieur et scientifique, formé à <strong>Télécom Paris</strong>, une des grandes écoles d'ingénieurs, avant de rejoindre <strong>Microsoft à Seattle</strong> où je suis aujourd'hui <strong>Scientifique Appliqué Senior</strong>. Mon travail quotidien consiste à concevoir des systèmes de traitement du langage naturel à grande échelle — des systèmes utilisés par des dizaines de millions de personnes dans le monde.
+        </p>
+        <p>
+          Neuf brevets en intelligence artificielle ponctuent cette trajectoire : personnalisation des interfaces, détection d'anomalies comportementales, évaluation du bien-être numérique. Mais plus j'ai avancé dans la construction de ces systèmes, plus une question insistante s'est imposée : à quel moment cesse-t-on de construire des outils, et commence-t-on à construire des tuteurs cognitifs ?
+        </p>
+        <p>
+          J'enseigne également les architectures des grands modèles de langage à <strong>l'EPITA Paris</strong>, où je travaille avec la prochaine génération d'ingénieurs en IA.
+        </p>
+        <p>
+          En dehors des serveurs et des salles de cours, je suis <strong>ceinture noire de judo</strong> et deux fois champion national de karaté jutsu. Je surfe sur les côtes sauvages du Pacific Northwest.
+        </p>
+      </div>
+    </div>
+
+    <!-- BREVETS (compact) -->
+    <h2 class="section-label" id="brevets">Propriété Intellectuelle</h2>
+    <p style="font-family:'Lora',serif; font-size:1rem; color:var(--muted); margin-bottom:2rem;">
+      9 brevets déposés aux États-Unis dans les domaines de l'IA, du traitement du langage naturel et de l'interaction homme-machine.
+    </p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Filtrage de contenu visuel lors de réunions virtuelles</div>
+          <span class="tech-tag tag-patent">US 11,881,958</span>
+        </div>
+        <p>Optimisation intelligente de l'information dans les espaces de travail collaboratifs virtuels.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Personnalisation de l'expérience informatique</div>
+          <span class="tech-tag tag-patent">US 12,039,470</span>
+        </div>
+        <p>Systèmes adaptatifs apprenant les comportements utilisateurs pour optimiser les flux de travail.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Prononciation des noms par apprentissage automatique</div>
+          <span class="tech-tag tag-patent">US 12,028,176</span>
+        </div>
+        <p>Modèle linguistique favorisant l'inclusivité par la reconnaissance précise des noms du monde entier.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Mémorisation personnalisée des interactions informatiques</div>
+          <span class="tech-tag tag-patent">US 11,789,944</span>
+        </div>
+        <p>Systèmes de mémoire personnalisés pour les interfaces informatiques.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Richesse des réunions virtuelles</div>
+          <span class="tech-tag tag-patent">US 11,831,696</span>
+        </div>
+        <p>Optimisation par IA de la qualité de la collaboration à distance.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Réponses automatiques contextuelles à l'absence</div>
+          <span class="tech-tag tag-patent">US 11,418,463</span>
+        </div>
+        <p>IA contextuelle pour des communications d'absence personnalisées et adaptées.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="/en/#work" class="btn-outline">Voir tous les 9 brevets (EN)</a>
+    </div>
+
+    <!-- BLOG RÉCENT -->
+    <h2 class="section-label">Du Blog</h2>
+    <div class="blog-previews">
+      <div class="post-preview">
+        <div class="post-date">Avril 2026</div>
+        <h2><a href="/fr/blog/pourquoi-paresse-de-penser.html">Pourquoi j'ai écrit La paresse de penser</a></h2>
+        <p class="post-excerpt">Une exploration de l'esprit moderne — et de ce que neuf ans à construire des systèmes d'IA m'ont appris sur la pensée humaine.</p>
+        <a href="/fr/blog/pourquoi-paresse-de-penser.html" class="post-read-more">Lire &nbsp;→</a>
+      </div>
+      <div class="post-preview">
+        <div class="post-date">Avril 2026</div>
+        <h2><a href="/fr/blog/raccourcis-cognitifs.html">Ce que les LLMs nous apprennent sur nos raccourcis cognitifs</a></h2>
+        <p class="post-excerpt">La prédiction du prochain token comme métaphore de la pensée heuristique. Une réflexion née de l'intérieur du laboratoire.</p>
+        <a href="/fr/blog/raccourcis-cognitifs.html" class="post-read-more">Lire &nbsp;→</a>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="/fr/blog/" class="btn-outline">Tous les articles</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/mastafa-foufa/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=fr" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://x.com/mastafahf" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="/press/">Dossier de presse</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Email</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

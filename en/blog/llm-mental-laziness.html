@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Large Language Models Taught Me About Human Mental Laziness | MHF</title>
+  <meta name="description" content="The mechanics of next-token prediction turn out to be a remarkably accurate model of how humans use cognitive shortcuts. A reflection from inside the AI lab. By Mastafa Foufa.">
+
+  <link rel="canonical" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html" />
+  <link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html" />
+  <link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html" />
+
+  <link rel="stylesheet" href="../../assets/css/shared.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Large Language Models Taught Me About Human Mental Laziness",
+    "datePublished": "2026-04-14",
+    "author": { "@type": "Person", "name": "Mastafa Foufa" },
+    "inLanguage": "en",
+    "url": "https://mastafafoufa.com/en/blog/llm-mental-laziness.html"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/en/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="/en/blog/">← Blog</a>
+      <a href="/en/">Home</a>
+      <a href="/fr/blog/raccourcis-cognitifs.html" class="lang-toggle" hreflang="fr">FR</a>
+    </nav>
+  </header>
+
+  <div class="article-container">
+    <a href="/en/blog/" class="back-link">← Back to Blog</a>
+
+    <div class="article-meta">The NLP Connection &nbsp;·&nbsp; April 2026</div>
+
+    <h1 class="article-title">What Large Language Models Taught Me About Human Mental Laziness</h1>
+
+    <div class="article-body">
+      <p>At production scale, you see things about language models that are difficult to observe in research settings. When a model serves fifty thousand requests a day, you accumulate a clinical picture of its failures — not random failures, but systematic ones, with recognisable shapes. After years of running NLP systems within the Microsoft 365 ecosystem, one pattern kept standing out: the model's errors were not random. They were plausible.</p>
+
+      <p>Not correct, but plausible. The model would generate a confident, well-constructed, grammatically impeccable sentence that happened to be factually wrong. It would invent a statistic with exactly the level of specificity that makes statistics convincing. It would produce the ending a sentence was heading toward — the natural, fluent, statistically expected continuation — rather than the true one. The failures were not the failures of ignorance. They were the failures of overconfidence in the most probable path.</p>
+
+      <p>I have been thinking about that pattern ever since. Because it is not a pattern unique to machines.</p>
+
+      <p>The core architecture of a large language model is, stripped of its complexity, a function for predicting what comes next. Given a sequence of tokens — words, subwords, punctuation — the model computes a probability distribution over the next token. It does not know what is true. It knows, with extraordinary precision, what tends to follow what in the vast corpus of human-generated text it was trained on. It is, in the most precise technical sense, a very sophisticated prediction engine operating on statistical regularities.</p>
+
+      <p>This is, word for word, a description of System 1 thinking. Daniel Kahneman's framework divides cognition into two modes: System 1 — fast, automatic, pattern-matching, operating on heuristics and prior associations — and System 2 — slow, deliberate, effortful, capable of structured reasoning. System 1 is our default. It is what fills in the end of a familiar phrase before the speaker finishes it, what generates an immediate impression of a person before we have processed the evidence, what tells us a question is easy when it is actually hard and we are answering a different, easier one.</p>
+
+      <p>System 1 is our next-token predictor. And like a language model, it generates coherent, fluent, confident output — and is structurally prone to errors that are plausible rather than detectable. The cognitive science literature calls this confabulation: the tendency to generate consistent narratives to fill gaps in memory or reasoning, without any subjective sense that something is being invented. Studies going back decades show that eyewitnesses "remember" details that fit the scene but were never there. We are, by default, generators of plausible text who believe we are recorders of truth.</p>
+
+      <p>The question this raises — and it is the question I spend time with in my forthcoming book — is about direction of influence. Language models are built on human-generated text: they learn our patterns, including our cognitive shortcuts. But the feedback loop does not stop there. When we use these systems at scale, when we rely on them for drafting, summarising, deciding, we are also learning from them. We are internalising their output as a model of how things should be expressed, what the plausible answer looks like, what the most statistically expected response to a given situation is.</p>
+
+      <p>There is an asymmetry that matters here. Human System 1 is paired with System 2: the capacity to slow down, doubt, verify, and construct careful arguments despite the friction of doing so. This capacity is not natural — it is trained, cultural, energetically expensive. But it is real. Language models have no genuine equivalent. Chain-of-thought prompting and step-by-step reasoning are, at root, still token prediction — more sophisticated, but not structurally different. The capacity to genuinely doubt one's own process remains on the human side of the equation.</p>
+
+      <p>What I have watched, at production scale, is the quiet attrition of that capacity in everyday use. Not dramatically — nobody wakes up and decides to stop thinking. But gradually, as the plausible answer becomes easier to accept than the verified one, as the friction of System 2 reasoning starts to feel unnecessary when the system already has an answer waiting, the balance shifts. The shortcuts multiply. The checking stops.</p>
+
+      <p>The systems are not doing anything wrong. They are doing exactly what they were designed to do: generate fluent, useful, statistically calibrated output as quickly as possible. The question of what happens when we integrate that output into our own cognitive processes is a question those systems are not equipped to answer. It requires, precisely, the slow, effortful kind of thinking that they are so good at making unnecessary.</p>
+
+      <p>That is the loop I am trying to make visible.</p>
+    </div>
+
+    <div class="article-footer">
+      MHF &nbsp;·&nbsp; <a href="/en/">Mastafa Foufa</a> &nbsp;·&nbsp;
+      <a href="/fr/blog/raccourcis-cognitifs.html">Lire en français →</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="/en/blog/">Blog</a>
+      <a href="/en/">Home</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa.</p>
+  </footer>
+</body>
+</html>

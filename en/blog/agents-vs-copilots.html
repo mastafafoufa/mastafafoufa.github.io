@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Copilot to Autonomous Agent: The Next Great Shift in AI | MHF</title>
+  <meta name="description" content="The technical difference between a Copilot and an autonomous Agent explained clearly, and what the shift means for human delegation and control. By Mastafa Foufa.">
+
+  <link rel="canonical" href="https://mastafafoufa.com/en/blog/agents-vs-copilots.html" />
+  <link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/agents-vs-copilots.html" />
+  <link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/agents-vs-copilotes.html" />
+
+  <link rel="stylesheet" href="../../assets/css/shared.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"From Copilot to Autonomous Agent: The Next Great Shift in AI","datePublished":"2026-04-14","author":{"@type":"Person","name":"Mastafa Foufa"},"inLanguage":"en","url":"https://mastafafoufa.com/en/blog/agents-vs-copilots.html"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/en/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="/en/blog/">← Blog</a>
+      <a href="/en/">Home</a>
+      <a href="/fr/blog/agents-vs-copilotes.html" class="lang-toggle" hreflang="fr">FR</a>
+    </nav>
+  </header>
+
+  <div class="article-container">
+    <a href="/en/blog/" class="back-link">← Back to Blog</a>
+    <div class="article-meta">The Science &nbsp;·&nbsp; April 2026</div>
+    <h1 class="article-title">From Copilot to Autonomous Agent: The Next Great Shift in AI</h1>
+
+    <div class="article-body">
+      <p>The word "agentic" has been appearing with increasing frequency in AI product announcements, research papers, and executive communications. Like most terms that travel quickly from research into marketing, it has accumulated ambiguity. Clarifying what it actually means — technically, not rhetorically — matters, because the difference between an AI assistant and an AI agent is not a matter of degree. It is a difference in kind.</p>
+
+      <p>A <strong>Copilot</strong> — in the sense used by products like Microsoft Copilot or GitHub Copilot — is a reactive system. It waits for your prompt. It generates a response: text, code, a summary, a suggestion. Then it waits again. It does not act on the world unless you take its output and act yourself. It has no persistent state between sessions unless explicitly provided. It cannot send an email, call an API, modify a file, browse the web, or make a decision in your absence. The interaction paradigm is the chat box: you write, it responds, you respond.</p>
+
+      <p>An <strong>Agent</strong> is architecturally different. An AI agent has access to tools — capabilities for acting on external systems — and a reasoning loop that allows it to decompose a goal into sub-tasks, execute those sub-tasks (sequentially or in parallel), observe the results, and update its strategy without human intervention at each step. An agent can navigate the web, query and write to databases, read and modify files, send messages, run code, and work for hours or days toward an objective you assigned it once.</p>
+
+      <p>The practical distinction: a Copilot helps you do something. An agent does something on your behalf. In the first case, you remain in the loop at every step. In the second, you may not be in the loop at all.</p>
+
+      <p>The dominant architecture for modern agents is the ReAct (Reasoning + Acting) loop, or its variants. At each step, the language model at the core of the agent performs three operations: it <em>reasons</em> about the current state of the task, <em>decides</em> which of its available tools to invoke, and <em>observes</em> the result to update its reasoning. This cycle repeats until the goal is reached or the model determines it cannot proceed. What makes this qualitatively different from a Copilot is persistence: the agent maintains state across steps, adapts its strategy based on intermediate results, and continues executing through a sequence of actions toward a goal without requiring human confirmation at each turn.</p>
+
+      <p>This capability is genuinely powerful. It is also the source of genuinely new risks. The specification problem — articulating what you actually want precisely enough that an autonomous system will not diverge from your intentions in consequential ways — is fundamentally hard. Humans who receive instructions can ask clarifying questions, notice contradictions, pause when something feels wrong. An agent operates within the goal as it understands it. Its understanding is a statistical approximation of your intent. The gap between the two can be large or small, and you will often only know after the fact.</p>
+
+      <p>Multi-agent systems — architectures where multiple agents collaborate, with one "orchestrator" agent delegating to specialist "sub-agents" — amplify both the capability and the specification problem. The orchestrator does not fully understand what the sub-agents are doing at each step any more than the human user understands what the orchestrator is doing. Verification becomes harder the more layers of delegation there are.</p>
+
+      <p>The frontier research in AI safety treats this as one of the central challenges of the next five years: ensuring that increasingly capable autonomous systems remain reliably aligned with their operators' actual intentions, not just their stated instructions. The engineering approaches — sandboxing, human-in-the-loop confirmation for high-stakes actions, interpretability tools — are active areas of work. None of them is solved.</p>
+
+      <p>Delegating the writing of an email to an assistant is one thing. Delegating an entire business process to an autonomous agent that works while you sleep is another. The question of how to maintain meaningful control over a system that acts faster and more continuously than any human supervisor is one of the defining challenges of the agentic era — and not one that the product announcements have been rushing to address.</p>
+    </div>
+
+    <div class="article-footer">
+      MHF &nbsp;·&nbsp; <a href="/en/">Mastafa Foufa</a> &nbsp;·&nbsp;
+      <a href="/fr/blog/agents-vs-copilotes.html">Lire en français →</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="/en/blog/">Blog</a>
+      <a href="/en/">Home</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa.</p>
+  </footer>
+</body>
+</html>

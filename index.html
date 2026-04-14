@@ -1,325 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>MHF | Mastafa Foufa - AI, Philosophy & Innovation</title>
-    <meta name="description" content="Mastafa Foufa (MHF) - Senior Applied Scientist, Inventor (9+ patents), and Author exploring the intersection of AI and Philosophy.">
-    
-    <link rel="canonical" href="https://mastafafoufa.github.io" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mastafa Foufa — MHF</title>
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="MHF | Mastafa Foufa - AI, Philosophy & Innovation" />
-    <meta property="og:description" content="Senior Applied Scientist at Microsoft. Exploring the philosophical and societal implications of AI.">
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/images/mastafa_ethics_llm.jpeg" />
+  <link rel="canonical" href="https://mastafafoufa.com/en/" />
+  <link rel="alternate" hreflang="en"        href="https://mastafafoufa.com/en/" />
+  <link rel="alternate" hreflang="fr"        href="https://mastafafoufa.com/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://mastafafoufa.com/en/" />
 
-    <link href="https://fonts.googleapis.com/css?display=swap&family=Lato:400,700" rel="stylesheet">
+  <meta http-equiv="refresh" content="0; url=/en/">
+  <script>
+    (function() {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.startsWith('fr')) {
+        window.location.replace('/fr/');
+      } else {
+        window.location.replace('/en/');
+      }
+    })();
+  </script>
 
-    <style>
-        :root {
-            --bg-color: #FFFFFF; 
-            --text-color: #2c3e50;
-            --heading-color: #000000;
-            --accent-color: #2980b9; 
-            --border-color: #ecf0f1;
-            --secondary-bg: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            font-size: 18px;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-        
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        h1, h2, h3 { color: var(--heading-color); font-weight: 700; }
-        h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-        
-        h3 {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            margin-top: 4rem;
-            margin-bottom: 2rem;
-        }
-
-        a { color: var(--accent-color); text-decoration: none; font-weight: 700; transition: 0.2s; }
-        a:hover { text-decoration: underline; }
-
-        /* --- Header --- */
-        .header { text-align: center; padding: 4rem 1rem 3rem; border-bottom: 1px solid var(--border-color); }
-        .logo { font-size: 2.5rem; letter-spacing: 4px; }
-        .tagline { font-size: 0.9rem; letter-spacing: 2px; opacity: 0.8; margin-top: 10px; }
-        .site-nav { margin-top: 2rem; }
-        .site-nav a { margin: 0 15px; color: var(--text-color); font-size: 0.9rem; }
-
-        /* --- Mission Deck (Bento Grid) --- */
-        .mission-deck {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 4rem 0;
-        }
-        
-        .deck-button {
-            display: inline-block;
-            padding: 12px 30px;
-            border: 2px solid var(--heading-color);
-            color: var(--heading-color);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .deck-button:hover {
-            background: var(--heading-color);
-            color: #fff;
-            text-decoration: none;
-        }
-        .deck-card {
-            background: var(--secondary-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-        .deck-card h4 { margin-top: 0; color: var(--accent-color); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        .deck-card p { font-size: 1.05rem; margin-bottom: 0; }
-
-        /* --- Book Section (Refined) --- */
-        .book-announcement {
-            background: #000;
-            color: #fff;
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 4rem 0;
-        }
-        .book-announcement h2 { color: #fff; margin-bottom: 1rem; }
-        .book-announcement p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
-        .status-badge { 
-            display: inline-block; 
-            padding: 4px 12px; 
-            background: var(--accent-color); 
-            border-radius: 20px; 
-            font-size: 0.75rem; 
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        /* --- About Section --- */
-        .about-section { display: flex; align-items: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
-        .profile-pic { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid var(--secondary-bg); }
-        .about-text { flex: 1; min-width: 300px; }
-
-        /* --- Projects & Patents --- */
-        .research-tabs { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
-        .tab-btn { 
-            background: none; border: none; font-size: 1rem; font-weight: 700; color: #95a5a6; 
-            cursor: pointer; padding: 0.5rem 1rem; border-bottom: 3px solid transparent; transition: 0.3s;
-        }
-        .tab-btn.active { color: var(--heading-color); border-bottom-color: var(--accent-color); }
-
-        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-        .project-card { 
-            background: #fff; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; 
-            transition: 0.3s; display: block;
-        }
-        .project-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: var(--accent-color); }
-        .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
-        .tech-tag { font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; }
-        .tag-patent { background: #e8f6f3; color: #1abc9c; }
-        .tag-app { background: #fef9e7; color: #f1c40f; }
-        .tag-pub { background: #ebf5fb; color: #3498db; }
-
-        footer { text-align: center; padding: 4rem 0; border-top: 1px solid var(--border-color); margin-top: 4rem; }
-        .social-links a { margin: 0 15px; }
-
-        @media (max-width: 768px) {
-            .about-section { text-align: center; justify-content: center; }
-            h1 { font-size: 2rem; }
-        }
-    </style>
+  <style>
+    body { font-family: sans-serif; display: flex; align-items: center; justify-content: center;
+           min-height: 100vh; margin: 0; background: #FAFAF8; color: #1C1C1A; }
+    .gateway { text-align: center; }
+    .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 6px; margin-bottom: 2rem; }
+    .gateway a { display: inline-block; margin: 0 1rem; font-size: 0.9rem; font-weight: 700;
+                 text-decoration: none; color: #1A5276; }
+    .gateway a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-
-    <header class="header">
-        <div class="logo">MHF</div>
-        <div class="tagline">AI • PHILOSOPHY • INNOVATION</div>
-        <nav class="site-nav">
-            <a href="#mission">Mission</a>
-            <a href="#about">About</a>
-            <a href="#work">Patents</a>
-             <a href="blog/index.html">Blog</a>
-            <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
-        </nav>
-    </header>
-
-    <main class="content">
-
-        <!-- MISSION DECK SECTION -->
-        <section id="mission">
-            <h3>Mission & Identity</h3>
-            <div class="mission-deck">
-                <div class="deck-card">
-                    <h4>The Mission</h4>
-                    <p>Building tools that bridge the gap between high-scale computing and human well-being through ethical AI integration.</p>
-                </div>
-                <div class="deck-card">
-                    <h4>The Method</h4>
-                    <p>Combining rigorous Applied Science with philosophical inquiry to ensure innovation serves humanity, not just efficiency.</p>
-                </div>
-                <div class="deck-card">
-                    <h4>The Roots</h4>
-                    <p>Disciplined by the martial arts (Judo & Karate) and inspired by a cross-cultural heritage between France and Morocco.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="deck/index.html" class="deck-button">
-                    My Deck 
-                    <span style="margin-left: 8px;">→</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- BOOK SECTION (No marketing, just authority) -->
-        <section class="book-announcement">
-            <span class="status-badge">Current Project: Manuscript in Progress</span>
-            <h2>The Philosophy of AI</h2>
-            <p>I am currently authoring a book exploring the deep-seated societal implications of Artificial Intelligence. I delve into why building the technology compels us to rethink what it means to be human.</p>
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <h3 id="about">Biographical</h3>
-        <section class="about-section">
-            <img src="assets/images/mastafa_ethics_llm.jpeg" alt="Mastafa Foufa" class="profile-pic">
-            <div class="about-text">
-                <p>
-                    I am a <strong>Senior Applied Scientist at Microsoft</strong> based in Seattle. With over 9 patents in AI and Human-Computer Interaction, my career has been dedicated to technological excellence. 
-                </p>
-                <p>
-                    Beyond engineering, I am a black belt in Judo and a former national Karate Jutsu champion. Today, I translate that discipline into my research and my passion for surfing, kitesurfing, and the philosophy of technology.
-                </p>
-            </div>
-        </section>
-
-        <!-- WORK & PATENTS SECTION -->
-        <section id="work">
-            <h3>Intellectual Property & Research</h3>
-            
-            <div class="research-tabs">
-                <button class="tab-btn active" onclick="filterProjects('all')">All</button>
-                <button class="tab-btn" onclick="filterProjects('patents')">Patents</button>
-                <button class="tab-btn" onclick="filterProjects('publications')">Publications</button>
-            </div>
-
-            <div id="projects-container" class="projects-grid">
-                
-                <!-- Patent 1 -->
-                <div class="project-card" data-type="patents">
-                    <div class="project-header">
-                        <div class="project-title">Shared visual content filtering during virtual meetings</div>
-                        <span class="tech-tag tag-patent">US 11,881,958</span>
-                    </div>
-                    <p>Methodology for intelligent information streamlining in collaborative virtual spaces.</p>
-                </div>
-
-                <!-- Patent 2 -->
-                <div class="project-card" data-type="patents">
-                    <div class="project-header">
-                        <div class="project-title">Computing experience personalization to enhance productivity</div>
-                        <span class="tech-tag tag-patent">US 12,039,470</span>
-                    </div>
-                    <p>Adaptive systems that learn user behavior to optimize high-performance workflows.</p>
-                </div>
-
-                <!-- Patent 3 (Application) -->
-                <div class="project-card" data-type="patents">
-                    <div class="project-header">
-                        <div class="project-title">Verbatim feedback processing for compliant retention</div>
-                        <span class="tech-tag tag-app">App 18/650,589</span>
-                    </div>
-                    <p>Next-gen NLP approach for processing feedback while maintaining strict privacy and compliance.</p>
-                </div>
-
-                <!-- Patent 4 -->
-                <div class="project-card" data-type="patents">
-                    <div class="project-header">
-                        <div class="project-title">Machine-learning-model based name pronunciation</div>
-                        <span class="tech-tag tag-patent">US 12,028,176</span>
-                    </div>
-                    <p>A linguistic AI model fostering inclusivity through accurate global name recognition.</p>
-                </div>
-
-                <!-- Patent 5 -->
-                <div class="project-card" data-type="patents">
-                    <div class="project-header">
-                        <div class="project-title">User-specific computer interaction recall</div>
-                        <span class="tech-tag tag-patent">US 11,789,944</span>
-                    </div>
-                    <p>Personalized memory systems for computing interfaces to enhance human recall.</p>
-                </div>
-
-                <!-- Patent 6 (Application) -->
-                <div class="project-card" data-type="patents">
-                    <div class="project-header">
-                        <div class="project-title">Computer-based well being assessment and mitigation</div>
-                        <span class="tech-tag tag-app">App 17/664,974</span>
-                    </div>
-                    <p>Detecting and mitigating digital fatigue through AI-driven behavioral analysis.</p>
-                </div>
-
-                <!-- Publication 1 -->
-                <div class="project-card" data-type="publications">
-                    <div class="project-header">
-                        <div class="project-title">Machine Learning in Non-Euclidean Spaces</div>
-                        <span class="tech-tag tag-pub">Medium Article</span>
-                    </div>
-                    <p>Exploring hyperbolic geometry for better hierarchical data representation in ML.</p>
-                </div>
-
-            </div>
-        </section>
-        
-        <footer>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/mastafa-foufa/" target="_blank">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=" target="_blank">Scholar</a>
-                <a href="https://x.com/mastafahf" target="_blank">X</a>
-                <a href="mailto:mastafa.foufa@hotmail.com">Email</a>
-            </div>
-            <p style="font-size: 0.8rem; margin-top: 2rem; color: #95a5a6;">&copy; 2025 Mastafa Foufa. All rights reserved.</p>
-        </footer>
-
-    </main>
-
-    <script>
-        function filterProjects(category) {
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.innerText.toLowerCase().includes(category)) btn.classList.add('active');
-            });
-
-            document.querySelectorAll('.project-card').forEach(card => {
-                const type = card.getAttribute('data-type');
-                card.style.display = (category === 'all' || type === category) ? 'block' : 'none';
-            });
-        }
-    </script>
+  <div class="gateway">
+    <div class="logo">MHF</div>
+    <a href="/en/">English</a>
+    <span style="color:#7A7872">·</span>
+    <a href="/fr/">Français</a>
+  </div>
 </body>
 </html>

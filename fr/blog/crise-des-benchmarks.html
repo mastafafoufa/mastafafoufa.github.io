@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Crise des Benchmarks : Pourquoi nous ne savons plus comment mesurer l'intelligence d'une IA | MHF</title>
+  <meta name="description" content="Au début, on évaluait les IA sur des examens de droit. Les modèles saturent maintenant ces tests. La crise de l'évaluation de l'IA expliquée de l'intérieur. Par Mastafa Foufa.">
+
+  <link rel="canonical" href="https://mastafafoufa.com/fr/blog/crise-des-benchmarks.html" />
+  <link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/crise-des-benchmarks.html" />
+  <link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/benchmark-crisis.html" />
+
+  <link rel="stylesheet" href="../../assets/css/shared.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "La Crise des Benchmarks : Pourquoi nous ne savons plus comment mesurer l'intelligence d'une IA",
+    "datePublished": "2026-04-14",
+    "author": { "@type": "Person", "name": "Mastafa Foufa" },
+    "inLanguage": "fr",
+    "url": "https://mastafafoufa.com/fr/blog/crise-des-benchmarks.html"
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/fr/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="/fr/blog/">← Blog</a>
+      <a href="/fr/">Accueil</a>
+      <a href="/en/blog/benchmark-crisis.html" class="lang-toggle" hreflang="en">EN</a>
+    </nav>
+  </header>
+
+  <div class="article-container">
+    <a href="/fr/blog/" class="back-link">← Retour au Blog</a>
+
+    <div class="article-meta">La Science &nbsp;·&nbsp; Avril 2026</div>
+
+    <h1 class="article-title">La Crise des Benchmarks&nbsp;: Pourquoi nous ne savons plus comment mesurer l'intelligence d'une IA</h1>
+
+    <div class="article-body">
+      <p><span class="dropcap">E</span>n 2022, lorsque les premiers grands modèles de langage ont commencé à être soumis aux benchmarks d'évaluation standardisés, les résultats ont suscité un mélange de stupéfaction et d'enthousiasme. GPT-4 obtenait des scores au-dessus du 90e percentile au barreau américain. Des performances équivalentes à celles de médecins spécialistes étaient annoncées sur les examens de médecine USMLE. Les gros titres se sont multipliés : « L'IA dépasse les humains en X. »</p>
+
+      <p>Ce que les gros titres n'ont pas dit, c'est que ces benchmarks n'avaient pas été conçus pour évaluer des IA. Ils avaient été conçus pour évaluer des juristes et des médecins. Et quand vous utilisez le même examen pour évaluer à la fois des humains et des systèmes entraînés sur des dizaines de milliards de tokens incluant, très probablement, les corrigés de cet examen — la comparaison ne tient plus.</p>
+
+      <p>Le problème s'est aggravé. Aujourd'hui, les modèles de pointe saturent presque tous les benchmarks classiques. MMLU, ARC, HellaSwag, WinoGrande — les scores approchent les plafonds théoriques. À chaque nouveau modèle annoncé, les labs publient les scores des benchmarks comme preuves de supériorité. Et à chaque fois, les chercheurs en évaluation font les mêmes remarques : les données d'évaluation sont peut-être dans les données d'entraînement (contamination), les modèles ont peut-être été surajustés sur ces tests spécifiques (overfitting), et de toute façon, un score élevé sur MMLU ne dit pas grand-chose sur la capacité à raisonner dans des situations réelles.</p>
+
+      <p>C'est ce qu'on appelle désormais la crise des benchmarks. Elle a plusieurs dimensions.</p>
+
+      <p>La première est la contamination. Les benchmarks comme MMLU (Massive Multitask Language Understanding) sont des jeux de questions-réponses dans des dizaines de domaines : histoire, biologie, droit, mathématiques. Ces questions sont publiques. Elles sont sur Internet. Elles sont donc, avec toute probabilité, dans les données d'entraînement des modèles les plus récents. Savoir que le modèle « comprend » la biologie cellulaire, ou qu'il a simplement mémorisé les bonnes réponses à ces questions spécifiques, est devenu impossible à distinguer.</p>
+
+      <p>La deuxième dimension est la saturation. Quand un benchmark est utilisé de façon répétée comme critère d'évaluation et de comparaison entre modèles, les équipes qui entraînent ces modèles finissent par l'optimiser — consciemment ou non. C'est l'équivalent de la loi de Goodhart : quand une mesure devient un objectif, elle cesse d'être une bonne mesure.</p>
+
+      <p>La troisième dimension, plus profonde, est conceptuelle : qu'est-ce qu'on mesure, exactement ? Les questions à choix multiples mesurent la reconnaissance de patterns dans des contextes fixés. Elles ne mesurent pas la capacité à formuler un problème, à identifier les limites de sa propre connaissance, à adapter un raisonnement à une situation nouvelle, ou à savoir quand ne pas répondre. Ce sont pourtant ces capacités qui définissent l'expertise réelle — chez les humains comme, si tant est que cela ait un sens, dans les systèmes d'IA.</p>
+
+      <p>Face à cette crise, l'industrie a produit deux types de réponses. La première est de créer des benchmarks plus difficiles : des examens de compétition en mathématiques (MATH, AIME), des puzzles de raisonnement spatial, des problèmes de code complexes (SWE-bench). Ces benchmarks sont plus résistants à la saturation — du moins, pour le moment. La deuxième réponse est plus radicale : utiliser un autre modèle de langage pour évaluer les sorties d'un modèle. C'est ce qu'on appelle le « LLM-as-a-judge ». Une IA qui note une IA.</p>
+
+      <p>Le LLM-as-a-judge a des avantages réels : il permet d'évaluer des réponses longues, ouvertes, nuancées, qui ne se prêtent pas à une réponse binaire correcte/incorrecte. Mais il introduit de nouveaux problèmes. Le modèle-juge a ses propres biais, ses propres angles morts, ses propres préférences stylistiques. Il tend à favoriser les réponses longues, bien structurées et confiantes — exactement les qualités que produisent les modèles de langage performants, indépendamment de leur exactitude factuelle. Le risque est de créer une boucle de validation circulaire où les modèles apprennent à générer le type de sorties que d'autres modèles évalueront positivement.</p>
+
+      <p>Si même les ingénieurs peinent à évaluer objectivement la justesse d'une IA, comment l'utilisateur final peut-il lui faire confiance aveuglément ? C'est le cœur de mon prochain essai, <em>La paresse de penser</em> — une exploration de ce que signifie déléguer sa pensée à des systèmes dont les performances réelles restent, pour une large part, opaque à ceux qui les utilisent au quotidien.</p>
+    </div>
+
+    <div class="article-footer">
+      MHF &nbsp;·&nbsp; <a href="/fr/">Mastafa Foufa</a> &nbsp;·&nbsp;
+      <a href="/en/blog/benchmark-crisis.html">Read in English →</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="/fr/blog/">Blog</a>
+      <a href="/fr/">Accueil</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa.</p>
+  </footer>
+</body>
+</html>

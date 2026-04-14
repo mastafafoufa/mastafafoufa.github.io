@@ -1,0 +1,401 @@
+/* ============================================================
+   MHF Design System — mastafafoufa.com
+   Shared styles. Page-specific layout goes inline per file.
+   ============================================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap');
+
+/* --- Design Tokens --- */
+:root {
+  --bg:            #FAFAF8;
+  --text:          #1C1C1A;
+  --heading:       #0A0A09;
+  --accent:        #1A5276;
+  --accent-light:  #2E86C1;
+  --gold:          #B8962E;
+  --border:        #E8E6E0;
+  --secondary-bg:  #F2F0EC;
+  --muted:         #7A7872;
+  --black:         #000000;
+  --white:         #FFFFFF;
+}
+
+/* --- Base --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 { color: var(--heading); margin-top: 0; }
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent-light); text-decoration: underline; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Layout Container --- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Section Labels --- */
+.section-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Navigation --- */
+.site-header {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 100;
+}
+
+.site-logo {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: var(--heading);
+  text-decoration: none;
+}
+.site-logo:hover { text-decoration: none; color: var(--heading); }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+.site-nav a {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.site-nav a:hover { color: var(--accent); text-decoration: none; }
+
+.lang-toggle {
+  font-size: 0.78rem !important;
+  color: var(--muted) !important;
+  border: 1px solid var(--border);
+  padding: 4px 11px;
+  border-radius: 3px;
+  letter-spacing: 2px !important;
+}
+.lang-toggle:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent);
+  text-decoration: none !important;
+}
+
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--border);
+  margin-top: 6rem;
+}
+.site-footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.site-footer .social-links a {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.site-footer .social-links a:hover { color: var(--accent); }
+.site-footer .copyright { font-size: 0.75rem; color: var(--muted); }
+
+/* --- Buttons --- */
+.btn-outline {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 2px solid var(--heading);
+  color: var(--heading);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-outline:hover {
+  background: var(--heading);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* --- Badge --- */
+.badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.badge-forthcoming { background: var(--gold); color: #fff; }
+.badge-published    { background: var(--accent); color: #fff; }
+
+/* --- Book Panel --- */
+.book-panel {
+  background: var(--black);
+  color: var(--white);
+  padding: 3.5rem;
+  border-radius: 8px;
+  margin: 4rem 0;
+}
+.book-panel .book-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0.75rem 0 1.25rem;
+  line-height: 1.15;
+}
+.book-panel .book-publisher {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 2rem;
+}
+.book-panel .book-desc {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.82);
+  max-width: 580px;
+}
+
+/* --- Deck / Bento Cards --- */
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.deck-card {
+  background: var(--secondary-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.deck-card .card-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.deck-card p { font-size: 1rem; margin: 0; }
+
+/* --- Patent / Project Cards --- */
+.projects-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.25s;
+}
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border-color: var(--accent);
+}
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.project-title { font-weight: 700; font-size: 1rem; }
+.tech-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.tag-patent { background: #e8f6f3; color: #1abc9c; }
+.tag-app    { background: #fef9e7; color: #c0932a; }
+.tag-pub    { background: #ebf5fb; color: #2980b9; }
+
+/* --- Research Tabs --- */
+.research-tabs { display: flex; gap: 1rem; margin-bottom: 2.5rem; }
+.tab-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.25s;
+}
+.tab-btn.active { color: var(--heading); border-bottom-color: var(--accent); }
+.tab-btn:hover  { color: var(--accent); }
+
+/* --- Photo Row --- */
+.photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+.photo-row figure { margin: 0; }
+.photo-row img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.photo-row figcaption {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* --- Blog Post Preview --- */
+.post-preview { margin-bottom: 3rem; }
+.post-preview h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+.post-preview h2 a { color: var(--heading); }
+.post-preview h2 a:hover { color: var(--accent); text-decoration: none; }
+.post-date {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.post-excerpt {
+  font-family: 'Lora', serif;
+  color: #555;
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+.post-read-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Article Styles --- */
+.article-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 2rem 6rem;
+}
+.back-link {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 4rem;
+}
+.back-link:hover { color: var(--accent); text-decoration: none; }
+.article-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.article-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--heading);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+.article-body {
+  font-family: 'Lora', serif;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+.article-body p { margin-bottom: 1.8rem; }
+.article-body strong { color: var(--heading); }
+.dropcap {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-right: 10px;
+  color: var(--heading);
+}
+.article-footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--muted);
+}
+.article-footer a { color: var(--accent); font-weight: 700; }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .site-header { flex-direction: column; gap: 1.25rem; padding: 1.25rem; }
+  .site-nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .book-panel { padding: 2rem 1.75rem; }
+  .photo-row { grid-template-columns: 1fr; }
+}

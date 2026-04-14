@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Landing Pages -->
+  <url>
+    <loc>https://mastafafoufa.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Blog Hubs -->
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Press Kit -->
+  <url>
+    <loc>https://mastafafoufa.com/press/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Deck -->
+  <url>
+    <loc>https://mastafafoufa.com/deck/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog Posts — Book & Cornerstone Essays -->
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/llm-mental-laziness.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/designing-for-friction.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/designing-for-friction.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/designing-for-friction.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts — Tech Deep-Dives -->
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/crise-des-benchmarks.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/crise-des-benchmarks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/benchmark-crisis.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/benchmark-crisis.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/benchmark-crisis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/crise-des-benchmarks.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/mur-des-donnees.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/mur-des-donnees.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/data-wall.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/data-wall.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/data-wall.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/mur-des-donnees.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/agents-vs-copilotes.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/agents-vs-copilotes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/agents-vs-copilots.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/agents-vs-copilots.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/agents-vs-copilots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/agents-vs-copilotes.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/open-source-vs-ferme.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/open-source-vs-ferme.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/open-source-vs-closed.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/open-source-vs-closed.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/open-source-vs-closed.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/open-source-vs-ferme.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/scaling-laws-vs-world-models.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/scaling-laws-vs-world-models.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/scaling-laws-vs-world-models.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/scaling-laws-vs-world-models.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/scaling-laws-vs-world-models.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/scaling-laws-vs-world-models.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts — Philosophy -->
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/vision-ellulienne.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/vision-ellulienne.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/ellul-technology.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/ellul-technology.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/ellul-technology.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/vision-ellulienne.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/dernier-homme-nietzsche.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/dernier-homme-nietzsche.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/nietzsche-last-man.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/nietzsche-last-man.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/nietzsche-last-man.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/dernier-homme-nietzsche.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts — Technical -->
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/histoire-embeddings.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/histoire-embeddings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/history-of-embeddings.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/en/blog/history-of-embeddings.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/history-of-embeddings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/histoire-embeddings.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Personal Essay -->
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/poids-du-silence.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/poids-du-silence.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
