@@ -75,14 +75,33 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-logo {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.05rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 6px;
+  letter-spacing: 0.32em;
   color: var(--heading);
   text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 7px 0;
+  line-height: 1;
 }
+.site-logo::before,
+.site-logo::after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.75;
+  transition: opacity 0.25s;
+}
+.site-logo::before { top: 0; }
+.site-logo::after  { bottom: 0; }
 .site-logo:hover { text-decoration: none; color: var(--heading); }
+.site-logo:hover::before,
+.site-logo:hover::after { opacity: 1; }
 
 .site-nav {
   display: flex;
@@ -293,7 +312,7 @@ img { max-width: 100%; height: auto; display: block; }
   aspect-ratio: 16/10;
   object-fit: cover;
   border-radius: 0;
-  filter: grayscale(100%) contrast(1.12) brightness(0.88);
+  filter: grayscale(100%) contrast(1.05) brightness(0.95);
 }
 .photo-row figcaption {
   font-size: 0.72rem;

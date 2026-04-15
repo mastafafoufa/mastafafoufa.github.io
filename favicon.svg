@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#0A0A09"/>
+  <!-- Top rule -->
+  <rect x="4" y="7.5" width="24" height="0.8" fill="white" opacity="0.75"/>
+  <!-- MHF -->
+  <text x="16" y="20.5" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="9.5" font-weight="700"
+        fill="white" letter-spacing="2.2">MHF</text>
+  <!-- Bottom rule -->
+  <rect x="4" y="24.5" width="24" height="0.8" fill="white" opacity="0.75"/>
+</svg>

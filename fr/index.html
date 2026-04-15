@@ -7,6 +7,7 @@
   <title>Mastafa Foufa — Scientifique IA, Inventeur & Auteur | MHF</title>
   <meta name="description" content="Mastafa Foufa, Scientifique Appliqué Senior chez Microsoft, auteur de La paresse de penser (FYP Éditions, mai 2026). IA, cognition et philosophie de la technique.">
 
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical"    href="https://mastafafoufa.com/fr/" />
   <link rel="alternate" hreflang="fr"        href="https://mastafafoufa.com/fr/" />
   <link rel="alternate" hreflang="en"        href="https://mastafafoufa.com/en/" />
@@ -63,12 +64,12 @@
       padding: 5rem 2rem;
     }
     .book-hero-inner {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 4rem;
-      align-items: center;
+      grid-template-columns: 1fr 360px;
+      gap: 5rem;
+      align-items: start;
     }
     .book-hero .badge-forthcoming {
       margin-bottom: 1.5rem;
@@ -90,6 +91,14 @@
       color: rgba(255,255,255,0.4);
       margin-bottom: 2rem;
     }
+    .book-hero-subtitle {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+      margin: 0.25rem 0 1.5rem;
+      line-height: 1.4;
+    }
     .book-hero-desc {
       font-family: 'Lora', serif;
       font-size: 1.05rem;
@@ -97,12 +106,28 @@
       color: rgba(255,255,255,0.8);
       max-width: 520px;
     }
+    .book-hero-portrait-wrap {
+      position: relative;
+      line-height: 0;
+      margin-top: -1rem;
+    }
+    .book-hero-portrait-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 35%;
+      background: linear-gradient(to bottom, transparent, #000000);
+      pointer-events: none;
+    }
     .book-hero-portrait {
       width: 100%;
+      height: 420px;
       border-radius: 0;
       object-fit: cover;
+      object-position: center 10%;
       filter: grayscale(100%) contrast(1.08) brightness(0.88);
-      box-shadow: 16px 16px 48px rgba(0,0,0,0.35);
     }
 
     /* --- Retailers (placeholder) --- */
@@ -135,13 +160,30 @@
     /* --- About --- */
     .about-grid {
       display: grid;
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: 280px 1fr;
       gap: 3.5rem;
       align-items: start;
       margin-top: 2rem;
     }
+    .about-portrait-wrap {
+      position: relative;
+      line-height: 0;
+    }
+    .about-portrait-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+      background: linear-gradient(to bottom, transparent, #FAFAF8);
+      pointer-events: none;
+    }
     .about-portrait {
       width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center 10%;
       border-radius: 0;
       filter: grayscale(100%) contrast(1.06) brightness(0.97);
     }
@@ -156,8 +198,10 @@
 
     @media (max-width: 768px) {
       .book-hero-inner { grid-template-columns: 1fr; }
-      .book-hero-portrait { max-width: 240px; }
+      .book-hero-portrait-wrap { max-width: 260px; margin-top: 2rem; }
+      .book-hero-portrait { height: 340px; }
       .about-grid { grid-template-columns: 1fr; }
+      .about-portrait { height: 280px; }
       .blog-previews { grid-template-columns: 1fr; }
     }
   </style>
@@ -184,11 +228,12 @@
       <div>
         <span class="badge badge-forthcoming">À paraître &nbsp;·&nbsp; Mai 2026</span>
         <h1 class="book-hero-title">La paresse<br>de penser</h1>
-        <p class="book-hero-publisher">FYP Éditions</p>
+        <p class="book-hero-subtitle">La grande démission intellectuelle face à l'IA</p>
+        <p class="book-hero-publisher">FYP Éditions &nbsp;—&nbsp; Préface de Luc Julia</p>
         <p class="book-hero-desc">
-          Nous vivons dans une époque d'accélération cognitive. Les grands modèles de langage anticipent nos prochains mots. Les algorithmes de recommandation devancent nos désirs. Les agents autonomes prennent des décisions à notre place.
+          Les modèles de langage anticipent nos phrases. Les algorithmes de recommandation devancent nos désirs. Déjà, des agents autonomes se préparent à prendre des décisions complexes à notre place.
           <br><br>
-          Cet essai pose une question inconfortable : sommes-nous en train de déléguer non seulement nos tâches, mais notre capacité même à penser ?
+          Face à cette fulgurance technique, une question inconfortable s'impose : à quel moment la commodité technologique se transforme-t-elle en atrophie cognitive ? Sommes-nous en train de déléguer, non seulement nos tâches, mais notre capacité même à raisonner ?
         </p>
         <div class="retailers">
           <span class="retailer-pill">FNAC</span>
@@ -197,9 +242,11 @@
         </div>
         <p class="retailer-note">Disponible en librairies à partir de mai 2026.</p>
       </div>
-      <img src="../assets/images/mastafa_black_white_web.jpg"
-           alt="Mastafa Foufa — auteur de La paresse de penser"
-           class="book-hero-portrait">
+      <div class="book-hero-portrait-wrap">
+        <img src="../assets/images/mastafa_black_white_web.jpg"
+             alt="Mastafa Foufa — auteur de La paresse de penser"
+             class="book-hero-portrait">
+      </div>
     </div>
   </section>
 
@@ -209,22 +256,24 @@
     <h2 class="section-label">Le Propos</h2>
     <div style="max-width:680px; font-family:'Lora',serif; font-size:1.08rem; line-height:1.9;">
       <p>
-        Ce livre n'est pas un livre contre l'intelligence artificielle. C'est un livre pour une relation plus consciente avec elle.
+        Cet essai n'est pas un pamphlet contre l'intelligence artificielle. C'est un manuel d'autodéfense intellectuelle pour l'ère générative.
       </p>
       <p>
-        Nourri de neuf ans au cœur de l'industrie — de la construction de systèmes NLP à grande échelle chez Microsoft à l'enseignement des architectures de grands modèles de langage à l'EPITA Paris — <em>La paresse de penser</em> explore le mécanisme par lequel nous consentons, souvent sans le savoir, à laisser les machines penser à notre place.
+        Nourri par près d'une décennie d'expérience technique — de la conception de systèmes NLP à grande échelle chez Microsoft à l'enseignement de ces architectures à l'EPITA — <em>La Paresse de penser</em> prend du recul pour observer une mutation profonde de notre rapport à la technologie. Le livre explore cette mécanique subtile par laquelle nous consentons, souvent sans le savoir, à laisser les machines penser à notre place, troquant notre effort cognitif contre le confort de l'immédiateté.
       </p>
       <p>
-        Ni alarmiste, ni naïvement optimiste : cet essai est une invitation à ralentir, à observer, et à choisir délibérément ce que nous confions aux algorithmes.
+        Ni technophobe ni techno-béat, cet essai est une invitation urgente à réhabiliter le doute. Un appel à ralentir, à réintroduire de la friction dans nos usages, et à reconquérir farouchement le territoire de l'intention.
       </p>
     </div>
 
     <!-- AUTEUR -->
     <h2 class="section-label" id="auteur">L'Auteur</h2>
     <div class="about-grid">
-      <img src="../assets/images/mastafa_black_white_web.jpg"
-           alt="Mastafa Foufa"
-           class="about-portrait">
+      <div class="about-portrait-wrap">
+        <img src="../assets/images/mastafa_black_white_web.jpg"
+             alt="Mastafa Foufa"
+             class="about-portrait">
+      </div>
       <div class="about-text">
         <p>
           Je suis ingénieur et scientifique, formé à <strong>Télécom Paris</strong>, une des grandes écoles d'ingénieurs, avant de rejoindre <strong>Microsoft à Seattle</strong> où je suis aujourd'hui <strong>Scientifique Appliqué Senior</strong>. Mon travail quotidien consiste à concevoir des systèmes de traitement du langage naturel à grande échelle — des systèmes utilisés par des dizaines de millions de personnes dans le monde.

@@ -7,6 +7,7 @@
   <title>Mastafa Foufa — AI Scientist, Inventor & Author | MHF</title>
   <meta name="description" content="Senior Applied Scientist at Microsoft. 9 patents in AI and Human-Computer Interaction. Upcoming author of La paresse de penser (FYP Éditions, 2026). Seattle.">
 
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical"    href="https://mastafafoufa.com/en/" />
   <link rel="alternate" hreflang="en"        href="https://mastafafoufa.com/en/" />
   <link rel="alternate" hreflang="fr"        href="https://mastafafoufa.com/fr/" />
@@ -59,12 +60,16 @@
     /* --- Hero --- */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 4rem;
-      align-items: center;
-      padding: 6rem 2rem 5rem;
-      max-width: 900px;
+      grid-template-columns: 1fr 380px;
+      gap: 5rem;
+      align-items: start;
+      padding: 6rem 2rem 0;
+      max-width: 960px;
       margin: 0 auto;
+    }
+    .hero-text {
+      padding-top: 1rem;
+      padding-bottom: 5rem;
     }
     .hero-label {
       font-size: 0.75rem;
@@ -91,12 +96,28 @@
       line-height: 1.65;
     }
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-portrait-wrap {
+      position: relative;
+      line-height: 0;
+      margin-top: -2rem;
+    }
+    .hero-portrait-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 32%;
+      background: linear-gradient(to bottom, transparent, #FAFAF8);
+      pointer-events: none;
+    }
     .hero-portrait {
       width: 100%;
+      height: 420px;
       border-radius: 0;
       object-fit: cover;
+      object-position: center 10%;
       filter: grayscale(100%) contrast(1.06) brightness(0.97);
-      box-shadow: 18px 18px 48px rgba(0,0,0,0.10);
     }
 
     /* --- About --- */
@@ -107,19 +128,34 @@
       align-items: start;
       margin-top: 2rem;
     }
+    .about-portrait-wrap {
+      position: relative;
+      line-height: 0;
+    }
+    .about-portrait-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 30%;
+      background: linear-gradient(to bottom, transparent, #FAFAF8);
+      pointer-events: none;
+    }
     .about-portrait {
       width: 100%;
+      height: 300px;
       border-radius: 0;
       object-fit: cover;
-      aspect-ratio: 3/4;
+      object-position: center 10%;
       filter: grayscale(100%) contrast(1.06) brightness(0.97);
     }
     .about-text p { font-size: 1.05rem; margin-bottom: 1.25rem; }
     .about-text p:last-child { margin-bottom: 0; }
 
     @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-portrait { max-width: 260px; }
+      .hero { grid-template-columns: 1fr; align-items: start; padding: 4rem 1.5rem 0; }
+      .hero-text { padding-bottom: 0; }
+      .hero-portrait-wrap { max-width: 280px; margin: 2rem auto 0; }
+      .hero-portrait { height: 360px; }
       .about-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -153,9 +189,11 @@
         <a href="/deck/" class="btn-outline" style="border-color: var(--border); color: var(--muted);">View Deck &nbsp;→</a>
       </div>
     </div>
-    <img src="../assets/images/mastafa_black_white_web.jpg"
-         alt="Mastafa Foufa — AI Scientist and Author"
-         class="hero-portrait">
+    <div class="hero-portrait-wrap">
+      <img src="../assets/images/mastafa_black_white_web.jpg"
+           alt="Mastafa Foufa — AI Scientist and Author"
+           class="hero-portrait">
+    </div>
   </section>
 
   <main class="container">
@@ -173,7 +211,7 @@
       </div>
       <div class="deck-card">
         <div class="card-label">The Roots</div>
-        <p>Formed between Casablanca and Paris. Disciplined by the tatami. Drawn equally to algorithms, literature, and the open sea.</p>
+        <p>Raised in Nîmes, in the south of France, with Moroccan roots. Disciplined by the tatami. Drawn equally to algorithms, literature, and the open sea.</p>
       </div>
     </div>
     <div style="text-align:center; margin-top:2.5rem;">
@@ -184,18 +222,25 @@
     <div class="book-panel" id="book">
       <span class="badge badge-forthcoming">Forthcoming &nbsp;·&nbsp; May 2026</span>
       <div class="book-title">La paresse de penser</div>
+      <div style="font-family:'Lora',serif; font-style:italic; font-size:0.95rem; color:rgba(255,255,255,0.5); margin:-0.5rem 0 1.5rem; letter-spacing:0.01em;">The Laziness of Thinking — The Great Intellectual Resignation in the Age of AI</div>
       <div class="book-publisher">FYP Éditions</div>
       <p class="book-desc">
-        My forthcoming essay asks a simple, uncomfortable question: at what point does relying on intelligent machines stop being convenient and start becoming cognitive atrophy? Grounded in years of building the systems themselves, <em>La paresse de penser</em> is not a warning — it is an invitation to think more carefully about what we choose to stop thinking about.
+        Language models anticipate our next words. Recommendation algorithms outpace our desires. Autonomous agents are increasingly making decisions on our behalf.
+        <br><br>
+        Grounded in years of building the systems themselves — from developing large-scale NLP solutions at Microsoft to teaching AI architectures at EPITA Paris — <em>La paresse de penser</em> steps back to observe a profound shift in our relationship with technology. It explores the subtle process through which we consent, often unknowingly, to let machines do the thinking for us. Instead of blaming the algorithms, the book examines our own tendency to trade cognitive effort for seamless convenience.
+        <br><br>
+        Neither a doomsday warning nor a naive tech utopia, this book is a manual for cognitive self-defence. An invitation to slow down, design for friction, and fiercely reclaim what we choose to stop thinking about.
       </p>
     </div>
 
     <!-- ABOUT -->
     <h2 class="section-label" id="about">About</h2>
     <div class="about-grid">
-      <img src="../assets/images/mastafa_black_white_web.jpg"
-           alt="Mastafa Foufa"
-           class="about-portrait">
+      <div class="about-portrait-wrap">
+        <img src="../assets/images/mastafa_black_white_web.jpg"
+             alt="Mastafa Foufa"
+             class="about-portrait">
+      </div>
       <div class="about-text">
         <p>
           I am a <strong>Senior Applied Scientist at Microsoft</strong>, based in Seattle, where I architect NLP models and AI systems within the Microsoft 365 ecosystem — work that has produced <strong>9 patents</strong> spanning intelligent personalisation, behavioural anomaly detection, and human well-being in the workplace.
