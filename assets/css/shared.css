@@ -174,7 +174,7 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--black);
   color: var(--white);
   padding: 3.5rem;
-  border-radius: 8px;
+  border-radius: 0;
   margin: 4rem 0;
 }
 .book-panel .book-title {
@@ -253,14 +253,15 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.68rem;
   font-weight: 700;
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 2px;
   text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;
+  letter-spacing: 0.5px;
 }
-.tag-patent { background: #e8f6f3; color: #1abc9c; }
-.tag-app    { background: #fef9e7; color: #c0932a; }
-.tag-pub    { background: #ebf5fb; color: #2980b9; }
+.tag-patent { background: rgba(26, 82, 118, 0.07); color: #3A6189; border: 1px solid rgba(26, 82, 118, 0.16); }
+.tag-app    { background: rgba(110, 88, 52, 0.07); color: #7A6440; border: 1px solid rgba(110, 88, 52, 0.16); }
+.tag-pub    { background: rgba(50, 50, 45, 0.06); color: var(--muted); border: 1px solid rgba(50, 50, 45, 0.14); }
 
 /* --- Research Tabs --- */
 .research-tabs { display: flex; gap: 1rem; margin-bottom: 2.5rem; }
@@ -291,14 +292,16 @@ img { max-width: 100%; height: auto; display: block; }
   width: 100%;
   aspect-ratio: 16/10;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 0;
+  filter: grayscale(100%) contrast(1.12) brightness(0.88);
 }
 .photo-row figcaption {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--muted);
-  margin-top: 0.6rem;
-  text-align: center;
+  margin-top: 0.65rem;
+  text-align: left;
   font-style: italic;
+  letter-spacing: 0.2px;
 }
 
 /* --- Blog Post Preview --- */

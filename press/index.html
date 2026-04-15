@@ -24,7 +24,7 @@
     .bio-lang { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: 1rem; }
     .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
     .photo-item a { display: block; }
-    .photo-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px; transition: opacity 0.2s; }
+    .photo-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 0; transition: opacity 0.2s; filter: grayscale(100%) contrast(1.1) brightness(0.9); }
     .photo-item img:hover { opacity: 0.85; }
     .photo-item p { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; font-style: italic; }
     .qa-item { margin-bottom: 2.5rem; }
@@ -90,13 +90,13 @@
         <a href="/assets/images/picture_presenting.jpg" target="_blank">
           <img src="/assets/images/picture_presenting.jpg" alt="Mastafa Foufa présentant chez Microsoft">
         </a>
-        <p>Speaking at Microsoft — embeddings &amp; NLP</p>
+        <p>NLP &amp; Embeddings Conference, Dublin</p>
       </div>
       <div class="photo-item">
         <a href="/assets/images/mastafa_ethics_llm.jpeg" target="_blank">
-          <img src="/assets/images/mastafa_ethics_llm.jpeg" alt="Mastafa Foufa — conférence éthique LLM">
+          <img src="/assets/images/mastafa_ethics_llm.jpeg" alt="Mastafa Foufa — lecture LLM ethics, Seattle">
         </a>
-        <p>Lecture — LLM ethics &amp; societal impact</p>
+        <p>LLM Ethics &amp; Societal Impact, Seattle</p>
       </div>
     </div>
 
