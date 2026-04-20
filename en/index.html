@@ -59,12 +59,9 @@
   <style>
     /* --- Hero --- */
     .hero {
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 5rem;
-      align-items: start;
+      display: block;
       padding: 6rem 2rem 0;
-      max-width: 960px;
+      max-width: 700px;
       margin: 0 auto;
     }
     .hero-text {
@@ -122,8 +119,10 @@
 
     /* --- About --- */
     .about-grid {
-      display: block;
-      max-width: 680px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      align-items: start;
       margin-top: 2rem;
     }
     .about-portrait-wrap {
@@ -187,11 +186,6 @@
         <a href="/deck/" class="btn-outline" style="border-color: var(--border); color: var(--muted);">View Deck &nbsp;→</a>
       </div>
     </div>
-    <div class="hero-portrait-wrap">
-      <img src="../assets/images/mastafa_black_white_web.jpg"
-           alt="Mastafa Foufa — AI Scientist and Author"
-           class="hero-portrait">
-    </div>
   </section>
 
   <main class="container">
@@ -234,6 +228,11 @@
     <!-- ABOUT -->
     <h2 class="section-label" id="about">About</h2>
     <div class="about-grid">
+      <div class="about-portrait-wrap">
+        <img src="../assets/images/mastafa_black_white_web.jpg"
+             alt="Mastafa Foufa"
+             class="about-portrait">
+      </div>
       <div class="about-text">
         <p>
           I am a <strong>Senior Applied Scientist at Microsoft</strong>, based in Seattle, where I architect NLP models and AI systems within the Microsoft 365 ecosystem — work that has produced <strong>9 patents</strong> spanning intelligent personalisation, behavioural anomaly detection, and human well-being in the workplace.
@@ -399,6 +398,14 @@
     <p class="copyright">&copy; 2026 Mastafa Foufa. All rights reserved.</p>
   </footer>
 
+  <script>
+    (function() {
+      var h = document.querySelector('.site-header');
+      window.addEventListener('scroll', function() {
+        h.classList.toggle('scrolled', window.scrollY > 24);
+      }, { passive: true });
+    })();
+  </script>
   <script>
     function filterProjects(category) {
       document.querySelectorAll('.tab-btn').forEach(btn => {
