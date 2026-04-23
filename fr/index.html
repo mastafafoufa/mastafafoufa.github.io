@@ -282,57 +282,104 @@
       </div>
     </div>
 
-    <!-- BREVETS (compact) -->
+    <!-- GALERIE PHOTOS -->
+    <div class="photo-row">
+      <figure>
+        <img src="../assets/images/picture_presenting.jpg"
+             alt="Mastafa Foufa présentant sur le NLP et les embeddings, Dublin">
+        <figcaption>NLP &amp; Embeddings Conference, Dublin</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/images/mastafa_ethics_llm.jpeg"
+             alt="Mastafa Foufa donnant une conférence sur l'éthique des LLMs, Seattle"
+             style="object-position: center 20%;">
+        <figcaption>Conférence — Éthique des LLMs &amp; Impact sociétal, Seattle</figcaption>
+      </figure>
+    </div>
+
+    <!-- BREVETS -->
     <h2 class="section-label" id="brevets">Propriété Intellectuelle</h2>
     <p style="font-family:'Lora',serif; font-size:1rem; color:var(--muted); margin-bottom:2rem;">
       9 brevets déposés aux États-Unis dans les domaines de l'IA, du traitement du langage naturel et de l'interaction homme-machine.
     </p>
-    <div class="projects-grid">
-      <div class="project-card">
+
+    <div class="research-tabs">
+      <button class="tab-btn active" onclick="filterProjects('all')">Tout</button>
+      <button class="tab-btn" onclick="filterProjects('patents')">Brevets</button>
+      <button class="tab-btn" onclick="filterProjects('publications')">Publications</button>
+    </div>
+
+    <div id="projects-container" class="projects-grid">
+      <div class="project-card" data-type="patents">
         <div class="project-header">
           <div class="project-title">Filtrage de contenu visuel lors de réunions virtuelles</div>
           <span class="tech-tag tag-patent">US 11,881,958</span>
         </div>
         <p>Optimisation intelligente de l'information dans les espaces de travail collaboratifs virtuels.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-type="patents">
         <div class="project-header">
           <div class="project-title">Personnalisation de l'expérience informatique</div>
           <span class="tech-tag tag-patent">US 12,039,470</span>
         </div>
         <p>Systèmes adaptatifs apprenant les comportements utilisateurs pour optimiser les flux de travail.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-type="patents">
         <div class="project-header">
           <div class="project-title">Prononciation des noms par apprentissage automatique</div>
           <span class="tech-tag tag-patent">US 12,028,176</span>
         </div>
         <p>Modèle linguistique favorisant l'inclusivité par la reconnaissance précise des noms du monde entier.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-type="patents">
         <div class="project-header">
           <div class="project-title">Mémorisation personnalisée des interactions informatiques</div>
           <span class="tech-tag tag-patent">US 11,789,944</span>
         </div>
         <p>Systèmes de mémoire personnalisés pour les interfaces informatiques.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-type="patents">
         <div class="project-header">
           <div class="project-title">Richesse des réunions virtuelles</div>
           <span class="tech-tag tag-patent">US 11,831,696</span>
         </div>
         <p>Optimisation par IA de la qualité de la collaboration à distance.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-type="patents">
         <div class="project-header">
           <div class="project-title">Réponses automatiques contextuelles à l'absence</div>
           <span class="tech-tag tag-patent">US 11,418,463</span>
         </div>
         <p>IA contextuelle pour des communications d'absence personnalisées et adaptées.</p>
       </div>
-    </div>
-    <div style="text-align:center; margin-top:2rem;">
-      <a href="/en/#work" class="btn-outline">Voir tous les 9 brevets (EN)</a>
+      <div class="project-card" data-type="patents">
+        <div class="project-header">
+          <div class="project-title">Traitement verbatim des retours pour la conformité</div>
+          <span class="tech-tag tag-app">App 18/650,589</span>
+        </div>
+        <p>NLP de nouvelle génération pour le traitement des retours utilisateurs dans le respect strict de la confidentialité.</p>
+      </div>
+      <div class="project-card" data-type="patents">
+        <div class="project-header">
+          <div class="project-title">Évaluation et atténuation du bien-être numérique</div>
+          <span class="tech-tag tag-app">App 17/664,974</span>
+        </div>
+        <p>Détection et réduction de la fatigue numérique par analyse comportementale pilotée par l'IA.</p>
+      </div>
+      <div class="project-card" data-type="patents">
+        <div class="project-header">
+          <div class="project-title">Correction posturale et évaluation informatisée</div>
+          <span class="tech-tag tag-app">App 18/059,365</span>
+        </div>
+        <p>IA comportementale pour le guidage ergonomique et postural en temps réel.</p>
+      </div>
+      <div class="project-card" data-type="publications">
+        <div class="project-header">
+          <div class="project-title">Apprentissage automatique dans les espaces non-euclidiens</div>
+          <span class="tech-tag tag-pub">Publication</span>
+        </div>
+        <p>Exploration de la géométrie hyperbolique pour une meilleure représentation des données hiérarchiques.</p>
+      </div>
     </div>
 
     <!-- BLOG RÉCENT -->
@@ -340,7 +387,7 @@
     <div class="blog-previews">
       <div class="post-preview">
         <div class="post-date">Avril 2026</div>
-        <h2><a href="/fr/blog/pourquoi-paresse-de-penser.html">Le tiret cadratin et la fin de l'intention&nbsp;: pourquoi j'ai écrit «&nbsp;La Paresse de Penser&nbsp;»</a></h2>
+        <h2><a href="/fr/blog/pourquoi-paresse-de-penser.html">Le tiret cadratin et la fin de l'intention&nbsp;: pourquoi j'ai écrit «&nbsp;La paresse de penser&nbsp;»</a></h2>
         <p class="post-excerpt">Un détail typographique dans un message intime a tout déclenché — la signature syntaxique d'un LLM dans une conversation qui aurait dû rester humaine.</p>
         <a href="/fr/blog/pourquoi-paresse-de-penser.html" class="post-read-more">Lire &nbsp;→</a>
       </div>
@@ -390,6 +437,20 @@
         h.classList.toggle('scrolled', window.scrollY > 24);
       }, { passive: true });
     })();
+  </script>
+  <script>
+    function filterProjects(category) {
+      document.querySelectorAll('.tab-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText.toLowerCase() === 'tout')) {
+          btn.classList.add('active');
+        }
+      });
+      document.querySelectorAll('.project-card').forEach(function(card) {
+        var type = card.getAttribute('data-type');
+        card.style.display = (category === 'all' || type === category) ? 'block' : 'none';
+      });
+    }
   </script>
 </body>
 </html>
