@@ -180,6 +180,11 @@
       .about-portrait { height: 280px; }
       .blog-previews { grid-template-columns: 1fr; }
     }
+    /* White nav text when transparent over dark book hero */
+    .site-header.at-top .site-logo,
+    .site-header.at-top .site-nav a { color: rgba(255,255,255,0.85); }
+    .site-header.at-top .site-logo:hover,
+    .site-header.at-top .site-nav a:hover { color: #fff; }
   </style>
 </head>
 <body>
@@ -433,5 +438,6 @@
       });
     }
   </script>
+  <script src="/assets/js/nav-scroll.js"></script>
 </body>
 </html>

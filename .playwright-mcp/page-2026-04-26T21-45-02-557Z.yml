@@ -1,0 +1,185 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "MHF" [ref=e3] [cursor=pointer]:
+      - /url: /fr/
+    - navigation [ref=e4]:
+      - link "Le Livre" [ref=e5] [cursor=pointer]:
+        - /url: "#livre"
+      - link "À Propos" [ref=e6] [cursor=pointer]:
+        - /url: "#auteur"
+      - link "Brevets" [ref=e7] [cursor=pointer]:
+        - /url: "#brevets"
+      - link "Blog" [ref=e8] [cursor=pointer]:
+        - /url: /fr/blog/
+      - link "Presse" [ref=e9] [cursor=pointer]:
+        - /url: /press/
+      - link "Contact" [ref=e10] [cursor=pointer]:
+        - /url: mailto:mastafa.foufa@hotmail.com
+      - link "EN" [ref=e11] [cursor=pointer]:
+        - /url: /en/
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]: Prix de lancement · 20 € au lieu de 23,50 €
+      - heading "La paresse de penser" [level=1] [ref=e16]:
+        - text: La paresse
+        - text: de penser
+      - paragraph [ref=e17]: La grande démission intellectuelle face à l'IA
+      - paragraph [ref=e18]: FYP Éditions — Préface de Luc Julia
+      - paragraph [ref=e19]:
+        - text: Les modèles de langage anticipent nos phrases. Les algorithmes de recommandation devancent nos désirs. Déjà, des agents autonomes se préparent à prendre des décisions complexes à notre place.
+        - text: "Face à cette fulgurance technique, une question inconfortable s'impose : à quel moment la commodité technologique se transforme-t-elle en atrophie cognitive ? Sommes-nous en train de déléguer, non seulement nos tâches, mais notre capacité même à raisonner ?"
+      - generic [ref=e20]:
+        - link "FYP Éditions" [ref=e21] [cursor=pointer]:
+          - /url: https://boutique.fypeditions.com/products/la-paresse-de-penser-pourquoi-nous-laissons-lia-decider-a-notre-place
+        - link "Amazon FR" [ref=e22] [cursor=pointer]:
+          - /url: https://www.amazon.fr/paresse-penser-concepteur-ouvre-machine/dp/2364052777
+        - link "FNAC" [ref=e23] [cursor=pointer]:
+          - /url: https://www.fnac.com/a22668492/Mastafa-Foufa-La-paresse-de-penser
+        - link "Decitre" [ref=e24] [cursor=pointer]:
+          - /url: https://www.decitre.fr/livres/la-paresse-de-penser-9782364052772.html
+      - paragraph [ref=e25]:
+        - text: "Prix de lancement exclusif :"
+        - strong [ref=e26]: 20 €
+        - text: au lieu de 23,50 € · sur fypeditions.com uniquement · livraison immédiate.
+        - text: En vente officielle dans toutes les librairies à partir du
+        - strong [ref=e27]: 22 mai 2026
+        - text: .
+    - img "La paresse de penser — Mastafa Foufa" [ref=e28]
+  - main [ref=e29]:
+    - heading "Le propos" [level=2] [ref=e30]
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Cet essai n'est pas un pamphlet contre l'intelligence artificielle. C'est un manuel d'autodéfense intellectuelle pour l'ère générative.
+      - paragraph [ref=e33]:
+        - text: Nourri par près d'une décennie d'expérience technique — de la conception de systèmes NLP à grande échelle chez Microsoft à l'enseignement de ces architectures à l'EPITA —
+        - emphasis [ref=e34]: La Paresse de penser
+        - text: prend du recul pour observer une mutation profonde de notre rapport à la technologie. Le livre explore cette mécanique subtile par laquelle nous consentons, souvent sans le savoir, à laisser les machines penser à notre place, troquant notre effort cognitif contre le confort de l'immédiateté.
+      - paragraph [ref=e35]: Ni technophobe ni techno-béat, cet essai est une invitation urgente à réhabiliter le doute. Un appel à ralentir, à réintroduire de la friction dans nos usages, et à reconquérir farouchement le territoire de l'intention.
+    - heading "L'Auteur" [level=2] [ref=e36]
+    - generic [ref=e37]:
+      - img "Mastafa Foufa" [ref=e39]
+      - generic [ref=e40]:
+        - paragraph [ref=e41]:
+          - text: Je suis ingénieur et scientifique, formé à
+          - strong [ref=e42]: Télécom Paris
+          - text: ", une des grandes écoles d'ingénieurs, avant de rejoindre"
+          - strong [ref=e43]: Microsoft à Redmond
+          - text: où je suis aujourd'hui
+          - strong [ref=e44]: Scientifique Appliqué Senior
+          - text: . Je vis à Seattle. Mon travail quotidien consiste à concevoir des systèmes de traitement du langage naturel à grande échelle — des systèmes utilisés par des dizaines de millions de personnes dans le monde.
+        - paragraph [ref=e45]: "Neuf brevets en intelligence artificielle ponctuent cette trajectoire : personnalisation des interfaces, détection d'anomalies comportementales, évaluation du bien-être numérique. Mais plus j'ai avancé dans la construction de ces systèmes, plus une question insistante s'est imposée : à quel moment cesse-t-on de construire des outils, et commence-t-on à construire des tuteurs cognitifs ?"
+        - paragraph [ref=e46]:
+          - text: J'ai enseigné les architectures des grands modèles de langage à
+          - strong [ref=e47]: l'EPITA Paris
+          - text: de 2021 à 2023, avant de quitter la France pour les États-Unis. J'ai également suivi un master en apprentissage automatique à
+          - strong [ref=e48]: KTH Stockholm
+          - text: ", avec une spécialisation en architectures d'apprentissage profond."
+        - paragraph [ref=e49]:
+          - text: En dehors des serveurs et des salles de cours, je suis
+          - strong [ref=e50]: ceinture noire de judo
+          - text: et deux fois champion national de karaté jutsu. Je surfe sur les côtes sauvages du Pacific Northwest.
+    - generic [ref=e51]:
+      - figure "NLP & Embeddings Conference, Dublin" [ref=e52]:
+        - img "Mastafa Foufa présentant sur le NLP et les embeddings, Dublin" [ref=e53]
+        - generic [ref=e54]: NLP & Embeddings Conference, Dublin
+      - figure "Conférence — Éthique des LLMs & Impact sociétal, Seattle" [ref=e55]:
+        - img "Mastafa Foufa donnant une conférence sur l'éthique des LLMs, Seattle" [ref=e56]
+        - generic [ref=e57]: Conférence — Éthique des LLMs & Impact sociétal, Seattle
+    - heading "Propriété Intellectuelle" [level=2] [ref=e58]
+    - paragraph [ref=e59]: 9 brevets déposés aux États-Unis dans les domaines de l'IA, du traitement du langage naturel et de l'interaction homme-machine.
+    - generic [ref=e60]:
+      - button "Tout" [ref=e61] [cursor=pointer]
+      - button "Brevets" [ref=e62] [cursor=pointer]
+      - button "Publications" [ref=e63] [cursor=pointer]
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]: Filtrage de contenu visuel lors de réunions virtuelles
+          - generic [ref=e68]: US 11,881,958
+        - paragraph [ref=e69]: Optimisation intelligente de l'information dans les espaces de travail collaboratifs virtuels.
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: Personnalisation de l'expérience informatique
+          - generic [ref=e73]: US 12,039,470
+        - paragraph [ref=e74]: Systèmes adaptatifs apprenant les comportements utilisateurs pour optimiser les flux de travail.
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]: Prononciation des noms par apprentissage automatique
+          - generic [ref=e78]: US 12,028,176
+        - paragraph [ref=e79]: Modèle linguistique favorisant l'inclusivité par la reconnaissance précise des noms du monde entier.
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]: Mémorisation personnalisée des interactions informatiques
+          - generic [ref=e83]: US 11,789,944
+        - paragraph [ref=e84]: Systèmes de mémoire personnalisés pour les interfaces informatiques.
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e87]: Richesse des réunions virtuelles
+          - generic [ref=e88]: US 11,831,696
+        - paragraph [ref=e89]: Optimisation par IA de la qualité de la collaboration à distance.
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]: Réponses automatiques contextuelles à l'absence
+          - generic [ref=e93]: US 11,418,463
+        - paragraph [ref=e94]: IA contextuelle pour des communications d'absence personnalisées et adaptées.
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]: Traitement verbatim des retours pour la conformité
+          - generic [ref=e98]: App 18/650,589
+        - paragraph [ref=e99]: NLP de nouvelle génération pour le traitement des retours utilisateurs dans le respect strict de la confidentialité.
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - generic [ref=e102]: Évaluation et atténuation du bien-être numérique
+          - generic [ref=e103]: App 17/664,974
+        - paragraph [ref=e104]: Détection et réduction de la fatigue numérique par analyse comportementale pilotée par l'IA.
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - generic [ref=e107]: Correction posturale et évaluation informatisée
+          - generic [ref=e108]: App 18/059,365
+        - paragraph [ref=e109]: IA comportementale pour le guidage ergonomique et postural en temps réel.
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]: Apprentissage automatique dans les espaces non-euclidiens
+          - generic [ref=e113]: Publication
+        - paragraph [ref=e114]: Exploration de la géométrie hyperbolique pour une meilleure représentation des données hiérarchiques.
+    - heading "Articles récents" [level=2] [ref=e115]
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]: Avril 2026
+        - 'heading "Le tiret cadratin et la fin de l''intention : pourquoi j''ai écrit « La paresse de penser »" [level=2] [ref=e119]':
+          - 'link "Le tiret cadratin et la fin de l''intention : pourquoi j''ai écrit « La paresse de penser »" [ref=e120] [cursor=pointer]':
+            - /url: /fr/blog/pourquoi-paresse-de-penser.html
+        - paragraph [ref=e121]: Un détail typographique dans un message intime a tout déclenché — la signature syntaxique d'un LLM dans une conversation qui aurait dû rester humaine.
+        - link "Lire →" [ref=e122] [cursor=pointer]:
+          - /url: /fr/blog/pourquoi-paresse-de-penser.html
+      - generic [ref=e123]:
+        - generic [ref=e124]: Avril 2026
+        - heading "Ce que les LLMs nous apprennent sur nos raccourcis cognitifs" [level=2] [ref=e125]:
+          - link "Ce que les LLMs nous apprennent sur nos raccourcis cognitifs" [ref=e126] [cursor=pointer]:
+            - /url: /fr/blog/raccourcis-cognitifs.html
+        - paragraph [ref=e127]: La prédiction du prochain token comme métaphore de la pensée heuristique. Une réflexion née de l'intérieur du laboratoire.
+        - link "Lire →" [ref=e128] [cursor=pointer]:
+          - /url: /fr/blog/raccourcis-cognitifs.html
+    - link "Tous les articles" [ref=e130] [cursor=pointer]:
+      - /url: /fr/blog/
+    - heading "Projets en ligne" [level=2] [ref=e131]
+    - generic [ref=e133]:
+      - generic [ref=e134]: "01"
+      - generic [ref=e135]:
+        - generic [ref=e136]: tonjour.com
+        - heading "Tonjour" [level=3] [ref=e137]
+        - paragraph [ref=e138]: "Une plateforme de narration qui transforme des souvenirs personnels en cadeaux numériques en cinq chapitres — partagés via une URL privée et personnalisée, pensés pour être lus lentement. Sept gabarits d'occasions : demandes en mariage, anniversaires, commémorations, et plus encore."
+        - link "Visiter tonjour.com →" [ref=e139] [cursor=pointer]:
+          - /url: https://tonjour.com
+  - contentinfo [ref=e140]:
+    - generic [ref=e141]:
+      - link "LinkedIn" [ref=e142] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/mastafa-foufa/
+      - link "Google Scholar" [ref=e143] [cursor=pointer]:
+        - /url: https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=fr
+      - link "X / Twitter" [ref=e144] [cursor=pointer]:
+        - /url: https://x.com/mastafahf
+      - link "Dossier de presse" [ref=e145] [cursor=pointer]:
+        - /url: /press/
+      - link "Email" [ref=e146] [cursor=pointer]:
+        - /url: mailto:mastafa.foufa@hotmail.com
+    - paragraph [ref=e147]: © 2026 Mastafa Foufa. Tous droits réservés.

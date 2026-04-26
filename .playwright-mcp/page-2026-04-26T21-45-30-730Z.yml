@@ -1,0 +1,198 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "MHF" [ref=e3] [cursor=pointer]:
+      - /url: /en/
+    - navigation [ref=e4]:
+      - link "Mission" [ref=e5] [cursor=pointer]:
+        - /url: "#mission"
+      - link "About" [ref=e6] [cursor=pointer]:
+        - /url: "#about"
+      - link "Patents" [ref=e7] [cursor=pointer]:
+        - /url: "#work"
+      - link "Blog" [ref=e8] [cursor=pointer]:
+        - /url: /en/blog/
+      - link "Press" [ref=e9] [cursor=pointer]:
+        - /url: /press/
+      - link "Contact" [ref=e10] [cursor=pointer]:
+        - /url: mailto:mastafa.foufa@hotmail.com
+      - link "FR" [ref=e11] [cursor=pointer]:
+        - /url: /fr/
+  - generic [ref=e13]:
+    - paragraph [ref=e14]: Mastafa Foufa · Seattle
+    - heading "Making AI Work. Questioning What That Means." [level=1] [ref=e15]:
+      - text: Making AI Work.
+      - text: Questioning What
+      - text: That Means.
+    - paragraph [ref=e16]: Senior Applied Scientist at Microsoft · 9 Patents in AI · Upcoming Author
+    - generic [ref=e17]:
+      - link "Explore My Work" [ref=e18] [cursor=pointer]:
+        - /url: "#work"
+      - link "View Deck →" [ref=e19] [cursor=pointer]:
+        - /url: /deck/
+  - main [ref=e20]:
+    - heading "Mission & Identity" [level=2] [ref=e21]
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: The Mission
+        - paragraph [ref=e25]: Building AI systems that operate at production scale — and asking, at every step, whether they serve humanity or merely optimise for it.
+      - generic [ref=e26]:
+        - generic [ref=e27]: The Method
+        - paragraph [ref=e28]: Combining rigorous applied science with philosophical discipline. The best engineering decisions require slowing down — the friction is the point.
+      - generic [ref=e29]:
+        - generic [ref=e30]: The Roots
+        - paragraph [ref=e31]: Raised in Nîmes, in the south of France, with Moroccan roots. Disciplined by the tatami. Drawn equally to algorithms, literature, and the open sea.
+    - link "My Deck →" [ref=e33] [cursor=pointer]:
+      - /url: /deck/
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: Launch price · €20 instead of €23.50
+        - generic [ref=e38]: La paresse de penser
+        - generic [ref=e39]: The Laziness of Thinking — The Great Intellectual Resignation in the Age of AI
+        - generic [ref=e40]: FYP Éditions — Preface by Luc Julia, co-creator of Siri
+        - paragraph [ref=e41]:
+          - text: Language models anticipate our next words. Recommendation algorithms outpace our desires. Autonomous agents are increasingly making decisions on our behalf.
+          - text: Grounded in years of building the systems themselves — from developing large-scale NLP solutions at Microsoft to teaching AI architectures at EPITA Paris —
+          - emphasis [ref=e42]: La paresse de penser
+          - text: steps back to observe a profound shift in our relationship with technology. It explores the subtle process through which we consent, often unknowingly, to let machines do the thinking for us. Instead of blaming the algorithms, the book examines our own tendency to trade cognitive effort for seamless convenience.
+          - text: Neither a doomsday warning nor a naive tech utopia, this book is a manual for cognitive self-defence. An invitation to slow down, design for friction, and fiercely reclaim what we choose to stop thinking about.
+        - generic [ref=e43]:
+          - link "FYP Éditions" [ref=e44] [cursor=pointer]:
+            - /url: https://boutique.fypeditions.com/products/la-paresse-de-penser-pourquoi-nous-laissons-lia-decider-a-notre-place
+          - link "Amazon FR" [ref=e45] [cursor=pointer]:
+            - /url: https://www.amazon.fr/paresse-penser-concepteur-ouvre-machine/dp/2364052777
+          - link "FNAC" [ref=e46] [cursor=pointer]:
+            - /url: https://www.fnac.com/a22668492/Mastafa-Foufa-La-paresse-de-penser
+          - link "Decitre" [ref=e47] [cursor=pointer]:
+            - /url: https://www.decitre.fr/livres/la-paresse-de-penser-9782364052772.html
+        - paragraph [ref=e48]:
+          - text: "Launch price:"
+          - strong [ref=e49]: €20
+          - text: instead of €23.50 · exclusive on fypeditions.com · immediate delivery.
+          - text: Available in all bookstores from
+          - strong [ref=e50]: 22 May 2026
+          - text: .
+      - img "La paresse de penser — Mastafa Foufa" [ref=e51]
+    - heading "About" [level=2] [ref=e52]
+    - generic [ref=e53]:
+      - img "Mastafa Foufa" [ref=e55]
+      - generic [ref=e56]:
+        - paragraph [ref=e57]:
+          - text: I am a
+          - strong [ref=e58]: Senior Applied Scientist at Microsoft
+          - text: ", based in Seattle, where I architect NLP models and AI systems within the Microsoft 365 ecosystem — work that has produced"
+          - strong [ref=e59]: 9 patents
+          - text: spanning intelligent personalisation, behavioural anomaly detection, and human well-being in the workplace.
+        - paragraph [ref=e60]:
+          - text: I trained as an engineer at
+          - strong [ref=e61]: Télécom Paris
+          - text: and hold a master's in Machine Learning from
+          - strong [ref=e62]: KTH Stockholm
+          - text: ", with a focus on deep learning architectures. From 2021 to 2023, I taught advanced NLP and large language model architectures at"
+          - strong [ref=e63]: EPITA Paris
+          - text: before relocating to the US.
+        - paragraph [ref=e64]: Outside the lab, discipline comes from the tatami. I hold a black belt in Judo and am a former two-time national champion in Karate Jutsu. I surf the waters of the Pacific Northwest. And I write — most recently a book on why the age of intelligent machines demands, more than ever, that we think for ourselves.
+    - generic [ref=e65]:
+      - figure "NLP & Embeddings Conference, Dublin" [ref=e66]:
+        - img "Mastafa Foufa presenting on NLP and embeddings, Dublin" [ref=e67]
+        - generic [ref=e68]: NLP & Embeddings Conference, Dublin
+      - figure "Lecture — LLM Ethics & Societal Impact, Seattle" [ref=e69]:
+        - img "Mastafa Foufa lecturing on LLM ethics, Seattle" [ref=e70]
+        - generic [ref=e71]: Lecture — LLM Ethics & Societal Impact, Seattle
+    - heading "Intellectual Property & Research" [level=2] [ref=e72]
+    - generic [ref=e73]:
+      - button "All" [ref=e74] [cursor=pointer]
+      - button "Patents" [ref=e75] [cursor=pointer]
+      - button "Publications" [ref=e76] [cursor=pointer]
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - generic [ref=e79]:
+          - generic [ref=e80]: Shared visual content filtering during virtual meetings
+          - generic [ref=e81]: US 11,881,958
+        - paragraph [ref=e82]: Methodology for intelligent information streamlining in collaborative virtual spaces.
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: Computing experience personalisation to enhance productivity
+          - generic [ref=e86]: US 12,039,470
+        - paragraph [ref=e87]: Adaptive systems that learn user behaviour to optimise high-performance workflows.
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]: Machine-learning-model based name pronunciation
+          - generic [ref=e91]: US 12,028,176
+        - paragraph [ref=e92]: A linguistic AI model fostering inclusivity through accurate global name recognition.
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: User-specific computer interaction recall
+          - generic [ref=e96]: US 11,789,944
+        - paragraph [ref=e97]: Personalised memory systems for computing interfaces to enhance human recall.
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: "Meeting richness: optimising remote engagement"
+          - generic [ref=e101]: US 11,831,696
+        - paragraph [ref=e102]: AI-driven system to detect and enhance the quality of virtual collaboration.
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - generic [ref=e105]: Intelligent automated absence responses
+          - generic [ref=e106]: US 11,418,463
+        - paragraph [ref=e107]: Contextual AI for generating appropriate, personalised out-of-office communications.
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: Verbatim feedback processing for compliant retention
+          - generic [ref=e111]: App 18/650,589
+        - paragraph [ref=e112]: Next-generation NLP for processing feedback while maintaining strict privacy compliance.
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]: Computer-based well-being assessment and mitigation
+          - generic [ref=e116]: App 17/664,974
+        - paragraph [ref=e117]: Detecting and mitigating digital fatigue through AI-driven behavioural analysis.
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: Posture correction and computer-based assessment
+          - generic [ref=e121]: App 18/059,365
+        - paragraph [ref=e122]: Behavioural AI for real-time ergonomic and posture guidance in computing environments.
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - generic [ref=e125]: Machine Learning in Non-Euclidean Spaces
+          - generic [ref=e126]: Publication
+        - paragraph [ref=e127]: Exploring hyperbolic geometry for better hierarchical data representation in machine learning.
+    - heading "From the Blog" [level=2] [ref=e128]
+    - generic [ref=e129]:
+      - generic [ref=e130]:
+        - generic [ref=e131]: April 2026
+        - 'heading "The em dash and the end of intention: why I wrote \"The laziness of thinking\"" [level=2] [ref=e132]':
+          - 'link "The em dash and the end of intention: why I wrote \"The laziness of thinking\"" [ref=e133] [cursor=pointer]':
+            - /url: /en/blog/laziness-of-thinking-book.html
+        - paragraph [ref=e134]: A typographic detail in an intimate message — an overabundance of em dashes — set everything in motion. The story behind my forthcoming essay.
+        - link "Read →" [ref=e135] [cursor=pointer]:
+          - /url: /en/blog/laziness-of-thinking-book.html
+      - generic [ref=e136]:
+        - generic [ref=e137]: April 2026
+        - heading "What LLMs taught me about human mental laziness" [level=2] [ref=e138]:
+          - link "What LLMs taught me about human mental laziness" [ref=e139] [cursor=pointer]:
+            - /url: /en/blog/llm-mental-laziness.html
+        - paragraph [ref=e140]: The mechanics of next-token prediction turn out to be a remarkably good model of how humans cut corners.
+        - link "Read →" [ref=e141] [cursor=pointer]:
+          - /url: /en/blog/llm-mental-laziness.html
+    - link "All Posts" [ref=e143] [cursor=pointer]:
+      - /url: /en/blog/
+    - heading "Online Projects" [level=2] [ref=e144]
+    - generic [ref=e146]:
+      - generic [ref=e147]: "01"
+      - generic [ref=e148]:
+        - generic [ref=e149]: tonjour.com
+        - heading "Tonjour" [level=3] [ref=e150]
+        - paragraph [ref=e151]: "A storytelling platform that turns heartfelt memories into five-chapter digital gifts — delivered via a personalized private URL, meant to be read slowly. Seven occasion templates: proposals, birthdays, anniversaries, and more."
+        - link "Visit tonjour.com →" [ref=e152] [cursor=pointer]:
+          - /url: https://tonjour.com
+  - contentinfo [ref=e153]:
+    - generic [ref=e154]:
+      - link "LinkedIn" [ref=e155] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/mastafa-foufa/
+      - link "Google Scholar" [ref=e156] [cursor=pointer]:
+        - /url: https://scholar.google.com/citations?user=jA54ZlUAAAAJ&hl=en
+      - link "X / Twitter" [ref=e157] [cursor=pointer]:
+        - /url: https://x.com/mastafahf
+      - link "Press Kit" [ref=e158] [cursor=pointer]:
+        - /url: /press/
+      - link "Email" [ref=e159] [cursor=pointer]:
+        - /url: mailto:mastafa.foufa@hotmail.com
+    - paragraph [ref=e160]: © 2026 Mastafa Foufa. All rights reserved.
