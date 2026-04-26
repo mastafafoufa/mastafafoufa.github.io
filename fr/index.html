@@ -64,9 +64,16 @@
       padding: 5rem 2rem;
     }
     .book-hero-inner {
-      max-width: 700px;
+      max-width: 960px;
       margin: 0 auto;
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+    }
+    .book-hero-cover {
+      width: 220px;
+      flex-shrink: 0;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
     }
     .book-hero .badge-forthcoming {
       margin-bottom: 1.5rem;
@@ -127,33 +134,6 @@
       filter: grayscale(100%) contrast(1.08) brightness(0.88);
     }
 
-    /* --- Retailers (placeholder) --- */
-    .retailers {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 2.5rem;
-    }
-    .retailer-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 20px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: rgba(255,255,255,0.45);
-      text-transform: uppercase;
-      cursor: not-allowed;
-    }
-    .retailer-note {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.3);
-      margin-top: 1rem;
-      font-style: italic;
-    }
-
     /* --- About --- */
     .about-grid {
       display: grid;
@@ -194,9 +174,8 @@
     }
 
     @media (max-width: 768px) {
-      .book-hero-inner { grid-template-columns: 1fr; }
-      .book-hero-portrait-wrap { max-width: 260px; margin-top: 2rem; }
-      .book-hero-portrait { height: 340px; }
+      .book-hero-inner { flex-direction: column; gap: 2.5rem; }
+      .book-hero-cover { width: 180px; }
       .about-grid { grid-template-columns: 1fr; }
       .about-portrait { height: 280px; }
       .blog-previews { grid-template-columns: 1fr; }
@@ -222,8 +201,8 @@
   <!-- HERO — LIVRE EN AVANT-PLAN -->
   <section class="book-hero" id="livre">
     <div class="book-hero-inner">
-      <div>
-        <span class="badge badge-forthcoming">À paraître &nbsp;·&nbsp; Mai 2026</span>
+      <div style="flex:1;">
+        <span class="badge badge-forthcoming">Prix de lancement &nbsp;·&nbsp; 20 € au lieu de 23,50 €</span>
         <h1 class="book-hero-title">La paresse<br>de penser</h1>
         <p class="book-hero-subtitle">La grande démission intellectuelle face à l'IA</p>
         <p class="book-hero-publisher">FYP Éditions &nbsp;—&nbsp; Préface de Luc Julia</p>
@@ -233,12 +212,14 @@
           Face à cette fulgurance technique, une question inconfortable s'impose : à quel moment la commodité technologique se transforme-t-elle en atrophie cognitive ? Sommes-nous en train de déléguer, non seulement nos tâches, mais notre capacité même à raisonner ?
         </p>
         <div class="retailers">
-          <span class="retailer-pill">FNAC</span>
-          <span class="retailer-pill">Amazon&nbsp;FR</span>
-          <span class="retailer-pill">Librairies indépendantes</span>
+          <a class="retailer-pill" href="https://boutique.fypeditions.com/products/la-paresse-de-penser-pourquoi-nous-laissons-lia-decider-a-notre-place" target="_blank" rel="noopener">FYP Éditions</a>
+          <a class="retailer-pill" href="https://www.amazon.fr/paresse-penser-concepteur-ouvre-machine/dp/2364052777" target="_blank" rel="noopener">Amazon&nbsp;FR</a>
+          <a class="retailer-pill" href="https://www.fnac.com/a22668492/Mastafa-Foufa-La-paresse-de-penser" target="_blank" rel="noopener">FNAC</a>
+          <a class="retailer-pill" href="https://www.decitre.fr/livres/la-paresse-de-penser-9782364052772.html" target="_blank" rel="noopener">Decitre</a>
         </div>
-        <p class="retailer-note">Disponible en librairies à partir de mai 2026.</p>
+        <p class="retailer-note">Prix de lancement exclusif : <strong>20 €</strong> au lieu de 23,50 € &nbsp;·&nbsp; sur fypeditions.com uniquement &nbsp;·&nbsp; livraison immédiate.<br>En vente officielle dans toutes les librairies à partir du <strong>22 mai 2026</strong>.</p>
       </div>
+      <img src="/assets/images/laparessedepenser_cover.jpg" alt="La paresse de penser — Mastafa Foufa" class="book-hero-cover">
     </div>
   </section>
 
