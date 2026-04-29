@@ -57,11 +57,15 @@
   </script>
 
   <style>
+    /* Fixed header so the dark hero extends behind it */
+    .site-header { position: fixed; width: 100%; left: 0; }
+
     /* --- Hero livre (FR-specific : livre en avant-plan) --- */
     .book-hero {
       background: var(--black);
       color: var(--white);
       padding: 5rem 2rem;
+      padding-top: calc(5rem + 4.375rem); /* 5rem normal + ~70px header height */
     }
     .book-hero-inner {
       max-width: 960px;
