@@ -41,6 +41,22 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Permanent Press Records -->
+  <url>
+    <loc>https://mastafafoufa.com/en/press/lepetitjournal-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/press/lepetitjournal-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/press/lepetitjournal-2026.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mastafafoufa.com/fr/press/lepetitjournal-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/press/lepetitjournal-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/press/lepetitjournal-2026.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Deck -->
   <url>
     <loc>https://mastafafoufa.com/deck/</loc>
