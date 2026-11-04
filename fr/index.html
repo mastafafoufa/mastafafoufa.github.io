@@ -16,7 +16,7 @@
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://mastafafoufa.com/fr/" />
-  <meta property="og:title"       content="Mastafa Foufa — La paresse de penser, à paraître mai 2026" />
+  <meta property="og:title"       content="Mastafa Foufa — Auteur de La paresse de penser" />
   <meta property="og:description" content="Scientifique Appliqué chez Microsoft, auteur de La paresse de penser (FYP Éditions, 2026)." />
   <meta property="og:image"       content="https://mastafafoufa.com/assets/images/mastafa_black_white_web.jpg" />
   <meta name="twitter:card"       content="summary_large_image" />
@@ -75,31 +75,6 @@
       gap: 5rem;
     }
     
-    /* UX Added: Link wrapper for the cover */
-    .book-hero-cover-link {
-      display: block;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    .book-hero-cover-link:hover {
-      transform: translateY(-6px) scale(1.02);
-    }
-
-    .book-hero-cover {
-      width: 220px;
-      display: block;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
-      transition: box-shadow 0.3s ease;
-    }
-    
-    /* UX Added: Stronger shadow on hover */
-    .book-hero-cover-link:hover .book-hero-cover {
-      box-shadow: 0 32px 72px rgba(0,0,0,0.85);
-    }
-
-    .book-hero .badge-forthcoming {
-      margin-bottom: 1.5rem;
-    }
     .book-hero-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.8rem, 7vw, 4.5rem);
@@ -188,19 +163,13 @@
     }
     .about-text p { font-size: 1.05rem; margin-bottom: 1.25rem; }
 
-    /* --- Blog previews --- */
-    .blog-previews {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
     @media (max-width: 768px) {
+      .site-header { position: sticky; }
+      .site-header.at-top { background: var(--black); }
+      .book-hero { padding-top: 4rem; }
       .book-hero-inner { flex-direction: column; gap: 2.5rem; }
-      .book-hero-cover { width: 180px; }
       .about-grid { grid-template-columns: 1fr; }
       .about-portrait { height: 280px; }
-      .blog-previews { grid-template-columns: 1fr; }
     }
     /* White nav text when transparent over dark book hero */
     .site-header.at-top .site-logo,
@@ -247,15 +216,13 @@
         <p class="retailer-note">Disponible dans toutes les librairies depuis le <strong>22 mai 2026</strong>.</p>
       </div>
       
-      <!-- UPDATED COVER CODE START -->
       <a href="https://boutique.fypeditions.com/products/la-paresse-de-penser-pourquoi-nous-laissons-lia-decider-a-notre-place" 
          target="_blank" 
          rel="noopener" 
-         class="book-hero-cover-link"
+         class="book-cover-link"
          aria-label="Acheter le livre La paresse de penser sur le site de FYP Éditions">
-        <img src="/assets/images/laparessedepenser_cover.jpg" alt="La paresse de penser — Mastafa Foufa" class="book-hero-cover">
+        <img src="/assets/images/laparessedepenser_cover.jpg" alt="La paresse de penser — Mastafa Foufa" class="book-cover">
       </a>
-      <!-- UPDATED COVER CODE END -->
 
     </div>
   </section>
@@ -348,85 +315,85 @@
     </p>
 
     <div class="research-tabs">
-      <button class="tab-btn active" onclick="filterProjects('all')">Tout</button>
-      <button class="tab-btn" onclick="filterProjects('patents')">Brevets</button>
-      <button class="tab-btn" onclick="filterProjects('publications')">Publications</button>
+      <button class="tab-btn active" data-category="all" aria-pressed="true" onclick="filterProjects('all')">Tout</button>
+      <button class="tab-btn" data-category="patents" aria-pressed="false" onclick="filterProjects('patents')">Brevets</button>
+      <button class="tab-btn" data-category="publications" aria-pressed="false" onclick="filterProjects('publications')">Publications</button>
     </div>
 
     <div id="projects-container" class="projects-grid">
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Synthèse vocale en direct</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Synthèse vocale en direct</a>
           <span class="tech-tag tag-app">App 18/907,242</span>
         </div>
         <p>Génération vocale par IA en temps réel pour une synthèse audio naturelle et instantanée dans les applications interactives.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Synthèse vocale en direct avec mixage de voix</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Synthèse vocale en direct avec mixage de voix</a>
           <span class="tech-tag tag-app">App 18/907,329</span>
         </div>
         <p>Mélange en temps réel de plusieurs voix synthétisées pour produire un rendu audio plus riche et expressif.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Filtrage de contenu visuel lors de réunions virtuelles</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Filtrage de contenu visuel lors de réunions virtuelles</a>
           <span class="tech-tag tag-patent">US 11,881,958</span>
         </div>
         <p>Optimisation intelligente de l'information dans les espaces de travail collaboratifs virtuels.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Personnalisation de l'expérience informatique</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Personnalisation de l'expérience informatique</a>
           <span class="tech-tag tag-patent">US 12,039,470</span>
         </div>
         <p>Systèmes adaptatifs apprenant les comportements utilisateurs pour optimiser les flux de travail.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Prononciation des noms par apprentissage automatique</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Prononciation des noms par apprentissage automatique</a>
           <span class="tech-tag tag-patent">US 12,028,176</span>
         </div>
         <p>Modèle linguistique favorisant l'inclusivité par la reconnaissance précise des noms du monde entier.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Mémorisation personnalisée des interactions informatiques</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Mémorisation personnalisée des interactions informatiques</a>
           <span class="tech-tag tag-patent">US 11,789,944</span>
         </div>
         <p>Systèmes de mémoire personnalisés pour les interfaces informatiques.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Richesse des réunions virtuelles</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Richesse des réunions virtuelles</a>
           <span class="tech-tag tag-patent">US 11,831,696</span>
         </div>
         <p>Optimisation par IA de la qualité de la collaboration à distance.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Réponses automatiques contextuelles à l'absence</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Réponses automatiques contextuelles à l'absence</a>
           <span class="tech-tag tag-patent">US 11,418,463</span>
         </div>
         <p>IA contextuelle pour des communications d'absence personnalisées et adaptées.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Traitement verbatim des retours pour la conformité</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Traitement verbatim des retours pour la conformité</a>
           <span class="tech-tag tag-app">App 18/650,589</span>
         </div>
         <p>NLP de nouvelle génération pour le traitement des retours utilisateurs dans le respect strict de la confidentialité.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Évaluation et atténuation du bien-être numérique</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Évaluation et atténuation du bien-être numérique</a>
           <span class="tech-tag tag-app">App 17/664,974</span>
         </div>
         <p>Détection et réduction de la fatigue numérique par analyse comportementale pilotée par l'IA.</p>
       </div>
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Correction posturale et évaluation informatisée</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Correction posturale et évaluation informatisée</a>
           <span class="tech-tag tag-app">App 18/059,365</span>
         </div>
         <p>IA comportementale pour le guidage ergonomique et postural en temps réel.</p>
@@ -499,10 +466,9 @@
   <script>
     function filterProjects(category) {
       document.querySelectorAll('.tab-btn').forEach(function(btn) {
-        btn.classList.remove('active');
-        if (btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText.toLowerCase() === 'tout')) {
-          btn.classList.add('active');
-        }
+        var active = btn.dataset.category === category;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', String(active));
       });
       document.querySelectorAll('.project-card').forEach(function(card) {
         var type = card.getAttribute('data-type');

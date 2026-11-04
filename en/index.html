@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Mastafa Foufa — AI Scientist, Inventor & Author | MHF</title>
-  <meta name="description" content="Senior Applied Scientist at Microsoft. 11 patents in AI and Human-Computer Interaction. Upcoming author of La paresse de penser (FYP Éditions, 2026). Seattle.">
+  <meta name="description" content="Senior Applied Scientist at Microsoft. 11 patents in AI and Human-Computer Interaction. Author of La paresse de penser (FYP Éditions, 2026). Seattle.">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical"    href="https://mastafafoufa.com/en/" />
@@ -17,7 +17,7 @@
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://mastafafoufa.com/en/" />
   <meta property="og:title"       content="Mastafa Foufa — AI Scientist, Inventor & Author" />
-  <meta property="og:description" content="Senior Applied Scientist at Microsoft. 11 patents in AI. Upcoming author of La paresse de penser." />
+  <meta property="og:description" content="Senior Applied Scientist at Microsoft. 11 patents in AI. Author of La paresse de penser." />
   <meta property="og:image"       content="https://mastafafoufa.com/assets/images/mastafa_black_white_web.jpg" />
   <meta name="twitter:card"       content="summary_large_image" />
 
@@ -180,7 +180,7 @@
       <p class="hero-label">Mastafa Foufa &nbsp;·&nbsp; Seattle</p>
       <h1 class="hero-headline">Advancing AI.<br>Fascinated by what<br>it reveals about us.</h1>
       <p class="hero-sub">
-        Senior Applied Scientist at Microsoft &nbsp;·&nbsp; 11 Patents in AI &nbsp;·&nbsp; Upcoming Author
+        Senior Applied Scientist at Microsoft &nbsp;·&nbsp; 11 Patents in AI &nbsp;·&nbsp; Author
       </p>
       <div class="hero-ctas">
         <a href="#work" class="btn-outline">Explore My Work</a>
@@ -239,8 +239,8 @@
 
     <!-- BOOK SECTION -->
     <div class="book-panel" id="book">
-      <div style="display:flex; align-items:flex-start; gap:4rem; flex-wrap:wrap;">
-        <div style="flex:1; min-width:280px;">
+      <div class="book-panel-layout">
+        <div class="book-panel-copy">
           <div class="book-title">La paresse de penser</div>
           <div style="font-family:'Lora',serif; font-style:italic; font-size:0.95rem; color:rgba(255,255,255,0.5); margin:-0.5rem 0 1.5rem; letter-spacing:0.01em;">The Laziness of Thinking — The Great Intellectual Resignation in the Age of AI</div>
           <div class="book-publisher">FYP Éditions &nbsp;—&nbsp; Preface by Luc Julia, co-creator of Siri</div>
@@ -259,7 +259,13 @@
           </div>
           <p class="retailer-note">Available in all bookstores since <strong style="color:rgba(255,255,255,0.75);">22 May 2026</strong>.</p>
         </div>
-        <img src="/assets/images/laparessedepenser_cover.jpg" alt="La paresse de penser — Mastafa Foufa" style="width:200px; flex-shrink:0; box-shadow:0 24px 64px rgba(0,0,0,0.6); align-self:center;">
+        <a href="https://boutique.fypeditions.com/products/la-paresse-de-penser-pourquoi-nous-laissons-lia-decider-a-notre-place"
+           target="_blank"
+           rel="noopener"
+           class="book-cover-link"
+           aria-label="Buy La paresse de penser from FYP Éditions">
+          <img src="/assets/images/laparessedepenser_cover.jpg" alt="La paresse de penser — Mastafa Foufa" class="book-cover">
+        </a>
       </div>
     </div>
 
@@ -303,16 +309,16 @@
     <h2 class="section-label" id="work">Intellectual Property &amp; Research</h2>
 
     <div class="research-tabs">
-      <button class="tab-btn active" onclick="filterProjects('all')">All</button>
-      <button class="tab-btn" onclick="filterProjects('patents')">Patents</button>
-      <button class="tab-btn" onclick="filterProjects('publications')">Publications</button>
+      <button class="tab-btn active" data-category="all" aria-pressed="true" onclick="filterProjects('all')">All</button>
+      <button class="tab-btn" data-category="patents" aria-pressed="false" onclick="filterProjects('patents')">Patents</button>
+      <button class="tab-btn" data-category="publications" aria-pressed="false" onclick="filterProjects('publications')">Publications</button>
     </div>
 
     <div id="projects-container" class="projects-grid">
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Live voice synthesis</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Live voice synthesis</a>
           <span class="tech-tag tag-app">App 18/907,242</span>
         </div>
         <p>Real-time AI-generated voice for natural, instant audio synthesis in interactive applications.</p>
@@ -320,7 +326,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Live voice synthesis with voice mixing</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Live voice synthesis with voice mixing</a>
           <span class="tech-tag tag-app">App 18/907,329</span>
         </div>
         <p>Blending multiple synthesized voices in real time to produce richer, more expressive audio output.</p>
@@ -328,7 +334,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Shared visual content filtering during virtual meetings</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Shared visual content filtering during virtual meetings</a>
           <span class="tech-tag tag-patent">US 11,881,958</span>
         </div>
         <p>Methodology for intelligent information streamlining in collaborative virtual spaces.</p>
@@ -336,7 +342,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Computing experience personalisation to enhance productivity</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Computing experience personalisation to enhance productivity</a>
           <span class="tech-tag tag-patent">US 12,039,470</span>
         </div>
         <p>Adaptive systems that learn user behaviour to optimise high-performance workflows.</p>
@@ -344,7 +350,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Machine-learning-model based name pronunciation</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Machine-learning-model based name pronunciation</a>
           <span class="tech-tag tag-patent">US 12,028,176</span>
         </div>
         <p>A linguistic AI model fostering inclusivity through accurate global name recognition.</p>
@@ -352,7 +358,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">User-specific computer interaction recall</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">User-specific computer interaction recall</a>
           <span class="tech-tag tag-patent">US 11,789,944</span>
         </div>
         <p>Personalised memory systems for computing interfaces to enhance human recall.</p>
@@ -360,7 +366,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Meeting richness: optimising remote engagement</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Meeting richness: optimising remote engagement</a>
           <span class="tech-tag tag-patent">US 11,831,696</span>
         </div>
         <p>AI-driven system to detect and enhance the quality of virtual collaboration.</p>
@@ -368,7 +374,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Intelligent automated absence responses</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Intelligent automated absence responses</a>
           <span class="tech-tag tag-patent">US 11,418,463</span>
         </div>
         <p>Contextual AI for generating appropriate, personalised out-of-office communications.</p>
@@ -376,7 +382,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Verbatim feedback processing for compliant retention</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Verbatim feedback processing for compliant retention</a>
           <span class="tech-tag tag-app">App 18/650,589</span>
         </div>
         <p>Next-generation NLP for processing feedback while maintaining strict privacy compliance.</p>
@@ -384,7 +390,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Computer-based well-being assessment and mitigation</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Computer-based well-being assessment and mitigation</a>
           <span class="tech-tag tag-app">App 17/664,974</span>
         </div>
         <p>Detecting and mitigating digital fatigue through AI-driven behavioural analysis.</p>
@@ -392,7 +398,7 @@
 
       <div class="project-card" data-type="patents">
         <div class="project-header">
-          <div class="project-title">Posture correction and computer-based assessment</div>
+          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Posture correction and computer-based assessment</a>
           <span class="tech-tag tag-app">App 18/059,365</span>
         </div>
         <p>Behavioural AI for real-time ergonomic and posture guidance in computing environments.</p>
@@ -410,11 +416,11 @@
 
     <!-- BLOG PREVIEW -->
     <h2 class="section-label">From the Blog</h2>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+    <div class="blog-previews">
       <div class="post-preview">
         <div class="post-date">April 2026</div>
         <h2><a href="/en/blog/laziness-of-thinking-book.html">The em dash and the end of intention: why I wrote "The laziness of thinking"</a></h2>
-        <p class="post-excerpt">A typographic detail in an intimate message — an overabundance of em dashes — set everything in motion. The story behind my forthcoming essay.</p>
+        <p class="post-excerpt">A typographic detail in an intimate message — an overabundance of em dashes — set everything in motion. The story behind my essay.</p>
         <a href="/en/blog/laziness-of-thinking-book.html" class="post-read-more">Read &nbsp;→</a>
       </div>
       <div class="post-preview">
@@ -467,10 +473,9 @@
   <script>
     function filterProjects(category) {
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText.toLowerCase() === 'all')) {
-          btn.classList.add('active');
-        }
+        const active = btn.dataset.category === category;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', String(active));
       });
       document.querySelectorAll('.project-card').forEach(card => {
         const type = card.getAttribute('data-type');
