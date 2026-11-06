@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Mastafa Foufa — AI Scientist, Inventor & Author | MHF</title>
-  <meta name="description" content="Senior Applied Scientist at Microsoft. 11 patents in AI and Human-Computer Interaction. Author of La paresse de penser (FYP Éditions, 2026). Seattle.">
+  <meta name="description" content="Mastafa Foufa, Senior Applied Scientist at Microsoft. AI evaluation, independent projects, and La paresse de penser, published by FYP Éditions.">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical"    href="https://mastafafoufa.com/en/" />
   <link rel="alternate" hreflang="en"        href="https://mastafafoufa.com/en/" />
-  <link rel="alternate" hreflang="fr"        href="https://mastafafoufa.com/fr/" />
   <link rel="alternate" hreflang="x-default" href="https://mastafafoufa.com/en/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://mastafafoufa.com/en/" />
   <meta property="og:title"       content="Mastafa Foufa — AI Scientist, Inventor & Author" />
-  <meta property="og:description" content="Senior Applied Scientist at Microsoft. 11 patents in AI. Author of La paresse de penser." />
+  <meta property="og:description" content="AI evaluation at Microsoft, independent projects, and La paresse de penser. Applied science and the questions it raises about human judgment." />
   <meta property="og:image"       content="https://mastafafoufa.com/assets/images/mastafa_black_white_web.jpg" />
   <meta name="twitter:card"       content="summary_large_image" />
 
@@ -49,7 +48,7 @@
         "author": { "@type": "Person", "name": "Mastafa Foufa" },
         "publisher": { "@type": "Organization", "name": "FYP Éditions" },
         "inLanguage": "fr",
-        "datePublished": "2026-05",
+        "datePublished": "2026-05-22",
         "description": "An essay on how intelligent machines reshape our capacity for careful thought."
       }
     ]
@@ -60,13 +59,13 @@
     /* --- Hero --- */
     .hero {
       display: block;
-      padding: 6rem 2rem 0;
-      max-width: 700px;
+      padding: 3.5rem 2rem 0;
+      max-width: 900px;
       margin: 0 auto;
     }
     .hero-text {
       padding-top: 1rem;
-      padding-bottom: 5rem;
+      padding-bottom: 1.5rem;
     }
     .hero-label {
       font-size: 0.75rem;
@@ -74,48 +73,50 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       color: var(--muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
     .hero-headline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+      font-size: clamp(2.5rem, 6vw, 4.4rem);
       font-weight: 700;
       line-height: 1.05;
       color: var(--heading);
-      margin: 0 0 1.85rem;
+      margin: 0 0 1.5rem;
       letter-spacing: -0.01em;
     }
     .hero-sub {
-      font-size: 1rem;
-      color: var(--muted);
-      margin-bottom: 2.75rem;
+      font-size: 1.1rem;
+      color: var(--text);
+      max-width: 650px;
+      margin-bottom: 1rem;
       font-weight: 400;
       line-height: 1.65;
     }
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .hero-portrait-wrap {
-      position: relative;
-      line-height: 0;
-      margin-top: -2rem;
-    }
-    .hero-portrait-wrap::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 32%;
-      background: linear-gradient(to bottom, transparent, #FAFAF8);
-      pointer-events: none;
-    }
-    .hero-portrait {
-      width: 100%;
-      height: 420px;
-      border-radius: 0;
-      object-fit: cover;
-      object-position: center 10%;
-      filter: grayscale(100%) contrast(1.06) brightness(0.97);
-    }
+    .hero-author { font-size: 0.95rem; margin: 0 0 1.75rem; color: var(--muted); }
+    .hero-author a { text-decoration: underline; text-underline-offset: 0.2em; }
+    .portfolio-home .section-label { margin-top: 3.5rem; margin-bottom: 1.5rem; }
+    .portfolio-home .news-section .section-label { margin-top: 1.5rem; }
+    .portfolio-home .news-source { padding: 1.5rem; gap: 1rem; }
+    .portfolio-home .news-body { padding: 1.5rem; }
+    .portfolio-home .news-summary { margin-bottom: 1rem; }
+    .portfolio-home .book-panel { margin: 2.5rem 0 0; padding: 2.5rem; }
+    .portfolio-home .book-panel-layout { gap: 2.5rem; }
+    .portfolio-home .book-title { margin-top: 0; }
+    .book-subtitle { font-family: 'Lora', serif; font-size: 1rem; font-style: italic; color: #ccc; }
+    .book-translation { font-size: 0.8rem; color: #bbb; }
+    .portfolio-home .book-publisher { color: #bbb; letter-spacing: 1.5px; margin-bottom: 1.25rem; }
+    .portfolio-home .book-desc { font-size: 1rem; }
+    .portfolio-home .retailers { margin-top: 1.5rem; }
+    .portfolio-home .project-feature { padding: 1.75rem 0; }
+    .impact-intro, .section-intro { font-family: 'Lora', serif; font-size: 1rem; max-width: 650px; }
+    .impact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .impact-card { border-top: 2px solid var(--heading); padding-top: 1rem; }
+    .impact-card h3 { font-family: 'Lora', serif; font-size: 1.05rem; margin-bottom: 0.75rem; }
+    .impact-card p { font-size: 0.95rem; color: var(--muted); margin: 0; }
+    .research-archive { margin-top: 1.5rem; }
+    .research-archive summary { font-size: 0.9rem; font-weight: 700; cursor: pointer; padding: 1rem 0; }
+    .contact-section { margin-bottom: 3rem; }
 
     /* --- About --- */
     .about-grid {
@@ -149,50 +150,60 @@
     .about-text p:last-child { margin-bottom: 0; }
 
     @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; align-items: start; padding: 4rem 1.5rem 0; }
-      .hero-text { padding-bottom: 0; }
-      .hero-portrait-wrap { max-width: 280px; margin: 2rem auto 0; }
-      .hero-portrait { height: 360px; }
+      .hero { padding: 2rem 1.5rem 0; }
+      .hero-text { padding-bottom: 1rem; }
+      .portfolio-home .book-panel { padding: 1.75rem; }
+      .portfolio-home .book-panel-layout { flex-direction: column-reverse; gap: 1.75rem; }
+      .portfolio-home .book-panel-copy { flex-basis: auto; }
+      .portfolio-home .book-panel .book-cover-link { width: 160px; }
+      .impact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
       .about-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-<body>
+<body class="portfolio-home">
 
   <!-- NAVIGATION -->
   <header class="site-header">
     <a href="/en/" class="site-logo">MHF</a>
     <nav class="site-nav">
-      <a href="#mission">Mission</a>
-      <a href="#about">About</a>
-      <a href="#work">Patents</a>
       <a href="#news">News</a>
-      <a href="/en/blog/">Blog</a>
-      <a href="/press/">Press</a>
-      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
-      <a href="/fr/" class="lang-toggle" hreflang="fr">FR</a>
+      <a href="#book">Book</a>
+      <a href="#projects">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
-      <p class="hero-label">Mastafa Foufa &nbsp;·&nbsp; Seattle</p>
-      <h1 class="hero-headline">Advancing AI.<br>Fascinated by what<br>it reveals about us.</h1>
+      <p class="hero-label">Applied AI &nbsp;·&nbsp; Seattle</p>
+      <h1 class="hero-headline">Mastafa Foufa</h1>
       <p class="hero-sub">
-        Senior Applied Scientist at Microsoft &nbsp;·&nbsp; 11 Patents in AI &nbsp;·&nbsp; Author
+        I’m a Senior Applied Scientist at Microsoft. I build LLM-based systems that turn data into actionable insights, alongside AI evaluations that help improve Copilot’s real-world performance. My evaluation work has included close collaboration with colleagues at Microsoft AI.
       </p>
+      <p class="hero-author">Author of <a href="#book"><em lang="fr">La paresse de penser</em></a> &nbsp;·&nbsp; FYP Éditions, 2026</p>
       <div class="hero-ctas">
-        <a href="#work" class="btn-outline">Explore My Work</a>
-        <a href="/deck/" class="btn-outline" style="border-color: var(--border); color: var(--muted);">View Deck &nbsp;→</a>
+        <a href="#projects" class="btn-outline">Currently building</a>
+        <a href="#book" class="btn-outline">Discover the book</a>
       </div>
     </div>
   </section>
 
   <main class="container">
 
-    <section id="news" class="news-section" aria-labelledby="news-heading">
-      <h2 id="news-heading" class="section-label">News &amp; Conversations</h2>
+    <section id="news" class="news-section" aria-labelledby="news-heading" data-news-rail>
+      <div class="news-heading-row">
+        <h2 id="news-heading" class="section-label">News &amp; Conversations</h2>
+        <div class="news-controls" hidden>
+          <button type="button" class="news-previous" aria-controls="news-items" aria-label="Previous conversation">←</button>
+          <span class="news-position" aria-live="polite"></span>
+          <button type="button" class="news-next" aria-controls="news-items" aria-label="Next conversation">→</button>
+        </div>
+      </div>
+      <div id="news-items" class="news-rail">
       <article class="news-card" aria-labelledby="news-interview-title">
         <div class="news-source">
           <p class="news-kicker">In the press</p>
@@ -208,48 +219,26 @@
           </p>
           <h3 id="news-interview-title" class="news-title">AI, research &amp; the art of thinking</h3>
           <p class="news-credit">By Sylvie Joseph Julien · lepetitjournal.com</p>
-          <p class="news-summary">From France to Seattle, from applied science to writing: a conversation about my journey, my work on AI at Microsoft, and <em lang="fr">La paresse de penser</em>. A shared thread runs through it all: embracing technology without giving up our critical thinking.</p>
+          <p class="news-summary">A conversation about my journey from France to Seattle, applied AI at Microsoft, and <em lang="fr">La paresse de penser</em>—using technology without giving up our critical thinking.</p>
           <div class="news-actions">
             <a class="news-link" href="https://lepetitjournal.com/san-francisco/qui-est-homme-qui-questionne-ia-discussion-avec-mastafa-foufa-450788" hreflang="fr" target="_blank" rel="noopener">Read the interview in French <span aria-hidden="true">&nbsp;↗</span></a>
             <a class="news-record-link" href="/en/press/lepetitjournal-2026.html">Summary &amp; credits</a>
           </div>
         </div>
       </article>
+      </div>
     </section>
 
-    <!-- MISSION DECK -->
-    <h2 class="section-label" id="mission">Mission &amp; Identity</h2>
-    <div class="deck-grid">
-      <div class="deck-card">
-        <div class="card-label">The Mission</div>
-        <p>Building AI systems that operate at production scale — and asking, at every step, whether they serve humanity or merely optimise for it.</p>
-      </div>
-      <div class="deck-card">
-        <div class="card-label">The Method</div>
-        <p>Combining rigorous applied science with philosophical discipline. The best engineering decisions require slowing down — the friction is the point.</p>
-      </div>
-      <div class="deck-card">
-        <div class="card-label">The Roots</div>
-        <p>Raised in Nîmes, in the south of France, with Moroccan roots. Disciplined by the tatami. Drawn equally to algorithms, literature, and the open sea.</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:2.5rem;">
-      <a href="/deck/" class="btn-outline">My Deck &nbsp;→</a>
-    </div>
-
     <!-- BOOK SECTION -->
-    <div class="book-panel" id="book">
+    <section class="book-panel" id="book" aria-labelledby="book-title">
       <div class="book-panel-layout">
         <div class="book-panel-copy">
-          <div class="book-title">La paresse de penser</div>
-          <div style="font-family:'Lora',serif; font-style:italic; font-size:0.95rem; color:rgba(255,255,255,0.5); margin:-0.5rem 0 1.5rem; letter-spacing:0.01em;">The Laziness of Thinking — The Great Intellectual Resignation in the Age of AI</div>
+          <h2 class="book-title" id="book-title" lang="fr">La paresse de penser</h2>
+          <p class="book-subtitle" lang="fr">Pourquoi nous laissons l’IA décider à notre place</p>
+          <p class="book-translation">The laziness of thinking: why we let AI decide for us. Published in French.</p>
           <div class="book-publisher">FYP Éditions &nbsp;—&nbsp; Preface by Luc Julia, co-creator of Siri</div>
           <p class="book-desc">
-            Language models anticipate our next words. Recommendation algorithms outpace our desires. Autonomous agents are increasingly making decisions on our behalf.
-            <br><br>
-            Grounded in years of building the systems themselves — from developing large-scale NLP solutions at Microsoft to teaching AI architectures at EPITA Paris — <em>La paresse de penser</em> steps back to observe a profound shift in our relationship with technology. It explores the subtle process through which we consent, often unknowingly, to let machines do the thinking for us. Instead of blaming the algorithms, the book examines our own tendency to trade cognitive effort for seamless convenience.
-            <br><br>
-            Neither a doomsday warning nor a naive tech utopia, this book is a manual for cognitive self-defence. An invitation to slow down, design for friction, and fiercely reclaim what we choose to stop thinking about.
+            When does being assisted become giving up the effort to think? Drawing on my work building AI and teaching NLP, this essay examines what we exchange for the convenience of intelligent machines—and how to keep our own judgment.
           </p>
           <div class="retailers">
             <a class="retailer-pill" href="https://boutique.fypeditions.com/products/la-paresse-de-penser-pourquoi-nous-laissons-lia-decider-a-notre-place" target="_blank" rel="noopener">FYP Éditions</a>
@@ -257,7 +246,8 @@
             <a class="retailer-pill" href="https://www.fnac.com/a22668492/Mastafa-Foufa-La-paresse-de-penser" target="_blank" rel="noopener">FNAC</a>
             <a class="retailer-pill" href="https://www.decitre.fr/livres/la-paresse-de-penser-9782364052772.html" target="_blank" rel="noopener">Decitre</a>
           </div>
-          <p class="retailer-note">Available in all bookstores since <strong style="color:rgba(255,255,255,0.75);">22 May 2026</strong>.</p>
+          <p class="retailer-note">Published 22 May 2026. Available in bookstores.</p>
+          <a class="book-story-link" href="/en/blog/laziness-of-thinking-book.html">Why I wrote it &nbsp;→</a>
         </div>
         <a href="https://boutique.fypeditions.com/products/la-paresse-de-penser-pourquoi-nous-laissons-lia-decider-a-notre-place"
            target="_blank"
@@ -267,155 +257,50 @@
           <img src="/assets/images/laparessedepenser_cover.jpg" alt="La paresse de penser — Mastafa Foufa" class="book-cover">
         </a>
       </div>
-    </div>
+    </section>
 
-    <!-- ABOUT -->
-    <h2 class="section-label" id="about">About</h2>
-    <div class="about-grid">
-      <div class="about-portrait-wrap">
-        <img src="../assets/images/mastafa_black_white_web.jpg"
-             alt="Mastafa Foufa"
-             class="about-portrait">
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 class="section-label" id="projects-heading">Currently building</h2>
+      <div class="online-projects">
+        <article class="project-feature" aria-labelledby="tonjour-title">
+          <span class="project-feature-num" aria-hidden="true">01</span>
+          <div>
+            <span class="project-feature-url">Independent project &nbsp;·&nbsp; tonjour.com</span>
+            <h3 class="project-feature-name" id="tonjour-title">Tonjour</h3>
+            <p class="project-feature-desc">I’m building a way to turn personal memories into a gift: a five-chapter story, shared through a private link. For birthdays, anniversaries, proposals, and the moments worth keeping.</p>
+            <a href="https://tonjour.com" target="_blank" rel="noopener" class="project-feature-cta">Explore Tonjour &nbsp;↗</a>
+          </div>
+        </article>
       </div>
-      <div class="about-text">
-        <p>
-          I am a <strong>Senior Applied Scientist at Microsoft</strong>, based in Seattle, where I architect NLP models and AI systems within the Microsoft 365 ecosystem — work that has produced <strong>11 patents</strong> spanning intelligent personalisation, behavioural anomaly detection, live voice synthesis, and human well-being in the workplace.
-        </p>
-        <p>
-          I trained as an engineer at <strong>Télécom Paris</strong> and hold a master's in Machine Learning from <strong>KTH Stockholm</strong>, with a focus on deep learning architectures. From 2021 to 2023, I taught advanced NLP and large language model architectures at <strong>EPITA Paris</strong> before relocating to the US.
-        </p>
-        <p>
-          Outside the lab, discipline comes from the tatami. I hold a black belt in Judo and am a former two-time national champion in Karate Jutsu. I surf the waters of the Pacific Northwest. And I write — most recently a book on why the age of intelligent machines demands, more than ever, that we think for ourselves.
-        </p>
+    </section>
+
+    <section id="impact" aria-labelledby="impact-heading">
+      <h2 class="section-label" id="impact-heading">Impact at Microsoft</h2>
+      <p class="impact-intro">My work spans LLM-based systems, representative AI evaluations, and shared frameworks that help teams understand and improve product quality.</p>
+      <div class="impact-grid">
+        <article class="impact-card">
+          <h3>LLM classifiers for actionable insights</h3>
+          <p>I build LLM-based classifiers that turn Copilot and Cowork data into actionable insights for product teams.</p>
+        </article>
+        <article class="impact-card">
+          <h3>Evaluations that reflect real use</h3>
+          <p>I work on evaluation representativeness: connecting what we measure to the users, scenarios, and conditions our products need to serve.</p>
+        </article>
+        <article class="impact-card">
+          <h3>Shared evaluation frameworks</h3>
+          <p>I build centralized frameworks that help teams evaluate consistently and develop a shared understanding of product quality.</p>
+        </article>
+        <article class="impact-card">
+          <h3>Evidence for product decisions</h3>
+          <p>I make evaluation results useful to product teams and leadership, connecting quality measurements to product priorities and direction.</p>
+        </article>
       </div>
-    </div>
-
-    <!-- PHOTO GALLERY -->
-    <div class="photo-row">
-      <figure>
-        <img src="../assets/images/picture_presenting.jpg"
-             alt="Mastafa Foufa presenting on NLP and embeddings, Dublin">
-        <figcaption>NLP &amp; Embeddings Conference, Dublin</figcaption>
-      </figure>
-      <figure>
-        <img src="../assets/images/mastafa_ethics_llm.jpeg"
-             alt="Mastafa Foufa lecturing on LLM ethics, Seattle"
-             style="object-position: center 20%;">
-        <figcaption>Lecture — LLM Ethics &amp; Societal Impact, Seattle</figcaption>
-      </figure>
-    </div>
-
-    <!-- PATENTS & RESEARCH -->
-    <h2 class="section-label" id="work">Intellectual Property &amp; Research</h2>
-
-    <div class="research-tabs">
-      <button class="tab-btn active" data-category="all" aria-pressed="true" onclick="filterProjects('all')">All</button>
-      <button class="tab-btn" data-category="patents" aria-pressed="false" onclick="filterProjects('patents')">Patents</button>
-      <button class="tab-btn" data-category="publications" aria-pressed="false" onclick="filterProjects('publications')">Publications</button>
-    </div>
-
-    <div id="projects-container" class="projects-grid">
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Live voice synthesis</a>
-          <span class="tech-tag tag-app">App 18/907,242</span>
-        </div>
-        <p>Real-time AI-generated voice for natural, instant audio synthesis in interactive applications.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Live voice synthesis with voice mixing</a>
-          <span class="tech-tag tag-app">App 18/907,329</span>
-        </div>
-        <p>Blending multiple synthesized voices in real time to produce richer, more expressive audio output.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Shared visual content filtering during virtual meetings</a>
-          <span class="tech-tag tag-patent">US 11,881,958</span>
-        </div>
-        <p>Methodology for intelligent information streamlining in collaborative virtual spaces.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Computing experience personalisation to enhance productivity</a>
-          <span class="tech-tag tag-patent">US 12,039,470</span>
-        </div>
-        <p>Adaptive systems that learn user behaviour to optimise high-performance workflows.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Machine-learning-model based name pronunciation</a>
-          <span class="tech-tag tag-patent">US 12,028,176</span>
-        </div>
-        <p>A linguistic AI model fostering inclusivity through accurate global name recognition.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">User-specific computer interaction recall</a>
-          <span class="tech-tag tag-patent">US 11,789,944</span>
-        </div>
-        <p>Personalised memory systems for computing interfaces to enhance human recall.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Meeting richness: optimising remote engagement</a>
-          <span class="tech-tag tag-patent">US 11,831,696</span>
-        </div>
-        <p>AI-driven system to detect and enhance the quality of virtual collaboration.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Intelligent automated absence responses</a>
-          <span class="tech-tag tag-patent">US 11,418,463</span>
-        </div>
-        <p>Contextual AI for generating appropriate, personalised out-of-office communications.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Verbatim feedback processing for compliant retention</a>
-          <span class="tech-tag tag-app">App 18/650,589</span>
-        </div>
-        <p>Next-generation NLP for processing feedback while maintaining strict privacy compliance.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Computer-based well-being assessment and mitigation</a>
-          <span class="tech-tag tag-app">App 17/664,974</span>
-        </div>
-        <p>Detecting and mitigating digital fatigue through AI-driven behavioural analysis.</p>
-      </div>
-
-      <div class="project-card" data-type="patents">
-        <div class="project-header">
-          <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Posture correction and computer-based assessment</a>
-          <span class="tech-tag tag-app">App 18/059,365</span>
-        </div>
-        <p>Behavioural AI for real-time ergonomic and posture guidance in computing environments.</p>
-      </div>
-
-      <div class="project-card" data-type="publications">
-        <div class="project-header">
-          <div class="project-title">Anomaly Detection Across Multiple Languages</div>
-          <span class="tech-tag tag-pub">Publication &nbsp;·&nbsp; 2020</span>
-        </div>
-        <p>Cross-lingual anomaly detection in text — methods for surfacing outliers in multilingual NLP pipelines.</p>
-      </div>
-
-    </div>
+    </section>
 
     <!-- BLOG PREVIEW -->
-    <h2 class="section-label">From the Blog</h2>
+    <section id="writing" aria-labelledby="writing-heading">
+    <h2 class="section-label" id="writing-heading">Writing &amp; ideas</h2>
+    <p class="section-intro">From the mathematics behind machine learning to what intelligent tools change about our judgment. Essays and reflections, with English and French available inside the blog.</p>
     <div class="blog-previews">
       <div class="post-preview">
         <div class="post-date">April 2026</div>
@@ -426,7 +311,7 @@
       <div class="post-preview">
         <div class="post-date">April 2026</div>
         <h2><a href="/en/blog/llm-mental-laziness.html">What LLMs taught me about human mental laziness</a></h2>
-        <p class="post-excerpt">The mechanics of next-token prediction turn out to be a remarkably good model of how humans cut corners.</p>
+        <p class="post-excerpt">What next-token prediction suggests about our own habits of taking cognitive shortcuts.</p>
         <a href="/en/blog/llm-mental-laziness.html" class="post-read-more">Read &nbsp;→</a>
       </div>
     </div>
@@ -434,19 +319,190 @@
       <a href="/en/blog/" class="btn-outline">All Posts</a>
     </div>
 
-    <!-- ONLINE PROJECTS -->
-    <h2 class="section-label">Online Projects</h2>
-    <div class="online-projects">
-      <div class="project-feature">
-        <span class="project-feature-num">01</span>
-        <div>
-          <span class="project-feature-url">tonjour.com</span>
-          <h3 class="project-feature-name">Tonjour</h3>
-          <p class="project-feature-desc">A storytelling platform that turns heartfelt memories into five-chapter digital gifts — delivered via a personalized private URL, meant to be read slowly. Seven occasion templates: proposals, birthdays, anniversaries, and more.</p>
-          <a href="https://tonjour.com" target="_blank" rel="noopener" class="project-feature-cta">Visit tonjour.com &nbsp;→</a>
+    <section id="medium" class="medium-section" aria-labelledby="medium-heading">
+      <h2 id="medium-heading" class="section-label">On Medium</h2>
+      <div class="medium-intro">
+        <p>Notes on machine learning, language models and the mathematics behind them.</p>
+        <a class="medium-followers" href="https://medium.com/@mastafa.foufa" target="_blank" rel="noopener">940 followers on Medium <span aria-hidden="true">↗</span></a>
+      </div>
+      <ul class="medium-list">
+        <li>
+          <a href="https://medium.com/@mastafa.foufa/anomaly-detection-across-multiple-languages-30dec9c10e8b" target="_blank" rel="noopener">Anomaly Detection Across Multiple Languages</a>
+          <time datetime="2026-09-14">September 14, 2026</time>
+        </li>
+        <li>
+          <a href="https://medium.com/@mastafa.foufa/system-prompts-0e0cdee1888d" target="_blank" rel="noopener">Generate Effective System Prompts</a>
+          <time datetime="2024-04-23">April 23, 2024</time>
+        </li>
+        <li>
+          <a href="https://pub.towardsai.net/machine-learning-in-a-non-euclidean-space-78bb94869af1" target="_blank" rel="noopener">Machine Learning in a non-Euclidean Space</a>
+          <time datetime="2024-03-17">March 17, 2024</time>
+        </li>
+        <li>
+          <a href="https://medium.com/@mastafa.foufa/how-to-use-openai-with-effective-prompts-568c6576c0bc" target="_blank" rel="noopener">How to Use OpenAI with Effective Prompts</a>
+          <time datetime="2024-01-12">January 12, 2024</time>
+        </li>
+      </ul>
+      <details class="medium-archive">
+        <summary>Explore 21 more articles</summary>
+        <ul class="medium-list">
+          <li><a href="https://medium.com/@mastafa.foufa/google-gemini-the-future-chat-gpt-ee152bc56ffc" target="_blank" rel="noopener">Google Gemini, the future Chat GPT</a></li>
+          <li><a href="https://medium.com/data-science/unlock-data-science-potential-with-your-laptop-64c64652e906" target="_blank" rel="noopener">Unlock Data Science Potential with Your Laptop</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/harvey-specter-vs-harvey-ai-who-would-win-in-a-legal-battle-93f6c5b5b607" target="_blank" rel="noopener">Harvey Specter vs Harvey AI: Who Would Win in a Legal Battle?</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/how-stoicism-can-help-data-scientists-thrive-in-uncertainty-43bb100c456a" target="_blank" rel="noopener">How Stoicism Can Help Data Scientists Thrive in Uncertainty</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/python-now-in-excel-121f5fe5f79d" target="_blank" rel="noopener">Python is now in Excel</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/my-articles-and-a-welcome-to-my-blog-534d763750f8" target="_blank" rel="noopener">My articles and a welcome to my blog</a></li>
+          <li><a href="https://medium.com/towards-data-science/machine-learning-in-a-non-euclidean-space-99b0a776e92e" target="_blank" rel="noopener">Machine Learning in Non-Euclidean Space: Why you should learn about non-Euclidean ML</a></li>
+          <li><a href="https://medium.com/towards-artificial-intelligence/machine-learning-in-a-non-euclidean-space-8f3d13f0a317" target="_blank" rel="noopener">Machine Learning in a Non-Euclidean Space: How to get an intuition about hyperbolic geometry and when to use it in your Data Science projects?</a></li>
+          <li><a href="https://medium.com/towards-data-science/easy-object-detection-with-facebooks-detr-d0bd9e4e53a4" target="_blank" rel="noopener">Easy object detection with Facebook’s DETR: A brief introduction to DETR with real-world examples</a></li>
+          <li><a href="https://towardsdatascience.com/address-class-imbalance-easily-with-pytorch-e2d4fa208627" target="_blank" rel="noopener">Address class imbalance easily with Pytorch: What can you do when your model is overfitting your data?</a></li>
+          <li><a href="https://towardsdatascience.com/address-class-imbalance-easily-with-pytorch-bb540497d2a6" target="_blank" rel="noopener">Address class imbalance easily with Pytorch Part 2</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/machine-learning-in-a-non-euclidean-space-842eaefc2746" target="_blank" rel="noopener">Chapter 0: A Microsoft DS and an ML Doctoral Researcher thinking together</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/chatgpt-is-random-53c310aa34d6" target="_blank" rel="noopener">ChatGPT is stochastic: That’s why ChatGPT gives you different outputs.</a></li>
+          <li><a href="https://medium.com/towards-data-science/openai-gpt-leaking-your-data-2dfb9e22c1b2" target="_blank" rel="noopener">OpenAI GPT leaking your data: can we really extract data from GPT-2?</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/influence-of-large-batches-5f1d8a00891c" target="_blank" rel="noopener">Part 1. Influence of large batches</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/influence-of-large-batches-ba0ad9894f11" target="_blank" rel="noopener">Part 2. Influence of large batches</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/influence-of-large-batches-3129bc7504c1" target="_blank" rel="noopener">Part 3. Influence of large batches</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/measuring-clustering-quality-35c48fc217d8" target="_blank" rel="noopener">Measuring clustering quality: How to measure the goodness of your clustering?</a></li>
+          <li><a href="https://medium.com/towards-data-science/the-danger-of-bias-in-ai-c3ce68eabbcc" target="_blank" rel="noopener">The danger of bias in AI</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/staying-sharp-as-a-data-scientist-22fed80b3bbe" target="_blank" rel="noopener">Staying sharp as a FAANG Data Scientist</a></li>
+          <li><a href="https://medium.com/@mastafa.foufa/head-of-data-in-a-startup-c3dbf5207cb7" target="_blank" rel="noopener">Head of data in a startup</a></li>
+        </ul>
+      </details>
+      <div class="medium-profile">
+        <a href="https://medium.com/@mastafa.foufa" class="btn-outline" target="_blank" rel="noopener">All articles on Medium <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    </section>
+
+    <section id="work" aria-labelledby="research-heading">
+      <h2 class="section-label" id="research-heading">Research &amp; inventions</h2>
+      <p class="section-intro">Work on language, personalization, voice synthesis, and human-computer interaction. <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Explore my Google Scholar profile &nbsp;↗</a></p>
+      <div class="project-card" data-type="publications">
+        <div class="project-header">
+          <a class="project-title" href="https://www.diva-portal.org/smash/get/diva2:1644217/FULLTEXT01.pdf" target="_blank" rel="noopener">Anomaly Detection Across Multiple Languages</a>
+          <span class="tech-tag tag-pub">Master’s thesis &nbsp;·&nbsp; PDF</span>
         </div>
+        <p>Cross-lingual anomaly detection in text: methods for surfacing outliers in multilingual NLP pipelines.</p>
+      </div>
+      <details class="research-archive">
+        <summary>Explore patents &amp; applications</summary>
+        <p class="news-credit">US patent numbers and application numbers are identified separately below. Title links open my Google Scholar profile.</p>
+        <div id="projects-container" class="projects-grid">
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Live voice synthesis</a>
+              <span class="tech-tag tag-app">App 18/907,242</span>
+            </div>
+            <p>Real-time AI-generated voice for natural, instant audio synthesis in interactive applications.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Live voice synthesis with voice mixing</a>
+              <span class="tech-tag tag-app">App 18/907,329</span>
+            </div>
+            <p>Blending multiple synthesized voices in real time to produce richer, more expressive audio output.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Shared visual content filtering during virtual meetings</a>
+              <span class="tech-tag tag-patent">US 11,881,958</span>
+            </div>
+            <p>Methodology for intelligent information streamlining in collaborative virtual spaces.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Computing experience personalisation to enhance productivity</a>
+              <span class="tech-tag tag-patent">US 12,039,470</span>
+            </div>
+            <p>Adaptive systems that learn user behaviour to optimise high-performance workflows.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Machine-learning-model based name pronunciation</a>
+              <span class="tech-tag tag-patent">US 12,028,176</span>
+            </div>
+            <p>A linguistic AI model fostering inclusivity through accurate global name recognition.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">User-specific computer interaction recall</a>
+              <span class="tech-tag tag-patent">US 11,789,944</span>
+            </div>
+            <p>Personalised memory systems for computing interfaces to enhance human recall.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Meeting richness: optimising remote engagement</a>
+              <span class="tech-tag tag-patent">US 11,831,696</span>
+            </div>
+            <p>AI-driven system to detect and enhance the quality of virtual collaboration.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Intelligent automated absence responses</a>
+              <span class="tech-tag tag-patent">US 11,418,463</span>
+            </div>
+            <p>Contextual AI for generating appropriate, personalised out-of-office communications.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Verbatim feedback processing for compliant retention</a>
+              <span class="tech-tag tag-app">App 18/650,589</span>
+            </div>
+            <p>Next-generation NLP for processing feedback while maintaining strict privacy compliance.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Computer-based well-being assessment and mitigation</a>
+              <span class="tech-tag tag-app">App 17/664,974</span>
+            </div>
+            <p>Detecting and mitigating digital fatigue through AI-driven behavioural analysis.</p>
+          </div>
+          <div class="project-card" data-type="patents">
+            <div class="project-header">
+              <a class="project-title" href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Posture correction and computer-based assessment</a>
+              <span class="tech-tag tag-app">App 18/059,365</span>
+            </div>
+            <p>Behavioural AI for real-time ergonomic and posture guidance in computing environments.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+    <h2 class="section-label" id="about-heading">About &amp; teaching</h2>
+    <div class="about-grid">
+      <div class="about-portrait-wrap">
+        <img src="../assets/images/mastafa_black_white_web.jpg" alt="Mastafa Foufa" class="about-portrait" loading="lazy">
+      </div>
+      <div class="about-text">
+        <p>I trained as an engineer at <strong>Télécom Paris</strong> and hold a master’s in Machine Learning from <strong>KTH Stockholm</strong>. My work at Microsoft spans NLP, AI evaluation, and human-computer interaction.</p>
+        <p>From 2021 to 2023, I taught advanced NLP and large language models at <strong>EPITA Paris</strong>. Teaching, my Medium articles, and <em lang="fr">La paresse de penser</em> share the same aim: making technical ideas understandable without losing the difficult questions.</p>
+        <p>Raised in Nîmes, with Moroccan roots, I’m now based in Seattle. Outside work, I hold a black belt in Judo, am a former two-time national champion in Karate Jutsu, and surf in the Pacific Northwest.</p>
+        <a href="/deck/" class="post-read-more">Background &amp; presentation &nbsp;→</a>
       </div>
     </div>
+    <div class="photo-row">
+      <figure>
+        <img src="../assets/images/picture_presenting.jpg" alt="Mastafa Foufa presenting on NLP and embeddings, Dublin" loading="lazy">
+        <figcaption>NLP &amp; Embeddings Conference, Dublin</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/images/mastafa_ethics_llm.jpeg" alt="Mastafa Foufa lecturing on LLM ethics, Seattle" style="object-position: center 20%;" loading="lazy">
+        <figcaption>Lecture — LLM Ethics &amp; Societal Impact, Seattle</figcaption>
+      </figure>
+    </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <h2 class="section-label" id="contact-heading">Let’s talk</h2>
+      <p class="section-intro">For project collaborations, conversations about AI evaluation, speaking engagements, and interviews.</p>
+      <div class="hero-ctas">
+        <a href="mailto:mastafa.foufa@hotmail.com" class="btn-outline">Get in touch</a>
+        <a href="/press/" class="btn-outline">Press kit</a>
+      </div>
+    </section>
 
   </main>
 
@@ -462,28 +518,7 @@
     <p class="copyright">&copy; 2026 Mastafa Foufa. All rights reserved.</p>
   </footer>
 
-  <script>
-    (function() {
-      var h = document.querySelector('.site-header');
-      window.addEventListener('scroll', function() {
-        h.classList.toggle('scrolled', window.scrollY > 24);
-      }, { passive: true });
-    })();
-  </script>
-  <script>
-    function filterProjects(category) {
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        const active = btn.dataset.category === category;
-        btn.classList.toggle('active', active);
-        btn.setAttribute('aria-pressed', String(active));
-      });
-      document.querySelectorAll('.project-card').forEach(card => {
-        const type = card.getAttribute('data-type');
-        card.style.display = (category === 'all' || type === category) ? 'block' : 'none';
-      });
-    }
-  </script>
-
+  <script src="/assets/js/news-rail.js"></script>
   <script src="/assets/js/nav-scroll.js"></script>
 </body>
 </html>

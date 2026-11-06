@@ -8,19 +8,11 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://mastafafoufa.com/en/" />
   <link rel="alternate" hreflang="en"        href="https://mastafafoufa.com/en/" />
-  <link rel="alternate" hreflang="fr"        href="https://mastafafoufa.com/fr/" />
   <link rel="alternate" hreflang="x-default" href="https://mastafafoufa.com/en/" />
 
   <meta http-equiv="refresh" content="0; url=/en/">
   <script>
-    (function() {
-      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      if (lang.startsWith('fr')) {
-        window.location.replace('/fr/');
-      } else {
-        window.location.replace('/en/');
-      }
-    })();
+    window.location.replace('/en/' + window.location.search + window.location.hash);
   </script>
 
   <style>
@@ -36,9 +28,7 @@
 <body>
   <div class="gateway">
     <div class="logo">MHF</div>
-    <a href="/en/">English</a>
-    <span style="color:#7A7872">·</span>
-    <a href="/fr/">Français</a>
+    <a href="/en/">Continue to the website</a>
   </div>
   <script src="/assets/js/nav-scroll.js"></script>
 </body>

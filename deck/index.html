@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MHF | My Deck</title>
+    <title>Background &amp; Presentation — Mastafa Foufa | MHF</title>
+    <meta name="description" content="Mastafa Foufa: AI evaluation at Microsoft, patents and applications, teaching, and La paresse de penser.">
+    <link rel="canonical" href="https://mastafafoufa.com/deck/">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <style>
         :root {
             --bg-color: #050505;
             --text-primary: #ffffff;
             --text-secondary: #a0a0a0;
-            --accent: #3498db; 
-            --accent-muted: #f1c40f; /* For Apps */
+            --accent: #ffffff;
+            --accent-muted: #b8b8b8;
             --glass: rgba(255, 255, 255, 0.03);
             --border: rgba(255, 255, 255, 0.1);
             --gradient: linear-gradient(135deg, #fff 0%, #888 100%);
@@ -140,6 +142,7 @@
             gap: 15px;
             margin-top: 30px;
         }
+        .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
         .card {
             background: var(--glass);
@@ -183,7 +186,7 @@
             font-size: 0.8rem;
             transition: 0.3s;
         }
-        .btn-primary:hover { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: #d0d0d0; color: #000; }
 
         @media (max-width: 1024px) {
             .patent-grid { grid-template-columns: repeat(2, 1fr); }
@@ -195,12 +198,13 @@
             h1 { font-size: 2.5rem; }
             h2 { font-size: 1.5rem; }
             .side-nav { display: none; }
+            .feature-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <a href="../index.html" class="logo">MHF</a>
+    <a href="/en/" class="logo">MHF</a>
     
     <nav class="side-nav">
         <div class="dot active"></div>
@@ -218,35 +222,35 @@
         <!-- SLIDE 1 -->
         <section class="slide">
             <div class="content">
-                <h3>Senior Applied Scientist</h3>
+                <h3>Senior Applied Scientist · Microsoft</h3>
                 <h1>Mastafa Foufa</h1>
-                <p>Inventor of <span class="highlight">11 AI Patents</span>. <br>Bridging the gap between <span class="highlight">Production Scale AI</span> and <span class="highlight">Philosophical Inquiry</span>.</p>
+                <p>Building <span class="highlight">representative AI evaluations</span> and shared frameworks for product quality. <br>Author of <span class="highlight"><em>La paresse de penser</em></span> and builder of independent projects.</p>
             </div>
         </section>
 
         <!-- SLIDE 2 -->
         <section class="slide">
             <div class="content">
-                <h3>The Mission</h3>
-                <h2>Scalable Intelligence. Purposeful Design.</h2>
-                <div class="patent-grid" style="grid-template-columns: 1fr 1fr;">
+                <h3>Microsoft</h3>
+                <h2>Making AI quality clear.</h2>
+                <div class="patent-grid feature-grid">
                     <div class="card" style="padding: 40px;">
-                        <h4 style="font-size: 1.2rem;">Impact at Scale</h4>
-                        <p style="font-size: 0.95rem;">Architecting NLP models on Azure that safeguard 50,000+ monthly interactions within the Microsoft 365 ecosystem.</p>
+                        <h4 style="font-size: 1.2rem;">Representative Evaluation</h4>
+                        <p style="font-size: 0.95rem;">Developing evaluations that connect product quality to real users, scenarios, and conditions within the Microsoft 365 ecosystem.</p>
                     </div>
                     <div class="card" style="padding: 40px;">
-                        <h4 style="font-size: 1.2rem;">Human-Centric AI</h4>
-                        <p style="font-size: 0.95rem;">Focusing on anomaly detection and well-being assessment to ensure technology serves human health and productivity.</p>
+                        <h4 style="font-size: 1.2rem;">Shared Frameworks</h4>
+                        <p style="font-size: 0.95rem;">Building centralized evaluation frameworks that help teams measure consistently and leadership connect quality results to product priorities.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDE 3: ALL 11 PATENTS -->
+        <!-- SLIDE 3 -->
         <section class="slide">
             <div class="content">
                 <h3>Intellectual Property</h3>
-                <h2>Pioneering the Future</h2>
+                <h2>Patents &amp; Applications</h2>
                 <div class="patent-grid">
                     <!-- 1 -->
                     <div class="card">
@@ -323,8 +327,8 @@
             <div class="content">
                 <h3>Leadership</h3>
                 <h2>Scaling Knowledge</h2>
-                <p style="margin-bottom: 30px;"><strong>Lecturer at EPITA Paris</strong><br>Teaching Advanced NLP and LLM architectures to the next generation of engineers.</p>
-                <p><strong>Global Data Science Mentorship</strong><br>Educating 100+ Microsoft Applied Scientists on ML rigor and user privacy.</p>
+                <p style="margin-bottom: 30px;"><strong>EPITA Paris · 2021–2023</strong><br>Taught advanced NLP and large language models to engineering students.</p>
+                <p><strong>Data Science Mentorship</strong><br>Sharing machine-learning rigor and user-privacy practices with Microsoft applied scientists.</p>
             </div>
         </section>
 
@@ -333,7 +337,7 @@
             <div class="content">
                 <h3>The Intersection</h3>
                 <h2>Discipline & Philosophy</h2>
-                <div class="patent-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="patent-grid feature-grid">
                     <div class="card">
                         <h4>The Tatami</h4>
                         <p style="font-size: 0.9rem;">Black Belt in Judo and 2x National Champion in Karate Jutsu. Martial arts discipline is the core of my research methodology.</p>

@@ -21,7 +21,7 @@
       margin: 0.5rem 0 1rem;
     }
     .press-body { max-width: 900px; margin: 0 auto; padding: 0 2rem 6rem; }
-    .bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .bio-grid { max-width: 700px; }
     .bio-lang { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: 1rem; }
     .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
     .photo-item a { display: block; }
@@ -42,7 +42,7 @@
     <a href="/en/" class="site-logo">MHF</a>
     <nav class="site-nav">
       <a href="/en/">Home</a>
-      <a href="/fr/">Français</a>
+      <a href="/en/blog/">Blog</a>
       <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
     </nav>
   </header>
@@ -59,10 +59,10 @@
       <h2 id="coverage-heading" class="section-label">Selected Press Coverage</h2>
       <h3>lepetitjournal.com · San Francisco</h3>
       <p class="news-credit">Sylvie Joseph Julien · <time datetime="2026-08-21">21 August 2026</time> · Interview in French</p>
-      <p class="post-excerpt">A conversation about Mastafa Foufa's journey, AI research and the importance of critical thinking. These permanent records provide original summaries and source credits, not reproductions of the article.</p>
+      <p class="post-excerpt">A conversation about Mastafa Foufa's journey, AI research and the importance of critical thinking. The permanent record provides an original summary and source credits, not a reproduction of the article.</p>
       <div class="news-actions">
         <a class="news-record-link" href="/en/press/lepetitjournal-2026.html">English summary &amp; credits</a>
-        <a class="news-record-link" href="/fr/press/lepetitjournal-2026.html" hreflang="fr" lang="fr">Résumé &amp; crédits en français</a>
+        <a class="news-record-link" href="https://lepetitjournal.com/san-francisco/qui-est-homme-qui-questionne-ia-discussion-avec-mastafa-foufa-450788" target="_blank" rel="noopener" hreflang="fr">Original interview in French &nbsp;↗</a>
       </div>
     </section>
 
@@ -72,17 +72,9 @@
       <div>
         <div class="bio-lang">English</div>
         <p style="font-family:'Lora',serif; font-size:1rem; line-height:1.85;">
-          Mastafa Foufa is a Senior Applied Scientist at Microsoft, based in Seattle. He holds eleven patents in artificial intelligence and Human-Computer Interaction, spanning intelligent personalisation, behavioural anomaly detection, live voice synthesis, and digital well-being. Trained as an engineer at Télécom Paris and holding a master's in Machine Learning from KTH Stockholm with a focus on deep learning architectures, he taught advanced NLP and large language model architectures at EPITA Paris from 2021 to 2023 before relocating to the United States.
+          Mastafa Foufa is a Senior Applied Scientist at Microsoft, based in Seattle. His work focuses on representative AI evaluations and shared frameworks that help product teams and leadership understand product quality. His research and inventions span NLP, personalisation, voice synthesis, and human-computer interaction. Trained as an engineer at Télécom Paris and holding a master's in Machine Learning from KTH Stockholm, he taught advanced NLP and large language models at EPITA Paris from 2021 to 2023 before relocating to the United States.
           <br><br>
           His book, <em>La paresse de penser</em> (FYP Éditions, May 2026), examines how intelligent machines are reshaping our capacity for careful thought. He is a black belt in Judo and a former two-time national champion in Karate Jutsu.
-        </p>
-      </div>
-      <div>
-        <div class="bio-lang">Français</div>
-        <p style="font-family:'Lora',serif; font-size:1rem; line-height:1.85;">
-          Mastafa Foufa est Scientifique Appliqué Senior chez Microsoft, basé à Seattle. Il est titulaire de onze brevets en intelligence artificielle et interaction homme-machine, couvrant la personnalisation intelligente, la détection d'anomalies comportementales, la synthèse vocale en temps réel et le bien-être numérique. Ingénieur formé à Télécom Paris et titulaire d'un master en apprentissage automatique de KTH Stockholm avec une spécialisation en architectures d'apprentissage profond, il a enseigné les architectures NLP avancées et les grands modèles de langage à l'EPITA Paris de 2021 à 2023, avant de s'installer aux États-Unis.
-          <br><br>
-          Son premier essai, <em>La paresse de penser</em> (FYP Éditions, mai 2026), explore la façon dont les machines intelligentes transforment notre capacité à penser par nous-mêmes. Il est ceinture noire de judo et deux fois champion national de karaté jutsu.
         </p>
       </div>
     </div>
@@ -113,10 +105,11 @@
 
     <!-- BOOK SYNOPSIS -->
     <h2 class="section-label">Book Synopsis — <em>La paresse de penser</em></h2>
+    <p lang="fr"><em>Pourquoi nous laissons l’IA décider à notre place</em></p>
     <div style="margin-top: 2rem; padding: 2rem; background: var(--secondary-bg); border-radius: 8px;">
       <p style="font-weight:700; margin-bottom:0.5rem;">Editorial overview:</p>
       <p style="font-family:'Lora',serif; font-size:1rem; line-height:1.8;">
-        <em>La paresse de penser</em> examines how the proliferation of intelligent machines — AI writing assistants, recommendation algorithms, autonomous decision systems — is reshaping our relationship with our own capacity for careful thought. Drawing on nine years of engineering experience, six of them building AI systems at Microsoft, and teaching large language model architectures at EPITA Paris, Mastafa Foufa asks a deceptively simple question: at what point does "being assisted" become "being relieved of the need to think"? Written in the tradition of the French essay, this is neither a techno-pessimist manifesto nor a celebration of AI. It is an invitation to think more carefully about what we choose to stop thinking about.
+        <em>La paresse de penser</em> examines how the proliferation of intelligent machines — AI writing assistants, recommendation algorithms, autonomous decision systems — is reshaping our relationship with our own capacity for careful thought. Drawing on his work building AI systems at Microsoft and teaching NLP at EPITA Paris, Mastafa Foufa asks a deceptively simple question: at what point does "being assisted" become "being relieved of the need to think"? Written in the tradition of the French essay, this is neither a techno-pessimist manifesto nor a celebration of AI. It is an invitation to think more carefully about what we choose to stop thinking about.
       </p>
     </div>
 
@@ -124,7 +117,7 @@
     <h2 class="section-label">Sample Q&amp;A</h2>
 
     <div class="qa-item">
-      <p class="qa-q">You work at Microsoft and hold eleven AI patents. Why write a book that questions the technology you build?</p>
+      <p class="qa-q">You build and evaluate AI at Microsoft. Why write a book that questions the technology you work on?</p>
       <p class="qa-a">Because being inside the system is precisely what gives me the vantage point to describe it clearly. I am not speculating about AI from the outside. I have built some of these systems. I know what they optimise for, and I know what they cannot do — which is often very different from what their users believe they can do. The concern I am raising is not about the technology being dangerous. It is about what happens to human capacities when we outsource cognitive work over a long period of time.</p>
     </div>
 
@@ -174,8 +167,8 @@
     <div class="social-links">
       <a href="https://www.linkedin.com/in/mastafa-foufa/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://scholar.google.com/citations?user=jA54ZlUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="/en/">English Site</a>
-      <a href="/fr/">Site Français</a>
+      <a href="/en/">Home</a>
+      <a href="/en/blog/">Blog</a>
     </div>
     <p class="copyright">&copy; 2026 Mastafa Foufa. All rights reserved.</p>
   </footer>
