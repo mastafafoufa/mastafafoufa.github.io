@@ -1,3 +1,11 @@
 exclude:
   - _archive
+  - _preview
+  - .venv
+  - content
+  - scripts
+  - templates
+  - tests
+  - blog.ps1
+  - requirements.txt
   - blueprint.md.txt

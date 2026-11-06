@@ -31,19 +31,69 @@ _config.yml excludes _archive from GitHub Pages. This is source
 preservation, not private storage: repository source remains accessible,
 and a plain local Python server does not apply Jekyll exclusions.
 
-To restore a parked page, copy its archived source back to its original
-route, replacing the redirect. Review its copy and links, then restore its
-navigation, canonical/alternate metadata, and sitemap entries together.
+To restore a parked homepage or press page, copy its archived source back
+to its original route, replacing the redirect. Review its copy and links,
+then restore its navigation, canonical/alternate metadata, and sitemap
+entries together. For archived blog drafts, move the article content into
+a Markdown draft and use the publishing workflow below.
 
 Bilingual blog
-Keep /en/blog/ and /fr/blog/ active. Both languages link Home to /en/.
-Language switches link to the same article's translation only when one
-exists. French-only essays do not advertise an English translation.
+Keep /en/blog/ and /fr/blog/ active, with prominent English/Français reading
+buttons. These are independent collections, not two mandatory versions of
+every article. Both languages link Home to /en/.
 
-Only articles with content appear in the hubs, assets/js/article-nav.js,
-and sitemap.xml. Old unfinished-article URLs are noindex redirects to their
-language's blog hub. When publishing a preserved draft, replace its redirect
-and update the hub, article navigation, and sitemap together.
+Markdown is the source of truth:
+  content\blog\en\<slug>.md
+  content\blog\fr\<slug>.md
+An article can exist in just one folder. Never create a translation by
+default. Generated HTML, blog listings, previous/next navigation, and blog
+sitemap entries are updated together by scripts\blog.py.
+
+One-time authoring setup:
+  python -m venv .venv
+  .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+Create one draft, in the language you choose:
+  .\blog.ps1 new --lang fr --title "Mon article" --summary "Un court résumé."
+  .\blog.ps1 new --lang en --title "My article" --summary "A short summary."
+Each command creates only its selected language's Markdown file. It starts
+with draft: true and never creates a counterpart in the other language.
+Use --slug to choose the URL and --category technology or reflections.
+
+Write the article below its YAML front matter. Markdown supports headings,
+paragraphs, links, images, lists, code blocks, footnotes, and tables. The
+existing essays retain their original HTML inside valid Markdown so the
+migration does not rewrite their content.
+
+Preview unpublished drafts:
+  .\blog.ps1 build --preview-drafts
+  python -m http.server 8000 --bind 127.0.0.1
+Open http://127.0.0.1:8000/_preview/fr/blog/<slug>.html or the English
+equivalent. Draft previews are ignored by Git, marked noindex, and excluded
+from GitHub Pages, along with Markdown source, templates, scripts, tests,
+and .venv.
+Source committed to this public repository is still public, not private.
+
+Publish a finished article:
+  1. Set draft: false; provide a nonempty summary and article body.
+  2. Run .\blog.ps1 build, then .\blog.ps1 check.
+  3. Review the selected language's blog locally, commit the generated
+     changes together with the Markdown source, and push to main.
+No translation is required. Setting a published post back to draft removes
+it from listings/navigation/sitemap and redirects its former public URL to
+the appropriate blog hub. If another post explicitly links to that
+translation, remove its optional translation field before unpublishing it.
+
+Only for an actual translation, optionally add a front-matter field such as
+  translation: fr/mon-article
+The target must be a published post in the other language. The generator
+then adds reciprocal article links and language metadata. Otherwise readers
+can browse the other collection, but no translated version is advertised.
+
+Authoring checks:
+  .\.venv\Scripts\python.exe -m unittest discover -s tests
+Old unfinished-article URLs remain noindex redirects. Do not edit generated
+blog HTML directly; edit the Markdown or the templates and rebuild.
 
 News & Conversations
 Keep a single featured item without carousel controls. Add future .news-card

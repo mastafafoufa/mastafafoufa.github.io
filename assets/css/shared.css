@@ -565,6 +565,19 @@ section[id], h2[id] { scroll-margin-top: 6rem; }
 }
 
 /* --- Blog Post Preview --- */
+.blog-header { padding: 5rem 2rem 3rem; max-width: 900px; margin: 0 auto; }
+.blog-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4rem); margin: 0.5rem 0 1rem; }
+.blog-header .subtitle { font-family: 'Lora', serif; font-size: 1.05rem; color: var(--muted); max-width: 650px; }
+.blog-eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--muted); }
+.blog-body { max-width: 900px; margin: 0 auto; padding: 0 2rem 6rem; }
+.blog-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5rem; }
+.blog-cols.single-category { grid-template-columns: minmax(0, 1fr); max-width: 700px; }
+.category-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 2.5rem; }
+.blog-language-switch { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+.blog-language-switch a[aria-current="page"] { background: var(--heading); color: var(--white); }
+.blog-language-note { font-size: 0.85rem; color: var(--muted); max-width: 650px; margin-top: 1rem; }
+.article-translation { font-size: 0.85rem; margin: -1rem 0 2.5rem; }
+.draft-notice { padding: 1rem; background: var(--secondary-bg); border: 1px solid var(--border); font-size: 0.9rem; }
 .blog-previews {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -717,6 +730,10 @@ section[id], h2[id] { scroll-margin-top: 6rem; }
 }
 .article-body p { margin-bottom: 1.8rem; }
 .article-body strong { color: var(--heading); }
+.article-body a { overflow-wrap: anywhere; }
+.article-body pre { max-width: 100%; overflow-x: auto; padding: 1.25rem; background: var(--secondary-bg); font-size: 0.85rem; }
+.article-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: 0.95rem; }
+.article-body th, .article-body td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; }
 .dropcap {
   float: left;
   font-family: 'Playfair Display', serif;
@@ -864,6 +881,7 @@ section[id], h2[id] { scroll-margin-top: 6rem; }
   .book-panel { padding: 2rem 1.75rem; }
   .book-cover-link { width: 180px; }
   .blog-previews { grid-template-columns: 1fr; }
+  .blog-cols { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
   .photo-row { grid-template-columns: 1fr; }
   .project-feature {
     grid-template-columns: 1fr;

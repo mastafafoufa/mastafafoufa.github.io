@@ -1,17 +1,43 @@
 (function () {
+  // BEGIN GENERATED POSTS
   var fr = [
-    { url: '/fr/blog/pourquoi-paresse-de-penser.html', title: 'Le tiret cadratin et la fin de l\u2019intention' },
-    { url: '/fr/blog/raccourcis-cognitifs.html',        title: 'Ce que les LLMs nous apprennent sur nos raccourcis cognitifs' },
-    { url: '/fr/blog/eloge-de-la-friction.html',        title: 'L\u2019\u00e9loge de la friction' },
-    { url: '/fr/blog/passivite-organique-power-users.html', title: 'De la commande \u00e0 la consultation' },
-    { url: '/fr/blog/poids-du-silence.html',            title: 'Le poids du silence' },
-  ];
+  {
+    "url": "/fr/blog/passivite-organique-power-users.html",
+    "title": "De la commande \u00e0 la consultation"
+  },
+  {
+    "url": "/fr/blog/pourquoi-paresse-de-penser.html",
+    "title": "Le tiret cadratin et la fin de l\u2019intention"
+  },
+  {
+    "url": "/fr/blog/raccourcis-cognitifs.html",
+    "title": "Ce que les LLMs nous apprennent sur nos raccourcis cognitifs"
+  },
+  {
+    "url": "/fr/blog/eloge-de-la-friction.html",
+    "title": "L\u2019\u00e9loge de la friction"
+  },
+  {
+    "url": "/fr/blog/poids-du-silence.html",
+    "title": "Le poids du silence"
+  }
+];
 
   var en = [
-    { url: '/en/blog/laziness-of-thinking-book.html',   title: 'The em dash and the end of intention' },
-    { url: '/en/blog/llm-mental-laziness.html',         title: 'What LLMs taught me about human mental laziness' },
-    { url: '/en/blog/designing-for-friction.html',      title: 'Designing for friction' },
-  ];
+  {
+    "url": "/en/blog/laziness-of-thinking-book.html",
+    "title": "The em dash and the end of intention"
+  },
+  {
+    "url": "/en/blog/llm-mental-laziness.html",
+    "title": "What LLMs taught me about human mental laziness"
+  },
+  {
+    "url": "/en/blog/designing-for-friction.html",
+    "title": "Designing for friction"
+  }
+];
+  // END GENERATED POSTS
 
   var path = window.location.pathname;
   var isFr = path.indexOf('/fr/') === 0;

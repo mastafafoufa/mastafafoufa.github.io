@@ -1,1 +1,4 @@
 .playwright-mcp/
+.venv/
+_preview/
+__pycache__/

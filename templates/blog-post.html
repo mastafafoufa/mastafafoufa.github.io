@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${page_title}</title>
+  <meta name="description" content="${summary}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  ${metadata}
+  <link rel="stylesheet" href="/assets/css/shared.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/en/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="/${lang}/blog/">Blog</a>
+      <a href="/en/">${home_label}</a>
+      <a href="/${other_lang}/blog/" hreflang="${other_lang}" lang="${other_lang}">${other_posts_label}</a>
+    </nav>
+  </header>
+  <main class="article-container">
+    <a href="/${lang}/blog/" class="back-link">${back_label}</a>
+${draft_notice}
+    <p class="article-meta">${category_label} &nbsp;·&nbsp; <time datetime="${date}">${display_date}</time>${working_note}</p>
+    <h1 class="article-title">${title}</h1>
+${translation_link}
+    <div class="article-body">
+${article_body}
+    </div>
+    <div class="article-footer">
+      MHF &nbsp;·&nbsp; <a href="/en/">Mastafa Foufa</a>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="/${lang}/blog/">Blog</a>
+      <a href="/en/">${home_label}</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa.</p>
+  </footer>
+${article_nav_script}
+  <script src="/assets/js/nav-scroll.js"></script>
+</body>
+</html>

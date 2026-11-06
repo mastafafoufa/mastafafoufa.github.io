@@ -1,0 +1,31 @@
+---
+title: Ce que les modèles de langage nous apprennent sur nos propres raccourcis cognitifs
+date: '2026-04-14'
+summary: La prédiction du prochain token comme métaphore de la pensée heuristique. Une réflexion née de l'intérieur du laboratoire.
+category: technology
+draft: false
+short_title: Ce que les LLMs nous apprennent sur nos raccourcis cognitifs
+translation: en/llm-mental-laziness
+---
+
+<p><span class="dropcap">P</span>our comprendre ce que les grands modèles de langage font réellement — pas ce qu'on imagine qu'ils font, ni ce que leurs créateurs voudraient qu'on croie, mais ce qu'ils font mécaniquement, sous le capot — il faut repartir d'une idée fondamentale, presque déconcertante par sa simplicité : ils prédisent le prochain mot.</p>
+
+<p>C'est tout. Un modèle de langage, à son niveau le plus élémentaire, est une fonction qui prend une séquence de tokens en entrée et retourne une distribution de probabilité sur le token suivant. « Le chat est assis sur le... » — et le modèle calcule que « tapis » est plus probable que « ventilateur », que « tapis » est plus probable qu'« abîme ». Il n'a pas lu tous les livres du monde pour comprendre les chats. Il a ingéré des milliards de séquences de texte pour apprendre, statistiquement, ce qui suit quoi.</p>
+
+<p>Ce qui est fascinant, ce n'est pas que ça fonctionne aussi bien. C'est que ce mécanisme — optimiser pour la vraisemblance statistique — ressemble à quelque chose que nous connaissons de l'intérieur.</p>
+
+<p>Il y a ce qu'on appelle en psychologie cognitive la pensée de Système 1 : rapide, intuitive, heuristique. C'est le mode par défaut de notre cerveau. Quand vous voyez « 2 + 2 = », vous n'calculez pas — vous récupérez. Quand quelqu'un commence une phrase familière, vous la finissez avant qu'il ait terminé. Quand vous lisez une nouvelle sur un crime commis dans un certain quartier, votre cerveau active des associations, des corrélations apprises, des probabilités conditionnelles accumulées depuis des années d'expérience. Vous n'analysez pas : vous prédisez.</p>
+
+<p>Le Système 1, dans le vocabulaire de la psychologie cognitive, c'est notre moteur de prédiction du prochain token. Il est extraordinairement efficace. Et il est structurellement enclin à se tromper de la même façon que les LLMs se trompent : en générant du vraisemblable plutôt que du vrai.</p>
+
+<p>Ce rapprochement n'est pas métaphorique. Il a des conséquences pratiques. Considérez ce phénomène bien documenté : les grands modèles de langage « hallucinent ». Ils génèrent des faits confiants et incorrects, des citations qui n'existent pas, des biographies plausibles de personnes fictives. La raison profonde n'est pas un bug — c'est une feature. Le modèle génère ce qui est le plus cohérent avec ce qu'il a vu, pas ce qui est le plus vrai. Il n'a pas accès à la vérité. Il a accès à la distribution de probabilité du texte humain.</p>
+
+<p>Or, nous hallucinations aussi. Les psychologues ont un mot pour ça : la confabulation. Le cerveau, face à une lacune mémorielle ou une incertitude cognitive, génère du contenu cohérent pour combler le vide. Non par malveillance, mais parce que la cohérence narrative est son mode opératoire naturel. Des études classiques montrent que les témoins oculaires « mémorisent » des détails qui n'ont jamais eu lieu, mais qui étaient cohérents avec la scène. Nous sommes des générateurs de texte plausible qui se croient des enregistreurs de vérité.</p>
+
+<p>La différence — et c'est là que l'analogie atteint ses limites — c'est que nous disposons d'un Système 2. Un mode de pensée lent, délibéré, conscient, capable de remettre en question les productions du Système 1. Nous pouvons vérifier. Nous pouvons douter. Nous pouvons demander des sources. Nous pouvons prendre le temps de construire un raisonnement structuré plutôt que de nous fier à l'impression première. Ce n'est pas naturel — c'est laborieux, énergétiquement coûteux, profondément contre-intuitif. Mais c'est possible.</p>
+
+<p>Les modèles de langage, eux, n'ont pas de Système 2. Ils ont des mécanismes qui y ressemblent — le prompting en chaîne de pensée, le raisonnement pas à pas — mais qui restent fondamentalement des prédictions de tokens un peu plus élaborées. Ils ne peuvent pas, structurellement, s'arrêter pour douter de leur propre processus. Cette capacité reste du côté humain de l'équation.</p>
+
+<p>Ce que j'explore dans mon prochain essai, <em>La paresse de penser</em>, c'est ce mécanisme en profondeur : non seulement pourquoi les LLMs et le Système 1 humain fonctionnent de façon si similaire, mais ce que cela implique quand nous les combinons. Quand nous utilisons un outil qui prédit du vraisemblable pour compenser notre propre tendance à penser en raccourci, nous ne nous sauvons pas de nos biais. Nous les externalisons. Et une fois externalisés, ils deviennent invisibles.</p>
+
+<p>Telle est la question qui mérite d'être posée avant d'intégrer ces systèmes dans nos processus de décision, nos systèmes éducatifs, nos flux de travail professionnels : est-ce que nous utilisons l'IA pour penser mieux, ou pour ne pas penser du tout ?</p>

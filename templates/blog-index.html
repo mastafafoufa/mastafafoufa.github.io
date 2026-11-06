@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${page_title}</title>
+  <meta name="description" content="${description}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="${canonical}">
+  <link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/">
+  <link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://mastafafoufa.com/en/blog/">
+  <link rel="stylesheet" href="/assets/css/shared.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/en/" class="site-logo">MHF</a>
+    <nav class="site-nav">
+      <a href="/en/">${home_label}</a>
+      <a href="/${lang}/blog/">Blog</a>
+      <a href="/press/">${press_label}</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Contact</a>
+      <a href="/${other_lang}/blog/" class="lang-toggle" hreflang="${other_lang}" lang="${other_lang}">${other_language}</a>
+    </nav>
+  </header>
+  <main>
+    <div class="blog-header">
+      <p class="blog-eyebrow">${eyebrow}</p>
+      <h1>${heading}</h1>
+      <p class="subtitle">${description}</p>
+      ${language_picker}
+      <p class="blog-language-note">${language_note}</p>
+    </div>
+    <div class="blog-body">
+      <div class="blog-cols ${column_class}">
+${post_groups}
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/mastafa-foufa/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/mastafafoufa" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="/press/">${press_label}</a>
+      <a href="mailto:mastafa.foufa@hotmail.com">Email</a>
+    </div>
+    <p class="copyright">&copy; 2026 Mastafa Foufa.</p>
+  </footer>
+  <script src="/assets/js/nav-scroll.js"></script>
+</body>
+</html>

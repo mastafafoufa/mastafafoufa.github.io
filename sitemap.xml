@@ -1,111 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Landing Pages -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mastafafoufa.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Blog Hubs -->
   <url>
     <loc>https://mastafafoufa.com/en/blog/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mastafafoufa.com/fr/blog/</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Press Kit -->
   <url>
     <loc>https://mastafafoufa.com/press/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Permanent Press Records -->
   <url>
     <loc>https://mastafafoufa.com/en/press/lepetitjournal-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/press/lepetitjournal-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/press/lepetitjournal-2026.html" />
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Deck -->
   <url>
     <loc>https://mastafafoufa.com/deck/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
-  <!-- Blog Posts — Book & Cornerstone Essays -->
+  <url>
+    <loc>https://mastafafoufa.com/fr/blog/passivite-organique-power-users.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/passivite-organique-power-users.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html" />
     <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/laziness-of-thinking-book.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/pourquoi-paresse-de-penser.html" />
     <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html" />
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mastafafoufa.com/en/blog/llm-mental-laziness.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/llm-mental-laziness.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/raccourcis-cognitifs.html" />
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/designing-for-friction.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/designing-for-friction.html" />
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mastafafoufa.com/en/blog/designing-for-friction.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/designing-for-friction.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mastafafoufa.com/en/blog/designing-for-friction.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/eloge-de-la-friction.html" />
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Personal Reflections -->
-  <url>
-    <loc>https://mastafafoufa.com/fr/blog/passivite-organique-power-users.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/passivite-organique-power-users.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Personal Essay -->
   <url>
     <loc>https://mastafafoufa.com/fr/blog/poids-du-silence.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/poids-du-silence.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mastafafoufa.com/fr/blog/poids-du-silence.html" />
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
 </urlset>
